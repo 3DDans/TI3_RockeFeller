@@ -110,7 +110,7 @@ public class ExaminationArea : MonoBehaviour
         currentTime = 0f;
 
         scanPanel.SetActive(true);
-        statusText.text = "Analisando...";
+        statusText.text = "Analyzing...";
         scanSlider.value = 0f;
     }
 

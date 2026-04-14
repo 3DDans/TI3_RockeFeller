@@ -60,7 +60,7 @@ public class MedicalGameManager : MonoBehaviour
         // ? PERFEITO
         if (correctSelected.Count == totalCorrect && wrongSelected.Count == 0)
         {
-            feedbackText.text = "Diagnóstico perfeito!";
+            feedbackText.text = "Perfect Diagnosis!";
             Debug.Log("ACERTO TOTAL");
 
             EndMinigame();
@@ -70,7 +70,7 @@ public class MedicalGameManager : MonoBehaviour
         // ?? PARCIAL
         if (correctSelected.Count > 0)
         {
-            feedbackText.text = "Parcial! Revise os sintomas.";
+            feedbackText.text = "Parcial! Review some symptoms.";
 
             // mantém só os corretos
             selectedSymptoms = new List<string>(correctSelected);
@@ -81,7 +81,7 @@ public class MedicalGameManager : MonoBehaviour
         }
 
         // ? ERRO TOTAL
-        feedbackText.text = "Tudo incorreto! Tente novamente.";
+        feedbackText.text = "Try Again. You can do it!";
 
         selectedSymptoms.Clear();
 
