@@ -18,13 +18,15 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
     private Vector3 velocity;
+    private Animator animator;
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+    controller = GetComponent<CharacterController>();
+    animator = GetComponent<Animator>();
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+    Cursor.lockState = CursorLockMode.Locked;
+    Cursor.visible = false;
     }
 
     void Update()
@@ -37,13 +39,11 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        // CH�O
         if (controller.isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        // INPUT
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
@@ -58,16 +58,19 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = forward * v + right * h;
 
+        // 👉 ANIMAÇÃO DE ANDAR
+        bool isWalking = h != 0 || v != 0;
+        animator.SetBool("isWalking", isWalking);
+
         // PULO
         if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetTrigger("Jump");
         }
 
-        // GRAVIDADE
         velocity.y += gravity * Time.deltaTime;
 
-        // MOVIMENTO FINAL (TUDO JUNTO)
         Vector3 finalMove = move * moveSpeed + velocity;
 
         controller.Move(finalMove * Time.deltaTime);
