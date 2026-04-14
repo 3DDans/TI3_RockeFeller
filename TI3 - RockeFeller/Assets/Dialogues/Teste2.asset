@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
+  m_Name: Teste2
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - text: "Ol\xE1, novamente "
+    hasChoices: 0
+    choices: []
+    isEnd: 1
+  - text: "Voc\xEA ainda n\xE3o Completou o desafio"
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "Est\xE1 com dificuldade?"
+    hasChoices: 0
+    choices:
+    - text: Sim
+      nextIndex: 3
+    - text: "N\xE3o"
+      nextIndex: 4
+    isEnd: 0
+  - text: ....
+    hasChoices: 0
+    choices: []
+    isEnd: 1
+  - text: "Enta\xF5 fa\xE7a o desafio"
+    hasChoices: 0
+    choices:
+    - text: Sim
+      nextIndex: 3
+    - text: Sim
+      nextIndex: 3
+    isEnd: 1
