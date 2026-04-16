@@ -11,7 +11,7 @@ public class FootstepsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 move = target.transform.position + target.transform.forward;
+        Vector3 move = target.transform.position;
 
         move.y = transform.position.y;
 
