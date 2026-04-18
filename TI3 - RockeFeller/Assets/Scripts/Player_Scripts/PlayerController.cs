@@ -16,9 +16,11 @@ public class PlayerController : MonoBehaviour
 
     public bool canMove = true;
 
-    private CharacterController controller;
+    public CharacterController controller;
     private Vector3 velocity;
     private Animator animator;
+
+    public AudioSource[] audioSource;
 
     void Start()
     {
@@ -67,11 +69,23 @@ public class PlayerController : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             animator.SetTrigger("Jump");
+            audioSource[1].Play();
         }
+
+        audioSource[1].Stop();
 
         velocity.y += gravity * Time.deltaTime;
 
         Vector3 finalMove = move * moveSpeed + velocity;
+
+        if (h != 0 || v != 0)
+        {
+            audioSource[0].Play();
+        }
+        else 
+        {
+            audioSource[0].Stop();
+        }
 
         controller.Move(finalMove * Time.deltaTime);
     }

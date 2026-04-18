@@ -12,14 +12,17 @@ public class ThirdPersonMovement : MonoBehaviour
     public float jumpHeight;
     public float gravity;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public AudioSource audioSource;
+    public AudioClip[] clips;
+    private bool isWalkingSoundPlaying = false;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        audioSource = GetComponent<AudioSource>();
         mainCamera = Camera.main.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (canMove) Movement();
@@ -55,11 +58,75 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            PlayJumpSound();
         }
         velocity.y += gravity * Time.deltaTime;
 
         Vector3 finalMove = inputDir * walkSpeed + velocity;
 
         characterController.Move(finalMove * Time.deltaTime);
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            if (!isWalkingSoundPlaying)
+            {
+                PlayWalkingSound();
+            }
+        }
+        else
+        {
+            if (isWalkingSoundPlaying)
+            {
+                audioSource.Stop();
+                isWalkingSoundPlaying = false;
+            }
+        }
+    }
+
+    void Sounds(int clip, bool loop) 
+    {
+        if (audioSource.clip != clips[clip] || !audioSource.isPlaying)
+        {
+            audioSource.clip = clips[clip];
+            audioSource.loop = loop;
+            audioSource.Play();
+
+            isWalkingSoundPlaying = loop;
+        }
+    }
+
+    void PlayWalkingSound()
+    {
+        Sounds(0, true);
+        isWalkingSoundPlaying = true;
+    }
+
+    void PlayJumpSound()
+    {
+        bool wasWalking = isWalkingSoundPlaying;
+
+        if (wasWalking)
+        {
+            audioSource.Stop();
+        }
+
+        Sounds(1, false);
+        audioSource.Play();
+
+        if (wasWalking)
+        {
+            Invoke(nameof(ResumeWalkingSound), clips[1].length);
+        }
+    }
+
+    void ResumeWalkingSound()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        if ((horizontal != 0 || vertical != 0) && !audioSource.isPlaying)
+        {
+            PlayWalkingSound();
+        }
     }
 }
