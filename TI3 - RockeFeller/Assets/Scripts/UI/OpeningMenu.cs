@@ -9,8 +9,17 @@ public class OpeningMenu : MonoBehaviour //Menu temporário
     {
         PauseMenu=this.GetComponent<PauseMenu>();
     }
+
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     public void Play()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Canvas.SetActive(true);
         Menu.SetActive(false);
         Time.timeScale = 1f;
@@ -25,7 +34,6 @@ public class OpeningMenu : MonoBehaviour //Menu temporário
     public void Pause()
     {
         PauseMenu.Pause();
-
     }
     public void Quit()
     {     
