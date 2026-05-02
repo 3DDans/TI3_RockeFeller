@@ -29,7 +29,7 @@ public class NPCInteraction : MonoBehaviour
     public NPCInteraction linkedMinigameNPC;
 
     private bool playerInRange = false;
-    private PlayerController player;
+    private ThirdPersonMovement player;
 
     private NPCState currentState = NPCState.FirstTime;
 
@@ -38,7 +38,7 @@ public class NPCInteraction : MonoBehaviour
 
     void Start()
     {
-        player = FindFirstObjectByType<PlayerController>();
+        player = FindFirstObjectByType<ThirdPersonMovement>();
 
         if (npcType == NPCType.Minigame)
         {

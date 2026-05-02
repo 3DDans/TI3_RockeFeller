@@ -7,7 +7,13 @@ public class MicroscopeController : MonoBehaviour
     public Vector2 limitZ;
 
     private Vector3 lastMousePos;
+    private Vector3 initialCamPos;
     private bool dragging = false;
+
+    private void Start()
+    {
+        initialCamPos = transform.position;
+    }
 
     void Update()
     {
@@ -32,9 +38,9 @@ public class MicroscopeController : MonoBehaviour
 
             // Limites
             transform.position = new Vector3(
-                Mathf.Clamp(transform.position.x, limitX.x, limitX.y),
+                Mathf.Clamp(transform.position.x, initialCamPos.x + limitX.x, initialCamPos.x + limitX.y),
                 transform.position.y,
-                Mathf.Clamp(transform.position.z, limitZ.x, limitZ.y)
+                Mathf.Clamp(transform.position.z, initialCamPos.z + limitZ.x, initialCamPos.z + limitZ.y)
             );
 
             lastMousePos = Input.mousePosition;
