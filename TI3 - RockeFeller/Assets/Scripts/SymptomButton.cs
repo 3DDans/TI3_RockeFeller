@@ -7,17 +7,17 @@ public class SymptomButton : MonoBehaviour
 
     private MedicalGameManager manager;
     private bool selected = false;
-    private Image image;
+    private Image image; //cortar pra botar feedback de botão na ui
 
     void Start()
     {
         manager = FindFirstObjectByType<MedicalGameManager>();
-        image = GetComponent<Image>();
+        image = GetComponent<Image>(); //cortar pra botar feedback de botão na ui
     }
     public void SetSelected(bool value)
     {
         selected = value;
-        image.color = selected ? Color.green : Color.white;
+        image.color = selected ? Color.green : Color.white; //cortar pra botar feedback de botão na ui
     }
 
     public void OnClick()
@@ -26,7 +26,7 @@ public class SymptomButton : MonoBehaviour
 
         manager.ToggleSymptom(symptomName);
 
-        image.color = selected ? Color.green : Color.white;
+        image.color = selected ? Color.green : Color.white; //cortar pra botar feedback de botão na ui
 
         Debug.Log("Clicou: " + symptomName);
     }

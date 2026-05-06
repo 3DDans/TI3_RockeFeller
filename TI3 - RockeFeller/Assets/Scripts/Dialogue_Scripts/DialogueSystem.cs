@@ -45,7 +45,7 @@ public class DialogueSystem : MonoBehaviour
     
         if (choicePanel.activeSelf) return;
 
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) //botão p/ pular diálogo?
         {
             if (isTyping)
             {

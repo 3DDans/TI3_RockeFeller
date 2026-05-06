@@ -1,0 +1,303 @@
+using System.Collections;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class DialogueSystem : MonoBehaviour
+{
+    [Header("UI")]
+    public TextMeshProUGUI dialogueText;
+
+    [Header("Choices UI")]
+    public GameObject choicePanel;
+    public Button[] choiceButtons;
+    public TextMeshProUGUI[] choiceTexts;
+
+    [Header("Config")]
+    public float typingSpeed = 0.05f;
+
+    [Header("Dialogue")]
+    public DialogueData dialogueData;
+
+    private DialogueLine[] dialogue;
+    private int currentIndex = 0;
+    private bool isTyping = false;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip defaultBeep;
+    public float pitchMin = 0.9f;
+    public float pitchMax = 1.1f;
+    public AudioClip choiceOpenSound;
+    
+    [Header("Character UI")]
+    public Image characterImage;
+    public CanvasGroup characterGroup;
+    public float characterFadeDuration = 0.3f;
+
+    [Header("UI Box")]
+    public CanvasGroup textBoxGroup;
+
+    [Header("Fade Settings")]
+    public float fadeDuration = 0.5f;
+
+    [Header("Scene")]
+    public string nextSceneName; 
+
+    void Start()
+    {
+        choicePanel.SetActive(false);
+        textBoxGroup.alpha = 0f;
+
+        StartCoroutine(StartDialogueWithFade());
+    }
+
+    IEnumerator StartDialogueWithFade()
+    {
+        yield return new WaitForSeconds(1f);
+
+        yield return StartCoroutine(FadeIn());
+
+        dialogue = dialogueData.lines;
+        currentIndex = 0;
+
+        StartCoroutine(TypeLine());
+    }
+
+    IEnumerator FadeIn()
+    {
+        float time = 0f;
+
+        textBoxGroup.alpha = 0f;
+        textBoxGroup.gameObject.SetActive(true);
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            textBoxGroup.alpha = time / fadeDuration;
+            yield return null;
+        }
+
+        textBoxGroup.alpha = 1f;
+    }
+
+    IEnumerator FadeCharacterIn(Sprite sprite)
+    {
+        characterImage.sprite = sprite;
+        characterGroup.alpha = 0f;
+        characterGroup.gameObject.SetActive(true);
+
+        float time = 0f;
+
+        while (time < characterFadeDuration)
+        {
+            time += Time.deltaTime;
+            characterGroup.alpha = time / characterFadeDuration;
+            yield return null;
+        }
+
+        characterGroup.alpha = 1f;
+    }
+
+    IEnumerator FadeOut()
+    {
+        float time = 0f;
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            textBoxGroup.alpha = 1f - (time / fadeDuration);
+            yield return null;
+        }
+
+        textBoxGroup.alpha = 0f;
+
+        dialogueText.text = "";
+
+        textBoxGroup.gameObject.SetActive(false);
+    }
+
+    IEnumerator FadeCharacterOut()
+    {
+        float time = 0f;
+
+        while (time < characterFadeDuration)
+        {
+            time += Time.deltaTime;
+            characterGroup.alpha = 1f - (time / characterFadeDuration);
+            yield return null;
+        }
+
+        characterGroup.alpha = 0f;
+        characterGroup.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (choicePanel.activeSelf) return;
+
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if (isTyping)
+            {
+                StopAllCoroutines();
+                dialogueText.text = dialogue[currentIndex].text;
+                isTyping = false;
+            }
+            else
+            {
+                NextLine();
+            }
+        }
+    }
+
+   IEnumerator TypeLine()
+    {
+        isTyping = true;
+        dialogueText.text = "";
+
+        DialogueLine line = dialogue[currentIndex];
+
+        if (line.showCharacter && line.characterSprite != null)
+        {
+            StartCoroutine(FadeCharacterIn(line.characterSprite));
+        }
+        else
+        {
+            StartCoroutine(FadeCharacterOut());
+        }
+
+        AudioClip beep = line.customBeep != null ? line.customBeep : defaultBeep;
+
+        foreach (char c in line.text)
+        {
+            dialogueText.text += c;
+
+            if (line.glitchText && Random.value < line.glitchChance)
+            {
+                dialogueText.text += RandomChar();
+            }
+
+            if (c != ' ' && beep != null)
+            {
+                audioSource.pitch = Random.Range(line.pitchMin, line.pitchMax);
+                audioSource.PlayOneShot(beep);
+            }
+
+            float speed = line.overrideTypingSpeed ? line.typingSpeed : typingSpeed;
+            yield return new WaitForSeconds(speed);
+        }
+
+        isTyping = false;
+
+        if (line.unstableText)
+        {
+            yield return new WaitForSeconds(0.2f);
+            StartCoroutine(ShuffleText());
+        }
+
+        if (line.hasChoice)
+        {
+            ShowChoices(line);
+        }
+    }
+
+    IEnumerator ShuffleText()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            dialogueText.text = Scramble(dialogueText.text);
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    string Scramble(string text)
+    {
+        char[] arr = text.ToCharArray();
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            int rand = Random.Range(0, arr.Length);
+            (arr[i], arr[rand]) = (arr[rand], arr[i]);
+        }
+
+        return new string(arr);
+    }
+
+    char RandomChar()
+    {
+        string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        return chars[Random.Range(0, chars.Length)];
+    }
+
+    void NextLine()
+    {
+        if (currentIndex >= dialogue.Length) return;
+
+        if (dialogue[currentIndex].isEnd)
+        {
+            currentIndex = dialogue[currentIndex].continueIndex;
+        }
+        else
+        {
+            currentIndex++;
+        }
+
+        if (currentIndex < dialogue.Length)
+        {
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            StartCoroutine(EndDialogue());
+        }
+    }
+
+    void ShowChoices(DialogueLine line)
+    {
+        choicePanel.SetActive(true);
+
+        if (choiceOpenSound != null)
+        {
+            audioSource.PlayOneShot(choiceOpenSound);
+        }
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            if (i < line.choices.Length)
+            {
+                choiceButtons[i].gameObject.SetActive(true);
+                choiceTexts[i].text = line.choices[i].choiceText;
+
+                int index = i;
+                choiceButtons[i].onClick.RemoveAllListeners();
+                choiceButtons[i].onClick.AddListener(() => Choose(index));
+            }
+            else
+            {
+                choiceButtons[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    void Choose(int choiceIndex)
+    {
+        choicePanel.SetActive(false);
+
+        currentIndex = dialogue[currentIndex].choices[choiceIndex].nextLineIndex;
+        StartCoroutine(TypeLine());
+    }
+
+    IEnumerator EndDialogue()
+    {
+        yield return new WaitForSeconds(1f);
+
+        yield return StartCoroutine(FadeOut());
+
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+    }
+}

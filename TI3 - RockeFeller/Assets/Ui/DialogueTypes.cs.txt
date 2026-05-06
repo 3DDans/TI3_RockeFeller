@@ -1,0 +1,39 @@
+using System;
+using UnityEngine;
+
+[System.Serializable]
+public class Choice
+{
+    public string choiceText;
+    public int nextLineIndex;
+}
+
+[System.Serializable]
+public class DialogueLine
+{
+    public string text;
+
+    [Header("Audio")]
+    public AudioClip customBeep;
+    public float pitchMin = 1f;
+    public float pitchMax = 1f;
+
+    [Header("Character")]
+    public Sprite characterSprite;
+    public bool showCharacter;
+
+    [Header("Effects")]
+    public bool glitchText;
+    public float glitchChance = 0.1f;
+    public bool unstableText;
+
+    [Header("Typing")]
+    public bool overrideTypingSpeed;
+    public float typingSpeed = 0.05f;
+
+    public bool hasChoice;
+    public Choice[] choices;
+
+    public bool isEnd;
+    public int continueIndex;
+}

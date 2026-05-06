@@ -15,8 +15,8 @@ public class ExaminationArea : MonoBehaviour
     public AreaType areaType;
 
     [Header("UI")]
-    public GameObject scanPanel;
-    public Slider scanSlider;
+    public GameObject scanPanel; 
+    public Slider scanSlider; 
     public TextMeshProUGUI statusText;
 
     public GameObject resultPanel;
@@ -64,7 +64,7 @@ public class ExaminationArea : MonoBehaviour
             if (hit.collider.gameObject == gameObject)
             {
                 isHovering = true;
-                meshRenderer.material.color = highlightColor;
+                meshRenderer.material.color = highlightColor; //talvez trocar pra ui OU outline: Substitui slider de scan junto
                 return;
             }
         }
@@ -77,7 +77,7 @@ public class ExaminationArea : MonoBehaviour
     {
         if (!isHovering) return;
 
-        // COME�A O SCAN
+        // COME�A O SCAN
         if (Input.GetMouseButtonDown(0) && !isScanning)
         {
             StartScan();
@@ -110,14 +110,16 @@ public class ExaminationArea : MonoBehaviour
         currentTime = 0f;
 
         scanPanel.SetActive(true);
-        statusText.text = "Analyzing...";
+        statusText.text = "Analyzing..."; //cortar pra poder mudar no inspector
         scanSlider.value = 0f;
+        //sfx scan sendo feito (duração random entre 3f e 7f)
     }
 
     void FinishScan()
     {
         isScanning = false;
         scanPanel.SetActive(false);
+        //sfx scan completo
 
         ShowResult();
     }
@@ -126,6 +128,7 @@ public class ExaminationArea : MonoBehaviour
     {
         isScanning = false;
         scanPanel.SetActive(false);
+        //sfx scan cancelado
     }
 
     void ShowResult()
@@ -153,6 +156,7 @@ public class ExaminationArea : MonoBehaviour
     IEnumerator HideResult()
     {
         yield return new WaitForSeconds(6f);
+        //sfx tempo de espera? tipo musica de elevador sla
         resultPanel.SetActive(false);
     }
 }
