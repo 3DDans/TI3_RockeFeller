@@ -16,13 +16,12 @@ public class NPCInteraction : MonoBehaviour
     public Dialogue firstDialogue;
     public Dialogue beforePuzzleDialogue;
     public Dialogue afterPuzzleDialogue;
-   
 
     [Header("Puzzle")]
     public GameObject puzzleUI;
     public GameObject playerVs;
 
-   [Header("Type")]
+    [Header("Type")]
     public NPCType npcType;
 
     [Header("Quest Link")]
@@ -172,9 +171,8 @@ public class NPCInteraction : MonoBehaviour
     {
         if (puzzleUI != null)
             puzzleUI.SetActive(false);
-        
+
         EndInteraction();
-        
     }
 
     // ================= GERAL =================
@@ -186,7 +184,9 @@ public class NPCInteraction : MonoBehaviour
         dialogueCamera.Priority = 5;
         minigameCamera.Priority = 5;
         mainCamera.Priority = 10;
+
         playerVs.SetActive(true);
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

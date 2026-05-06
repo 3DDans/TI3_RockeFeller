@@ -20,6 +20,7 @@ public class DialogueSystem : MonoBehaviour
     private Dialogue currentDialogue;
     private int index;
     private bool isTyping;
+    private int savedIndex = 0;
 
     public System.Action onDialogueEnd;
 
@@ -28,10 +29,12 @@ public class DialogueSystem : MonoBehaviour
     public void StartDialogue(Dialogue data)
     {
         currentDialogue = data;
-        index = 0;
-        choicePanel.SetActive(false);
 
+        index = savedIndex; 
+
+        choicePanel.SetActive(false);
         dialoguePanel.SetActive(true);
+
         ShowLine();
     }
 
@@ -89,11 +92,11 @@ public class DialogueSystem : MonoBehaviour
 
     void NextLine()
     {
-        
         if (currentDialogue.lines[index].hasChoices)
             return;
 
         index++;
+        savedIndex = index; 
 
         if (index >= currentDialogue.lines.Length || currentDialogue.lines[index - 1].isEnd)
         {
@@ -140,7 +143,8 @@ public class DialogueSystem : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
 
-   
+        savedIndex = 0; 
+
         onDialogueEnd?.Invoke();
     }
 }
