@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using TMPro;
 using System.Collections;
 
@@ -18,9 +17,8 @@ public class TabletController : MonoBehaviour
 
     void Start()
     {
-        tabletUI.SetActive(false);
-        Cursor.lockState = isTabletOpen ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = isTabletOpen;
+        // Cursor.lockState = isTabletOpen ? CursorLockMode.None : CursorLockMode.Locked;
+        // Cursor.visible = isTabletOpen;
         if (Screens.Length > 0)
         Screens[0].SetActive(true);
     }
