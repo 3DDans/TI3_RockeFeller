@@ -2,11 +2,12 @@ using System;
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TabletController : MonoBehaviour
 
 {
-    [Tooltip("0 = Menu l\n1 = Tela vermelha\n2 = Tela verde\n3 = Tela amarela")]
+    [Tooltip("0 = Menu l\n1 = Tutorial\n2 = Mapa\n3 = Créditos\n4 = Stats/About")]
    
 
     public GameObject[] Screens;
@@ -77,7 +78,10 @@ public class TabletController : MonoBehaviour
 
         isRunningAnim = false;
     }
-
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Punkofeller");
+    }
 
 }
 
