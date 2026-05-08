@@ -7,19 +7,18 @@ using UnityEngine.SceneManagement;
 public class TabletController : MonoBehaviour
 
 {
-    [Tooltip("0 = Menu l\n1 = Tutorial\n2 = Mapa\n3 = Créditos\n4 = Stats/About")]
-   
-
     public GameObject[] Screens;
    public int actualScreen = 0;
    public TextMeshProUGUI hours;
    public GameObject tabletUI;
-    private bool isTabletOpen = false;
+    private bool isTabletOpen;
 
     void Start()
     {
-        // Cursor.lockState = isTabletOpen ? CursorLockMode.None : CursorLockMode.Locked;
-        // Cursor.visible = isTabletOpen;
+        isTabletOpen = false;
+        tabletUI.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         if (Screens.Length > 0)
         Screens[0].SetActive(true);
     }
@@ -27,32 +26,33 @@ public class TabletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Keyboard.current.escapeKey.wasPressedThisFrame)
-        // {
-        //     ToggleTablet();
-        // }
-
         hours.text = DateTime.Now.ToString("hh:mm tt");
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("Escape key pressed. Toggling tablet.");
             ToggleTablet();
         }
     }
    
     public void ToggleTablet()
     {
+        Debug.Log("Toggling tablet. Current state: " + (isTabletOpen ? "Open" : "Closed"));
         isTabletOpen = !isTabletOpen;
+        Debug.Log("New tablet state: " + (isTabletOpen ? "Open" : "Closed"));
         tabletUI.SetActive(isTabletOpen);
+        Debug.Log("Tablet UI active: " + tabletUI.activeSelf);
+        Cursor.visible = isTabletOpen;
+        Cursor.lockState = isTabletOpen
+        ? CursorLockMode.None
+        : CursorLockMode.Locked;
 
-        if (!isTabletOpen)
-        {
-            Menu();
-        }
+        Time.timeScale = isTabletOpen ? 0f : 1f;
     }
     
     public void Menu()
     {
         Screens[actualScreen].SetActive(false);
+        actualScreen = 0;
         Screens[0].SetActive(true);
 
     }
@@ -61,22 +61,18 @@ public class TabletController : MonoBehaviour
     public void OpenScreen(int index)
     {
         if (isRunningAnim) return;
-
         StartCoroutine(OpenScreenRoutine(index));
     }
 
     IEnumerator OpenScreenRoutine(int index)
     {
         isRunningAnim = true;
-
-        yield return new WaitForSeconds(0.7f);
-
+        yield return new WaitForSecondsRealtime(0.7f);
+        Screens[actualScreen].SetActive(false);
         actualScreen = index;
-
-        Screens[index].SetActive(true);
-        Screens[0].SetActive(false);
-
+        Screens[actualScreen].SetActive(true);
         isRunningAnim = false;
+        Debug.Log("Screen " + index + " opened.");
     }
     public void MainMenu()
     {
