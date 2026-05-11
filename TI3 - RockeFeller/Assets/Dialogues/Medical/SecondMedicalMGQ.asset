@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: FinalMed
+  m_Name: SecondMedicalMGQ
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Great Job!
+  - text: "E ent\xE3o? J\xE1 analisou o paciente?"
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "Preencha a ficha com aten\xE7\xE3o. Um detalhe errado pode complicar o
+      diagn\xF3stico."
     hasChoices: 0
     choices: []
     isEnd: 1

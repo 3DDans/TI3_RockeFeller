@@ -3,7 +3,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class MedicalGameManager : MonoBehaviour
+public class MedicalGameManager : MinigameBase
 {
     public PatientData currentPatient;
 
@@ -11,14 +11,17 @@ public class MedicalGameManager : MonoBehaviour
 
     public TextMeshProUGUI feedbackText;
 
-    public NPCInteraction npc;
+   
     public GameObject medicalUI;
     public SymptomButton[] allButtons;
     public TextMeshProUGUI patientNameText;
     void Start()
     {
+        
         patientNameText.text = currentPatient.patientName;
+        
     }
+
 
     public void ToggleSymptom(string symptom)
     {
@@ -96,7 +99,7 @@ public class MedicalGameManager : MonoBehaviour
     {
         medicalUI.SetActive(false);
 
-        npc.CompletePuzzle();
+        CompleteMinigame();
     }
 
     void UpdateButtonsVisual()
