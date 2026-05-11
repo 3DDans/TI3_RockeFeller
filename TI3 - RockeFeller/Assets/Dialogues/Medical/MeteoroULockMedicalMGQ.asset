@@ -10,34 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: Teste1
+  m_Name: MeteoroULockMedicalMGQ
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Hello! I see it's your first time here. Let's check some patients.
-    hasChoices: 0
-    choices: []
-    isEnd: 1
-  - text: "Esse \xE9 um teste"
+  - text: Obrigado pela ajuda.
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: Vamos testa o primeiro puzzle
-    hasChoices: 1
-    choices:
-    - text: Sim
-      nextIndex: 3
-    - text: "N\xE3o"
-      nextIndex: 4
-    isEnd: 0
-  - text: Vamos nessa
+  - text: "Os pacientes pararam de aparecer de repente... isso \xE9 estranho."
     hasChoices: 0
     choices: []
-    isEnd: 1
-  - text: "Voc\xEA n\xE3o tem op\xE7\xE3o, entendeu"
-    hasChoices: 1
-    choices:
-    - text: Sim
-      nextIndex: 3
-    - text: Sim
-      nextIndex: 3
+    isEnd: 0
+  - text: Ouvi dizer que aconteceu alguma coisa na ala espacial do campus.
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "Talvez voc\xEA encontre respostas l\xE1."
+    hasChoices: 0
+    choices: []
     isEnd: 1

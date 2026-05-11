@@ -10,34 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: Teste2
+  m_Name: PosMGBiologiaMGQ
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Hello again!
-    hasChoices: 0
-    choices: []
-    isEnd: 1
-  - text: "Voc\xEA ainda n\xE3o Completou o desafio"
+  - text: "Ent\xE3o eu estava certa\u2026"
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: "Est\xE1 com dificuldade?"
-    hasChoices: 0
-    choices:
-    - text: Sim
-      nextIndex: 3
-    - text: "N\xE3o"
-      nextIndex: 4
-    isEnd: 0
-  - text: ....
+  - text: "Aquelas part\xEDculas n\xE3o fazem parte da planta."
     hasChoices: 0
     choices: []
-    isEnd: 1
-  - text: "Enta\xF5 fa\xE7a o desafio"
+    isEnd: 0
+  - text: "Elas est\xE3o se camuflando entre as c\xE9lulas saud\xE1veis."
     hasChoices: 0
-    choices:
-    - text: Sim
-      nextIndex: 3
-    - text: Sim
-      nextIndex: 3
+    choices: []
+    isEnd: 0
+  - text: "Isso n\xE3o \xE9 algo natural."
+    hasChoices: 0
+    choices: []
     isEnd: 1
