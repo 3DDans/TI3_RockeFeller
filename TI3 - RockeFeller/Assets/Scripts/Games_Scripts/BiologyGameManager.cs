@@ -1,16 +1,15 @@
 using UnityEngine;
 using TMPro;
 
-public class BiologyGameManager : MonoBehaviour
+public class BiologyGameManager : MinigameBase
 {
     public TextMeshProUGUI feedbackText;
     public GameObject gameUI;
 
-    public NPCInteraction npc;
-
     public void CorrectChoice()
     {
         feedbackText.text = "Organismo identificado!";
+
         Invoke(nameof(EndGame), 1.5f);
     }
 
@@ -22,6 +21,7 @@ public class BiologyGameManager : MonoBehaviour
     void EndGame()
     {
         gameUI.SetActive(false);
-        npc.CompletePuzzle();
+
+        CompleteMinigame();
     }
 }

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
+  m_Name: Phase2MEdicalMGQ
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - text: "Voc\xEA voltou."
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "Depois do que aconteceu, ningu\xE9m mais apareceu com aqueles sintomas."
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "Se aquilo realmente veio do meteoro... ent\xE3o talvez o pior tenha passado"
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "Espero que voc\xEAs consigam resolver isso de vez."
+    hasChoices: 0
+    choices: []
+    isEnd: 1

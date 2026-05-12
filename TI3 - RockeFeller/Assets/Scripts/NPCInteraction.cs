@@ -1,5 +1,6 @@
-using UnityEngine;
+using System.Collections.Generic;
 using Unity.Cinemachine;
+using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
 {
@@ -12,25 +13,26 @@ public class NPCInteraction : MonoBehaviour
     public CinemachineCamera minigameCamera;
 
     [Header("Dialogue")]
+    public List<DialogueEntry> dialogues = new();
     public DialogueSystem dialogueSystem;
-    public Dialogue firstDialogue;
-    public Dialogue beforePuzzleDialogue;
-    public Dialogue afterPuzzleDialogue;
+
 
     [Header("Puzzle")]
     public GameObject puzzleUI;
     public GameObject playerVs;
 
     [Header("Type")]
-    public NPCType npcType;
+    public NPCRole npcRole;
 
     [Header("Quest Link")]
     public NPCInteraction linkedMinigameNPC;
+    public MinigameID minigameID;
 
     private bool playerInRange = false;
+    private bool hasTalked = false;
     private ThirdPersonMovement player;
 
-    private NPCState currentState = NPCState.FirstTime;
+
 
     private bool questUnlocked = false;
     private bool puzzleCompleted = false;
@@ -39,7 +41,7 @@ public class NPCInteraction : MonoBehaviour
     {
         player = FindFirstObjectByType<ThirdPersonMovement>();
 
-        if (npcType == NPCType.Minigame)
+        if (npcRole == NPCRole.Minigame)
         {
             interactionUI.SetActive(false);
         }
@@ -55,15 +57,22 @@ public class NPCInteraction : MonoBehaviour
 
     void Interact()
     {
-        if (npcType == NPCType.QuestGiver)
+        switch (npcRole)
         {
-            StartDialogue();
-        }
-        else if (npcType == NPCType.Minigame)
-        {
-            if (!questUnlocked) return;
+            case NPCRole.Ambient:
+            case NPCRole.BuildingHint:
+            case NPCRole.QuestGiver:
 
-            StartMinigame();
+                StartDialogue();
+                break;
+
+            case NPCRole.Minigame:
+
+                if (!GameProgressManager.Instance.IsUnlocked(minigameID))
+                    return;
+
+                StartMinigame();
+                break;
         }
     }
 
@@ -87,56 +96,79 @@ public class NPCInteraction : MonoBehaviour
 
     Dialogue GetCurrentDialogue()
     {
-        switch (currentState)
+        DialogueStage currentStage = GetCurrentDialogueStage();
+
+        foreach (var entry in dialogues)
         {
-            case NPCState.FirstTime:
-                return firstDialogue;
-
-            case NPCState.BeforePuzzle:
-                return beforePuzzleDialogue;
-
-            case NPCState.AfterPuzzle:
-                return afterPuzzleDialogue;
+            if (entry.stage == currentStage)
+            {
+                return entry.dialogue;
+            }
         }
 
-        return firstDialogue;
+        return null;
+    }
+    DialogueStage GetCurrentDialogueStage()
+    {
+        GameProgressManager progress = GameProgressManager.Instance;
+
+        // Pós jogo
+        if (progress.gameFinished)
+        {
+            return DialogueStage.Finished;
+        }
+
+        // Final do jogo
+        if (progress.finalStageUnlocked)
+        {
+            return DialogueStage.SecondPhase;
+        }
+
+        // Segunda fase
+        if (progress.meteorUnlocked)
+        {
+            return DialogueStage.MeteorUnlocked;
+        }
+
+        // Pós minigame
+        if (
+            minigameID != MinigameID.None &&
+            progress.IsCompleted(minigameID)
+        )
+        {
+            return DialogueStage.AfterPuzzle;
+        }
+
+        // Primeira conversa
+        if (!hasTalked)
+        {
+            return DialogueStage.FirstTime;
+        }
+
+        // Conversas repetidas
+        return DialogueStage.BeforePuzzle;
     }
 
     void OnDialogueEnd()
     {
-        if (npcType == NPCType.QuestGiver)
+        hasTalked = true;
+        if (npcRole == NPCRole.QuestGiver)
         {
-            if (currentState == NPCState.FirstTime)
-            {
-                currentState = NPCState.BeforePuzzle;
-                UnlockMinigameNPC();
-                EndInteraction();
-                return;
-            }
-
-            if (currentState == NPCState.BeforePuzzle)
-            {
-                EndInteraction();
-                return;
-            }
-
-            if (currentState == NPCState.AfterPuzzle)
-            {
-                EndInteraction();
-                return;
-            }
+            UnlockMinigameNPC();
         }
+        
+        EndInteraction();
     }
 
     void UnlockMinigameNPC()
     {
+        GameProgressManager.Instance.UnlockMinigame(minigameID);
+
         if (linkedMinigameNPC != null)
         {
-            linkedMinigameNPC.questUnlocked = true;
             linkedMinigameNPC.EnableInteraction();
         }
     }
-
     // ================= MINIGAME =================
 
     void StartMinigame()
@@ -153,16 +185,11 @@ public class NPCInteraction : MonoBehaviour
         if (puzzleUI != null)
             puzzleUI.SetActive(true);
     }
-
     public void CompletePuzzle()
     {
         puzzleCompleted = true;
 
-        // Atualiza estado do NPC que deu a missão
-        if (linkedMinigameNPC != null)
-        {
-            linkedMinigameNPC.currentState = NPCState.AfterPuzzle;
-        }
+        GameProgressManager.Instance.CompleteMinigame(minigameID);
 
         EndMinigame();
     }
@@ -193,8 +220,11 @@ public class NPCInteraction : MonoBehaviour
 
     void EnableInteraction()
     {
-        if (playerInRange)
-            interactionUI.SetActive(true);
+        if(playerInRange && GameProgressManager.Instance.IsUnlocked(minigameID))
+        {
+        interactionUI.SetActive(true);
+        }
+           
     }
 
     private void OnTriggerEnter(Collider other)
@@ -203,13 +233,23 @@ public class NPCInteraction : MonoBehaviour
 
         playerInRange = true;
 
-        if (npcType == NPCType.QuestGiver)
+        switch (npcRole)
         {
-            interactionUI.SetActive(true);
-        }
-        else if (npcType == NPCType.Minigame && questUnlocked)
-        {
-            interactionUI.SetActive(true);
+            case NPCRole.Ambient:
+            case NPCRole.BuildingHint:
+            case NPCRole.QuestGiver:
+
+                interactionUI.SetActive(true);
+                break;
+
+            case NPCRole.Minigame:
+
+                if (GameProgressManager.Instance.IsUnlocked(minigameID))
+                {
+                    interactionUI.SetActive(true);
+                }
+
+                break;
         }
     }
 
@@ -222,15 +262,11 @@ public class NPCInteraction : MonoBehaviour
     }
 }
 
-public enum NPCState
-{
-    FirstTime,
-    BeforePuzzle,
-    AfterPuzzle
-}
 
-public enum NPCType
+public enum NPCRole
 {
+    Ambient,
+    BuildingHint,
     QuestGiver,
     Minigame
 }
