@@ -30,6 +30,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Movement()
     {
+        // Leitura de Input e Direcao Relativa a Camera
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -47,11 +48,13 @@ public class ThirdPersonMovement : MonoBehaviour
 
         Vector3 inputDir = (camForward * vertical + camRight * horizontal);
 
+        // Rotacao do Personagem
         if (inputDir.magnitude > 0.1f){
             Quaternion targetRotation = Quaternion.LookRotation(inputDir);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
 
+        // Movimento Vertical (Pulo e Gravidade)
         if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
