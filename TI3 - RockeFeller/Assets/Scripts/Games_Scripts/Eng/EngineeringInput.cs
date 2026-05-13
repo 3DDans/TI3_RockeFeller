@@ -29,7 +29,7 @@ public class EngineeringInput : MonoBehaviour
         {
             Debug.Log("Acertou: " + hit.collider.name);
 
-            RoverPart part = hit.collider.GetComponentInParent<RoverPart>();
+            BuildPart part = hit.collider.GetComponentInParent<BuildPart>();
 
             if (part != null)
             {
@@ -37,7 +37,7 @@ public class EngineeringInput : MonoBehaviour
                 return;
             }
 
-            RoverSlot slot = hit.collider.GetComponent<RoverSlot>();
+            BuildSlot slot = hit.collider.GetComponent<BuildSlot>();
 
             if (slot != null)
             {

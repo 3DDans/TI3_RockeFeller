@@ -34,8 +34,6 @@ public class NPCInteraction : MonoBehaviour
 
 
 
-    private bool questUnlocked = false;
-    private bool puzzleCompleted = false;
 
     void Start()
     {
@@ -84,6 +82,7 @@ public class NPCInteraction : MonoBehaviour
 
         dialogueCamera.Priority = 20;
         mainCamera.Priority = 10;
+        interactionUI.SetActive(false);
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -92,6 +91,7 @@ public class NPCInteraction : MonoBehaviour
 
         dialogueSystem.StartDialogue(dialogueToUse);
         dialogueSystem.onDialogueEnd = OnDialogueEnd;
+
     }
 
     Dialogue GetCurrentDialogue()
@@ -156,7 +156,7 @@ public class NPCInteraction : MonoBehaviour
         {
             UnlockMinigameNPC();
         }
-        
+        interactionUI.SetActive(true);
         EndInteraction();
     }
 
@@ -178,16 +178,17 @@ public class NPCInteraction : MonoBehaviour
 
         minigameCamera.Priority = 20;
         mainCamera.Priority = 10;
+        interactionUI.SetActive(false);
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
         if (puzzleUI != null)
-            puzzleUI.SetActive(true);
+            puzzleUI.SetActive(false);
     }
     public void CompletePuzzle()
     {
-        puzzleCompleted = true;
+       
 
         GameProgressManager.Instance.CompleteMinigame(minigameID);
 
@@ -198,7 +199,7 @@ public class NPCInteraction : MonoBehaviour
     {
         if (puzzleUI != null)
             puzzleUI.SetActive(false);
-
+        interactionUI.SetActive(true);
         EndInteraction();
     }
 

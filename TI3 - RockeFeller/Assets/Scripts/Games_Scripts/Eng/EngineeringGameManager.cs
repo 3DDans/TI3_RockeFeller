@@ -5,33 +5,18 @@ using UnityEngine;
 
 public class EngineeringGameManager : MonoBehaviour
 {
-    private RoverPart selectedPart; 
+    private BuildPart selectedPart; 
     public TextMeshProUGUI feedbackText;
-    public List<RoverSlot> allSlots;
-    public RoverPart[] allParts;
+    public List<BuildSlot> allSlots;
+    public BuildPart[] allParts;
 
-    public void TestRover()
+    public bool IsAssemblyComplete()
     {
-        int wheels = allParts.Count(p => p.type == PartType.Wheel && p.isPlaced);
-
-        if (wheels == 0)
-        {
-            feedbackText.text = "Sem rodas, não se move!";
-            return;
-        }
-
-        if (wheels == 1)
-        {
-            feedbackText.text = "Rover instável!";
-        }
-        else
-        {
-            feedbackText.text = "Rover funcionando!";
-        }
+        return allParts.All(p => p.isPlaced);
     }
 
     // ?? Quando o player clica numa peça
-    public void SelectPart(RoverPart part)
+    public void SelectPart(BuildPart part)
     {
         if (selectedPart != null)
         {
@@ -50,7 +35,7 @@ public class EngineeringGameManager : MonoBehaviour
     }
 
     // ?? Quando clicar em slot (vamos usar depois)
-    public void TryPlace(RoverSlot slot)
+    public void TryPlace(BuildSlot slot)
     {
         if (selectedPart == null) return;
 
