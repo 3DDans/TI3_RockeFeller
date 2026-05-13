@@ -17,7 +17,7 @@ public class SymptomButton : MonoBehaviour
         toggle.onValueChanged.AddListener(OnToggleChanged);
     }
 
-    void OnToggleChanged(bool isOn)
+    void OnToggleChanged(bool isOn) 
     {
         manager.SetSymptom(symptomName, isOn);
     }
