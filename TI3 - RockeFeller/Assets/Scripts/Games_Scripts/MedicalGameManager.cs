@@ -23,18 +23,20 @@ public class MedicalGameManager : MinigameBase
     }
 
 
-    public void ToggleSymptom(string symptom)
+    public void SetSymptom(string symptom, bool active)
     {
-        if (selectedSymptoms.Contains(symptom))
+        if (active)
         {
-            selectedSymptoms.Remove(symptom);
+            if (!selectedSymptoms.Contains(symptom))
+                selectedSymptoms.Add(symptom);
         }
         else
         {
-            selectedSymptoms.Add(symptom);
+            selectedSymptoms.Remove(symptom);
         }
 
         Debug.Log("Lista atual:");
+
         foreach (var s in selectedSymptoms)
         {
             Debug.Log(s);
