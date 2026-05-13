@@ -6,28 +6,24 @@ public class SymptomButton : MonoBehaviour
     public string symptomName;
 
     private MedicalGameManager manager;
-    private bool selected = false;
-    private Image image;
+    private Toggle toggle;
 
     void Start()
     {
         manager = FindFirstObjectByType<MedicalGameManager>();
-        image = GetComponent<Image>();
+
+        toggle = GetComponent<Toggle>();
+
+        toggle.onValueChanged.AddListener(OnToggleChanged);
     }
+
+    void OnToggleChanged(bool isOn)
+    {
+        manager.SetSymptom(symptomName, isOn);
+    }
+
     public void SetSelected(bool value)
     {
-        selected = value;
-        image.color = selected ? Color.green : Color.white;
-    }
-
-    public void OnClick()
-    {
-        selected = !selected;
-
-        manager.ToggleSymptom(symptomName);
-
-        image.color = selected ? Color.green : Color.white;
-
-        Debug.Log("Clicou: " + symptomName);
+        toggle.isOn = value;
     }
 }
