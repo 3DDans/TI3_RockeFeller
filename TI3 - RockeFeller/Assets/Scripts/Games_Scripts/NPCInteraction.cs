@@ -184,7 +184,7 @@ public class NPCInteraction : MonoBehaviour
         Cursor.visible = true;
 
         if (puzzleUI != null)
-            puzzleUI.SetActive(false);
+            puzzleUI.SetActive(true);
     }
     public void CompletePuzzle()
     {
