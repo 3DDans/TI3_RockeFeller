@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -294,9 +294,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (23)
@@ -358,9 +366,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (20)
@@ -476,9 +492,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (18)
@@ -721,9 +745,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (31)
@@ -1150,9 +1182,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (40)
@@ -1344,9 +1384,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (7)
@@ -1943,9 +1991,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (22)
@@ -2150,9 +2206,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (14)
@@ -2291,9 +2355,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (4)
@@ -3186,9 +3258,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (30)
@@ -3857,9 +3937,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (53)
@@ -3926,9 +4014,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (19)
@@ -4235,9 +4331,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (8)
@@ -4516,9 +4620,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (4)
@@ -5189,9 +5301,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (16)
@@ -5254,9 +5374,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (38)
@@ -5692,9 +5820,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (52)
@@ -6181,9 +6317,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (3)
@@ -6250,9 +6394,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (11)
@@ -6566,9 +6718,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (25)
@@ -6635,9 +6795,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (44)
@@ -7084,9 +7252,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (43)
@@ -7322,9 +7498,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (12)
@@ -7723,9 +7907,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (10)
@@ -8164,9 +8356,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (47)
@@ -8430,9 +8630,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (34)
@@ -9349,9 +9557,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (23)
@@ -9414,9 +9630,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (3)
@@ -11315,9 +11539,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (26)
@@ -11389,9 +11621,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (31)
@@ -11674,9 +11914,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (45)
@@ -11976,9 +12224,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (35)
@@ -12204,9 +12460,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (19)
@@ -12568,9 +12832,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (7)
@@ -13016,9 +13288,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (20)
@@ -13357,9 +13637,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (9)
@@ -13892,9 +14180,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (22)
@@ -14069,9 +14365,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (41)
@@ -14227,9 +14531,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (50)
@@ -14735,9 +15047,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (29)
@@ -14874,9 +15194,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (21)
@@ -15258,9 +15586,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (51)
@@ -15914,9 +16250,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (4)
@@ -16424,9 +16768,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (34)
@@ -16851,9 +17203,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (28)
@@ -17883,9 +18243,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (19)
@@ -18042,9 +18410,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (27)
@@ -18155,9 +18531,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (13)
@@ -18348,9 +18732,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (51)
@@ -18534,9 +18926,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (33)
@@ -18608,9 +19008,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (37)
@@ -18860,9 +19268,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (32)
@@ -19371,9 +19787,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (24)
@@ -19711,9 +20135,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (46)
@@ -20180,9 +20612,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (27)
@@ -20248,9 +20688,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (49)
@@ -20383,9 +20831,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (39)
@@ -20622,9 +21078,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (9)
@@ -21083,9 +21547,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (10)
@@ -22554,9 +23026,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (28)
@@ -22633,9 +23113,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (50)
@@ -23909,9 +24397,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (24)
@@ -24016,9 +24512,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (21)
@@ -24451,9 +24955,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro
@@ -24516,9 +25028,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (37)
@@ -24541,9 +25061,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1542420441}
     m_Modifications:
     - target: {fileID: -9132587299089746191, guid: e386c784f00bb494cadb4fbe72be7955, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -9132587299089746191, guid: e386c784f00bb494cadb4fbe72be7955, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 7282429bf18a4be4f816bd03d8d699b1, type: 2}
+    - target: {fileID: -9132587299089746191, guid: e386c784f00bb494cadb4fbe72be7955, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: -8679921383154817045, guid: e386c784f00bb494cadb4fbe72be7955, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -24923,9 +25451,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (18)
@@ -25335,9 +25871,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (32)
@@ -25807,9 +26351,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (41)
@@ -26597,9 +27149,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (26)
@@ -26934,9 +27494,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (43)
@@ -27488,9 +28056,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (40)
@@ -27673,9 +28249,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (13)
@@ -28067,9 +28651,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (12)
@@ -28136,9 +28728,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (5)
@@ -28205,9 +28805,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (8)
@@ -28284,9 +28892,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (26)
@@ -28388,9 +29004,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (49)
@@ -29136,9 +29760,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (7)
@@ -29759,9 +30391,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (36)
@@ -30906,8 +31546,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.7028302, g: 1, b: 0.9938648, a: 1}
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -30916,10 +31556,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.338
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.45
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -30946,12 +31586,12 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_BounceIntensity: 15.08
+  m_ColorTemperature: 2553
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -30969,13 +31609,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291337920}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.40118274, y: 0.052671883, z: 0.11904084, w: 0.9067014}
   m_LocalPosition: {x: -39.09, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 712069983}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 45.64, y: 15.856, z: 21.666}
 --- !u!114 &1291337923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30993,7 +31633,7 @@ MonoBehaviour:
   m_CustomShadowLayers: 0
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
+  m_SoftShadowQuality: 1
   m_RenderingLayersMask:
     serializedVersion: 0
     m_Bits: 1
@@ -31430,9 +32070,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (6)
@@ -31507,9 +32155,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (31)
@@ -32178,9 +32834,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (1)
@@ -32269,9 +32933,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (33)
@@ -32493,9 +33165,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (52)
@@ -32680,9 +33360,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (11)
@@ -32851,9 +33539,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (15)
@@ -33233,9 +33929,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (22)
@@ -33855,9 +34559,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (5)
@@ -34363,9 +35075,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (36)
@@ -34921,9 +35641,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (35)
@@ -35932,9 +36660,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: -1828939954781576733, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -35952,13 +36688,29 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4225337535859484329, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4225337535859484329, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: 4225337535859484329, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
+    - target: {fileID: 4235435668244077112, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4235435668244077112, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: 4235435668244077112, guid: 6a12db98cf1d2154cbdba3ef7d21c9f3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36403,9 +37155,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (18)
@@ -36642,9 +37402,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (42)
@@ -36927,9 +37695,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (14)
@@ -37959,9 +38735,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (44)
@@ -38537,9 +39321,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (24)
@@ -38606,9 +39398,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (25)
@@ -39295,9 +40095,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (1)
@@ -39360,9 +40168,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (17)
@@ -39456,9 +40272,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (45)
@@ -39526,9 +40350,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (30)
@@ -40045,9 +40877,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (23)
@@ -40283,9 +41123,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (46)
@@ -40813,9 +41661,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (10)
@@ -40952,9 +41808,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (36)
@@ -41017,9 +41881,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (27)
@@ -42200,9 +43072,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (48)
@@ -42265,9 +43145,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta
@@ -42446,9 +43334,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (38)
@@ -42537,9 +43433,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (2)
@@ -43032,9 +43936,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (2)
@@ -44434,9 +45346,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (48)
@@ -44504,9 +45424,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (53)
@@ -44803,9 +45731,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (6)
@@ -45641,9 +46577,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (17)
@@ -45723,9 +46667,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (25)
@@ -45818,9 +46770,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (16)
@@ -45887,9 +46847,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (32)
@@ -45964,9 +46932,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (3)
@@ -46238,9 +47214,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (35)
@@ -46886,9 +47870,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (39)
@@ -47115,9 +48107,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (41)
@@ -48234,9 +49234,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (47)
@@ -48445,9 +49453,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (15)
@@ -50191,9 +51207,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (42)
@@ -50609,9 +51633,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (29)
@@ -50809,9 +51841,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: dd0ba3b2e60ce26499e54fe738a764b1, type: 3}
       propertyPath: m_Name
       value: Muro (15)
@@ -51623,9 +52663,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b9da02ed9af183649883a344f56efc84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: b9da02ed9af183649883a344f56efc84, type: 3}
       propertyPath: m_Name
       value: Mureta (21)
@@ -51700,9 +52748,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3a436d2f2516ab49812841de370e096, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     - target: {fileID: 919132149155446097, guid: a3a436d2f2516ab49812841de370e096, type: 3}
       propertyPath: m_Name
       value: Pole (40)
