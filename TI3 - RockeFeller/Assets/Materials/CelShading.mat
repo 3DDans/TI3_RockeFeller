@@ -50,13 +50,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Boolean: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RimPower: 1
+    - _RimStrength: 5
+    - _SmoothspetE1: 1
+    - _SmoothspetE2: 1
+    - _SpecularPower: 1
+    - _SpecularStrength: 0.31
+    - _UseRim: 1
+    - _UseSpec: 1
     - _max: 1
     - _min: 0.3
-    - _shades: 0.56
+    - _shades: 0.54
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 0.4716981, g: 0.19935139, b: 0.06007476, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &706361393105667216
