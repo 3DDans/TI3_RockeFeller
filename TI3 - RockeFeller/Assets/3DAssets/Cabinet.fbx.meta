@@ -3,7 +3,12 @@ guid: ef8c22b2280e8074eb91088ae9379c06
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: GradientTexture
+    second: {fileID: 2800000, guid: cb3994066de398a47b009177dfb9b858, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
