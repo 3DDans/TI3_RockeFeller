@@ -3,7 +3,12 @@ guid: a5d41194e15953a42b887097c0c96c27
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VertexPaint
+    second: {fileID: 2100000, guid: 9330927a74867fc4f876ad12aa571603, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
