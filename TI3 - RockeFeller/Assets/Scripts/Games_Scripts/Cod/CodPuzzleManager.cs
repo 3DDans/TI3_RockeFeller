@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CodPuzzleManager : MonoBehaviour
+public class CodPuzzleManager : MinigameBase
 {
     public GameObject[] puzzles;
     public int currentPuzzle;
@@ -26,7 +26,7 @@ public class CodPuzzleManager : MonoBehaviour
 
         if(niveisFinalizados == puzzles.Length)
         {
-            npcInteraction.CompletePuzzle();
+            CompleteMinigame();
         }
     }
 }

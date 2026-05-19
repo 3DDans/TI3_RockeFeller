@@ -3,7 +3,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class EngineeringGameManager : MonoBehaviour
+public class EngineeringGameManager : MinigameBase
 {
     private BuildPart selectedPart; 
     public TextMeshProUGUI feedbackText;
