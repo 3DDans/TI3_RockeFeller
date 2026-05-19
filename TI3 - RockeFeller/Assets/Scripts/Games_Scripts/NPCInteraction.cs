@@ -79,6 +79,7 @@ public class NPCInteraction : MonoBehaviour
     void StartDialogue()
     {
         player.canMove = false;
+        playerVs.SetActive(false);
 
         dialogueCamera.Priority = 20;
         mainCamera.Priority = 10;
@@ -151,12 +152,14 @@ public class NPCInteraction : MonoBehaviour
 
     void OnDialogueEnd()
     {
+       
         hasTalked = true;
         if (npcRole == NPCRole.QuestGiver)
         {
             UnlockMinigameNPC();
         }
         interactionUI.SetActive(true);
+        playerVs.SetActive(true);
         EndInteraction();
     }
 
