@@ -64,9 +64,27 @@ public bool gameFinished = false;
 
         Debug.Log($"{id} completed!");
 
+
         CheckProgression();
     }
+    private int GetCompletedFirstPhaseCount()
+    {
+        int completed = 0;
 
+        if (IsCompleted(MinigameID.Medicina))
+            completed++;
+
+        if (IsCompleted(MinigameID.Biologia))
+            completed++;
+
+        if (IsCompleted(MinigameID.Engenharia))
+            completed++;
+
+        if (IsCompleted(MinigameID.Programacao))
+            completed++;
+
+        return completed;
+    }
     private void CheckProgression()
     {
         CheckFirstPhaseCompletion();
@@ -75,15 +93,41 @@ public bool gameFinished = false;
 
     private void CheckFirstPhaseCompletion()
     {
+        int completedCount = GetCompletedFirstPhaseCount();
+
+        // CONTROLE DO CÉU
+        switch (completedCount)
+        {
+            case 0:
+                SkyboxManager.Instance.SetDayStage(0);
+                break;
+
+            case 1:
+                SkyboxManager.Instance.SetDayStage(1);
+                break;
+
+            case 2:
+                SkyboxManager.Instance.SetDayStage(2);
+                break;
+
+            case 3:
+                SkyboxManager.Instance.SetDayStage(3);
+                break;
+        }
+
+        // VERIFICA SE TODOS FORAM COMPLETADOS
         bool allCompleted =
             IsCompleted(MinigameID.Medicina) &&
             IsCompleted(MinigameID.Biologia) &&
             IsCompleted(MinigameID.Engenharia) &&
             IsCompleted(MinigameID.Programacao);
 
+        // LIBERA METEORO
         if (allCompleted && !meteorUnlocked)
         {
             UnlockMeteor();
+
+            SkyboxManager.Instance.SetNight();
         }
     }
 
