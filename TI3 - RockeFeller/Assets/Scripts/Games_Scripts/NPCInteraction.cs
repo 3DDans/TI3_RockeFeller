@@ -222,7 +222,7 @@ public class NPCInteraction : MonoBehaviour
         }
     }
 
-    // ================= GERAL =================
+    // ================= GERAL =================    
 
     void EndInteraction()
     {
