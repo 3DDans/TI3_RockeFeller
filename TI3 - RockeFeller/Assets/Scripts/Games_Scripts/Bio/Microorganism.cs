@@ -13,6 +13,15 @@ public class Microorganism : MonoBehaviour
     private float timer;
     public Transform petriDish;
 
+    [Header("Detection")]
+    public float detectionRadius = 80f;
+
+    [Header("Scan")]
+    public float scanTimeRequired = 2f;
+
+    private float currentScanTime = 0f;
+    bool alreadyDetected = false;
+
     private BiologyGameManager manager;
 
     void Start()
@@ -36,6 +45,10 @@ public class Microorganism : MonoBehaviour
     void Update()
     {
         Move();
+        if (isTarget)
+        {
+            CheckDetection();
+        }
     }
 
     void Move()
@@ -69,5 +82,55 @@ public class Microorganism : MonoBehaviour
             0,
             Random.Range(-1f, 1f)
         ).normalized;
+    }
+
+    void CheckDetection()
+    {
+        Camera cam = Camera.main;
+
+        Vector3 screenPos =
+            cam.WorldToScreenPoint(transform.position);
+
+        Vector2 screenCenter = new Vector2(
+            Screen.width / 2f,
+            Screen.height / 2f
+        );
+
+        float distance =
+            Vector2.Distance(screenPos, screenCenter);
+
+        bool isInside =
+            distance <= detectionRadius;
+
+        if (isInside)
+        {
+            currentScanTime += Time.deltaTime;
+
+            if (currentScanTime >= scanTimeRequired)
+            {
+                Detect();
+            }
+        }
+        else
+        {
+            currentScanTime = 0f;
+        }
+    }
+
+    void Detect()
+    {
+        if (alreadyDetected)
+            return;
+
+        alreadyDetected = true;
+
+        if (isTarget)
+        {
+            manager.CorrectChoice();
+        }
+        else
+        {
+            manager.WrongChoice();
+        }
     }
 }

@@ -6,7 +6,7 @@ public class BiologyGameManager : MinigameBase
     public TextMeshProUGUI feedbackText;
     public GameObject gameUI;
 
-    public void CorrectChoice()
+    public void CorrectChoice() 
     {
         feedbackText.text = "Organismo identificado!";
 
