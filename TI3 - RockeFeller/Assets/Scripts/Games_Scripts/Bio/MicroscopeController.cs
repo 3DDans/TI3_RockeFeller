@@ -2,48 +2,52 @@ using UnityEngine;
 
 public class MicroscopeController : MonoBehaviour
 {
-    public float dragSpeed = 0.1f;
+    [Header("Movement")]
+    public float moveSpeed = 2f;
+
+    [Header("Limits")]
     public Vector2 limitX;
     public Vector2 limitZ;
 
-    private Vector3 lastMousePos;
-    private Vector3 initialCamPos;
-    private bool dragging = false;
+    private Vector3 initialPos;
 
-    private void Start()
+    void Start()
     {
-        initialCamPos = transform.position;
+        initialPos = transform.position;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            dragging = true;
-            lastMousePos = Input.mousePosition;
-        }
+        MoveMicroscope();
+    }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            dragging = false;
-        }
+    void MoveMicroscope()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
 
-        if (dragging)
-        {
-            Vector3 delta = Input.mousePosition - lastMousePos;
+        Vector3 move = new Vector3(
+            -mouseX * moveSpeed,
+            0,
+            -mouseY * moveSpeed
+        );
 
-            Vector3 move = new Vector3(-delta.x * dragSpeed, 0, -delta.y * dragSpeed);
+        transform.position += move * Time.deltaTime;
 
-            transform.position += move;
+        transform.position = new Vector3(
+            Mathf.Clamp(
+                transform.position.x,
+                initialPos.x + limitX.x,
+                initialPos.x + limitX.y
+            ),
 
-            // Limites
-            transform.position = new Vector3(
-                Mathf.Clamp(transform.position.x, initialCamPos.x + limitX.x, initialCamPos.x + limitX.y),
-                transform.position.y,
-                Mathf.Clamp(transform.position.z, initialCamPos.z + limitZ.x, initialCamPos.z + limitZ.y)
-            );
+            transform.position.y,
 
-            lastMousePos = Input.mousePosition;
-        }
+            Mathf.Clamp(
+                transform.position.z,
+                initialPos.z + limitZ.x,
+                initialPos.z + limitZ.y
+            )
+        );
     }
 }

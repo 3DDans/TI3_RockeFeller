@@ -178,6 +178,11 @@ public class NPCInteraction : MonoBehaviour
 
     void StartMinigame()
     {
+        if (minigameID != MinigameID.Biologia)
+        {
+            CursorManager.Instance.ShowCursor();
+        }
+
         if (tabletManager != null)
         {
             tabletManager.EnableTablet();
@@ -190,7 +195,7 @@ public class NPCInteraction : MonoBehaviour
         mainCamera.Priority = 10;
         interactionUI.SetActive(false);
 
-        CursorManager.Instance.ShowCursor();
+       
 
         if (puzzleUI != null)
             puzzleUI.SetActive(true);
