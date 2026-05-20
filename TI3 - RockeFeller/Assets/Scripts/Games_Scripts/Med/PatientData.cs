@@ -5,11 +5,16 @@ public class PatientData : ScriptableObject
 {
     public string patientName;
 
-    [Header("Sintomas corretos")]
+    [Header("Correct Symptoms")]
     public string[] correctSymptoms;
 
-    [Header("Dicas por área")]
-    [TextArea] public string headInfo;
-    [TextArea] public string throatInfo;
-    [TextArea] public string bodyInfo;
+    [Header("HEAD")]
+    [TextArea] public string headThermometer;
+    [TextArea] public string headStethoscope;
+    [TextArea] public string headFlashlight;
+
+    [Header("BODY")]
+    [TextArea] public string bodyThermometer;
+    [TextArea] public string bodyStethoscope;
+    [TextArea] public string bodyFlashlight;
 }

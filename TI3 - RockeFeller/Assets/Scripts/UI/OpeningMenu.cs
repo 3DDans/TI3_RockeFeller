@@ -12,14 +12,12 @@ public class OpeningMenu : MonoBehaviour //Menu temporário
 
     public void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        CursorManager.Instance.ShowCursor();
     }
 
     public void Play()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        CursorManager.Instance.HideCursor();
         Canvas.SetActive(true);
         Menu.SetActive(false);
         Time.timeScale = 1f;

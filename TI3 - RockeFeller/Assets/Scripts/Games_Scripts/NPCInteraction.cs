@@ -20,6 +20,7 @@ public class NPCInteraction : MonoBehaviour
     [Header("Puzzle")]
     public GameObject puzzleUI;
     public GameObject playerVs;
+    public MinigameTabletManager tabletManager;
 
     [Header("Type")]
     public NPCRole npcRole;
@@ -27,10 +28,11 @@ public class NPCInteraction : MonoBehaviour
     [Header("Quest Link")]
     public NPCInteraction linkedMinigameNPC;
     public MinigameID minigameID;
-
+     
     private bool playerInRange = false;
     private bool hasTalked = false;
     private ThirdPersonMovement player;
+ 
 
 
 
@@ -78,6 +80,7 @@ public class NPCInteraction : MonoBehaviour
 
     void StartDialogue()
     {
+        GameProgressManager.IsInMinigame = true;
         player.canMove = false;
         playerVs.SetActive(false);
 
@@ -85,8 +88,7 @@ public class NPCInteraction : MonoBehaviour
         mainCamera.Priority = 10;
         interactionUI.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        CursorManager.Instance.ShowCursor();
 
         Dialogue dialogueToUse = GetCurrentDialogue();
 
@@ -152,7 +154,7 @@ public class NPCInteraction : MonoBehaviour
 
     void OnDialogueEnd()
     {
-       
+        GameProgressManager.IsInMinigame = false;
         hasTalked = true;
         if (npcRole == NPCRole.QuestGiver)
         {
@@ -176,6 +178,11 @@ public class NPCInteraction : MonoBehaviour
 
     void StartMinigame()
     {
+        if (tabletManager != null)
+        {
+            tabletManager.EnableTablet();
+        }
+        GameProgressManager.IsInMinigame = true;
         player.canMove = false;
         playerVs.SetActive(false);
 
@@ -183,8 +190,7 @@ public class NPCInteraction : MonoBehaviour
         mainCamera.Priority = 10;
         interactionUI.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        CursorManager.Instance.ShowCursor();
 
         if (puzzleUI != null)
             puzzleUI.SetActive(true);
@@ -200,10 +206,15 @@ public class NPCInteraction : MonoBehaviour
 
     void EndMinigame()
     {
+        GameProgressManager.IsInMinigame = false;
         if (puzzleUI != null)
             puzzleUI.SetActive(false);
-        interactionUI.SetActive(true);
+        
         EndInteraction();
+        if (tabletManager != null)
+        {
+            tabletManager.DisableTablet();
+        }
     }
 
     // ================= GERAL =================
@@ -218,8 +229,7 @@ public class NPCInteraction : MonoBehaviour
 
         playerVs.SetActive(true);
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        CursorManager.Instance.HideCursor();
     }
 
     void EnableInteraction()

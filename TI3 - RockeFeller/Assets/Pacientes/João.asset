@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa0f984412fd1a4580992bd38c98026, type: 3}
   m_Name: "Jo\xE3o"
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
-  patientName: Jean
+  patientName: Daniel
   correctSymptoms:
   - Fever
   - Nausea
   - Headache
-  headInfo: "Headache\nTemperature : 40\xB0 Celcius / 104\xB0 Fahrenheit\n"
-  throatInfo: 
-  bodyInfo: Nausea
+  headThermometer: "Temp 50\xB0c"
+  headStethoscope: "Cabe\xE7a oca "
+  headFlashlight: "Olhos normais mas cabe\xE7a doi"
+  bodyThermometer: "Temp 47\xB0c"
+  bodyStethoscope: Barulhos no estomago
+  bodyFlashlight: Pele oleosa

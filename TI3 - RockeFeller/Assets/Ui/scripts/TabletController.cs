@@ -17,8 +17,6 @@ public class TabletController : MonoBehaviour
     {
         isTabletOpen = false;
         tabletUI.SetActive(false);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         if (Screens.Length > 0)
         Screens[0].SetActive(true);
     }
@@ -27,7 +25,7 @@ public class TabletController : MonoBehaviour
     void Update()
     {
         hours.text = DateTime.Now.ToString("hh:mm tt");
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameProgressManager.IsInMinigame)
         {
             Debug.Log("Escape key pressed. Toggling tablet.");
             ToggleTablet();
@@ -76,6 +74,7 @@ public class TabletController : MonoBehaviour
     }
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Punkofeller");
     }
 

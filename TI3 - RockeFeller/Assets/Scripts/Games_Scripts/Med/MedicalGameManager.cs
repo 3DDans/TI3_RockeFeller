@@ -113,4 +113,12 @@ public class MedicalGameManager : MinigameBase
         }
     }
 
-} 
+}
+
+public enum MedicalToolType
+{
+    None,
+    Thermometer,
+    Stethoscope,
+    Flashlight
+}

@@ -29,6 +29,7 @@ public class SceneController : MonoBehaviour
         // Prioridades
         introCamera.Priority = 20;
         playerCamera.Priority = 10;
+       
     }
 
     public void PlayGame()
@@ -42,6 +43,7 @@ public class SceneController : MonoBehaviour
 
         // Espera blend terminar
         Invoke(nameof(StartGameplay), introTime);
+        CursorManager.Instance.HideCursor();
     }
 
     void StartGameplay()

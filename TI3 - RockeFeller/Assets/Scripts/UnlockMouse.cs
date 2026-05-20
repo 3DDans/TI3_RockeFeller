@@ -11,8 +11,7 @@ public class UnlockMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        //CursorManager.Instance.ShowCursor();
 
     }
 }
