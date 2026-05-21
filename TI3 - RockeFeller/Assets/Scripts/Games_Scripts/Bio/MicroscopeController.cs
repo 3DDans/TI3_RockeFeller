@@ -265,7 +265,7 @@ public class MicroscopeController : MonoBehaviour
         // ACIMA DO IDEAL
         else
         {
-            move.z += drift;
+            move.y += drift;
         }
     }
 
