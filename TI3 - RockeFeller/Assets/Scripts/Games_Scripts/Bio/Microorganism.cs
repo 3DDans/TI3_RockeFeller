@@ -23,11 +23,48 @@ public class Microorganism : MonoBehaviour
     bool alreadyDetected = false;
 
     private BiologyGameManager manager;
+    private Vector3 currentDirection;
+
+    [Header("Animation")]
+
+    public Transform[] bones;
+    private Quaternion[] boneInitialRotations;
+
+    [Header("Pulse")]
+    public bool usePulse = true;
+    public float pulseSpeed = 2f;
+    public float pulseAmount = 0.05f;
+
+    [Header("Wobble")]
+    public bool useWobble = true;
+    public float wobbleSpeed = 3f;
+    public float wobbleAmount = 15f;
+
+    [Header("Bone Follow")]
+    public float followDelay = 0.15f;
+
+    private Vector3 baseScale;
 
     void Start()
     {
         manager = FindFirstObjectByType<BiologyGameManager>();
+
+        baseScale = transform.localScale;
+
+        // Randomização
+        pulseSpeed += Random.Range(-0.5f, 0.5f);
+
+        wobbleSpeed += Random.Range(-1f, 1f);
+
+        wobbleAmount += Random.Range(-5f, 5f);
         PickNewDirection();
+        currentDirection = direction;
+        boneInitialRotations = new Quaternion[bones.Length];
+
+        for (int i = 0; i < bones.Length; i++)
+        {
+            boneInitialRotations[i] = bones[i].localRotation;
+        }
     }
 
     void OnMouseDown()
@@ -44,7 +81,13 @@ public class Microorganism : MonoBehaviour
 
     void Update()
     {
+        if (!BiologyGameManager.gameStarted)
+            return;
+
         Move();
+
+        AnimateVisuals();
+
         if (isTarget)
         {
             CheckDetection();
@@ -60,17 +103,34 @@ public class Microorganism : MonoBehaviour
             PickNewDirection();
         }
 
-        transform.position += direction * speed * Time.deltaTime;
+        currentDirection = Vector3.Lerp(
+            currentDirection,
+            direction,
+            Time.deltaTime * 2f
+        ).normalized;
 
-        
-        Vector3 localPos = petriDish.InverseTransformPoint(transform.position);
+        Vector3 pos = transform.position;
+
+        pos += currentDirection * speed * Time.deltaTime;
 
         float margin = 0.3f;
 
-        localPos.x = Mathf.Clamp(localPos.x, limitX.x + margin, limitX.y - margin);
-        localPos.z = Mathf.Clamp(localPos.z, limitZ.x + margin, limitZ.y - margin);
+        pos.x = Mathf.Clamp(
+            pos.x,
+            limitX.x + margin,
+            limitX.y - margin
+        );
 
-        transform.position = petriDish.TransformPoint(localPos);
+        pos.z = Mathf.Clamp(
+            pos.z,
+            limitZ.x + margin,
+            limitZ.y - margin
+        );
+
+        // trava altura
+        pos.y = transform.position.y;
+
+        transform.position = pos;
     }
 
     void PickNewDirection()
@@ -133,4 +193,60 @@ public class Microorganism : MonoBehaviour
             manager.WrongChoice();
         }
     }
+
+    void AnimateVisuals()
+    {
+        AnimatePulse();
+
+        AnimateBones();
+    }
+
+    void AnimatePulse()
+    {
+        if (!usePulse)
+            return;
+
+        float pulse =
+            1f +
+            Mathf.Sin(Time.time * pulseSpeed)
+            * pulseAmount;
+
+        transform.localScale =
+            baseScale * pulse;
+    }
+
+    void AnimateBones()
+    {
+        if (!useWobble)
+            return;
+
+        if (bones == null || bones.Length == 0)
+            return;
+
+        for (int i = 0; i < bones.Length; i++)
+        {
+            float offset = i * followDelay;
+
+            float wave =
+                Mathf.Sin(
+                    (Time.time - offset)
+                    * wobbleSpeed
+                );
+
+            float rotation =
+                wave * wobbleAmount;
+
+            Quaternion wobbleRotation =
+                Quaternion.Euler(
+                    rotation*0.5f,
+                    -rotation,
+                    rotation
+                );
+
+            bones[i].localRotation =
+                boneInitialRotations[i] * wobbleRotation;
+        }
+    }
+
+
 }

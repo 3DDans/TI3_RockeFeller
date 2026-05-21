@@ -19,14 +19,21 @@ public class MicroscopeZoom : MonoBehaviour
     public int minZoomValue = 100;
     public int maxZoomValue = 500;
 
+    [Header("Initial State")]
+    public float initialFOV = 35f;
+
+
     private float targetFOV;
     void Start()
     {
-        targetFOV = virtualCamera.Lens.FieldOfView;
+        targetFOV = initialFOV;
+
+        virtualCamera.Lens.FieldOfView =
+            initialFOV;
 
         UpdateZoomHUD();
     }
-
+        
     void Update()
     {
         HandleZoom();
