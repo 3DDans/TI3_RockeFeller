@@ -2617,7 +2617,7 @@ Transform:
   m_GameObject: {fileID: 127030841}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.005284397, y: -0.14575276, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06700483, y: 0.067004815, z: 0.067004815}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2637,13 +2637,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &127030844
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6453,7 +6461,7 @@ Transform:
   m_GameObject: {fileID: 306180667}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.005284397, y: -0.08413596, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06700483, y: 0.067004815, z: 0.067004815}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -6473,13 +6481,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &306180670
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9010,7 +9026,7 @@ Transform:
   m_GameObject: {fileID: 421016399}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.048354052, y: 0, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.065623276, y: 0.06562326, z: 0.06562326}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9030,13 +9046,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 1
-  speed: 1
+  speed: 3
   changeDirectionTime: 2
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!65 &421016402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9447,7 +9471,7 @@ Transform:
   m_GameObject: {fileID: 434579852}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.020377763, y: -0.22988872, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.08151101, y: 0.081511, z: 0.081511}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9467,13 +9491,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &434579855
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9528,7 +9560,7 @@ Transform:
   m_GameObject: {fileID: 439338723}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.08082026, y: -0.22988872, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06700483, y: 0.067004815, z: 0.067004815}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9548,13 +9580,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &439338726
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13525,7 +13565,7 @@ Transform:
   m_GameObject: {fileID: 591127162}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.039926525, y: -0.14575276, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.048353985, y: 0.04835398, z: 0.048353978}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -13545,13 +13585,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &591127165
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13933,7 +13981,7 @@ Transform:
   m_GameObject: {fileID: 612812210}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.005284397, y: 0, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06700483, y: 0.067004815, z: 0.067004815}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -13953,13 +14001,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &612812213
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14021,7 +14077,7 @@ Transform:
   m_GameObject: {fileID: 616552648}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03992666, y: -0.039719395, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.048353985, y: 0.04835398, z: 0.048353978}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -14041,13 +14097,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &616552651
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15189,7 +15253,7 @@ Transform:
   m_GameObject: {fileID: 653928001}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.020377763, y: -0.08413596, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.08151101, y: 0.081511, z: 0.081511}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -15209,13 +15273,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &653928004
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16745,7 +16817,7 @@ Transform:
   m_GameObject: {fileID: 702081322}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.020377763, y: -0.039719395, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.08151101, y: 0.081511, z: 0.081511}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -16765,13 +16837,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &702081325
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18661,7 +18741,7 @@ Transform:
   m_GameObject: {fileID: 765072637}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.020377763, y: 0, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.08151101, y: 0.081511, z: 0.081511}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -18681,13 +18761,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &765072640
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19399,7 +19487,7 @@ Transform:
   m_GameObject: {fileID: 783397918}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.08082026, y: -0.08413596, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06700483, y: 0.067004815, z: 0.067004815}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -19419,13 +19507,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &783397921
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24274,7 +24370,7 @@ Transform:
   m_GameObject: {fileID: 965684128}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0551581, y: -0.08413596, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.08151101, y: 0.081511, z: 0.081511}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -24294,13 +24390,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &965684131
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25555,7 +25659,7 @@ Transform:
   m_GameObject: {fileID: 1005465009}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03992666, y: -0.22988872, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.048353985, y: 0.04835398, z: 0.048353978}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -25575,13 +25679,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &1005465012
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27739,7 +27851,7 @@ Transform:
   m_GameObject: {fileID: 1082956445}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.005284397, y: -0.22988872, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06700483, y: 0.067004815, z: 0.067004815}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -27759,13 +27871,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &1082956448
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30076,7 +30196,7 @@ Transform:
   m_GameObject: {fileID: 1171262370}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.005284397, y: -0.039719395, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06700483, y: 0.067004815, z: 0.067004815}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -30096,13 +30216,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &1171262373
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -31417,7 +31545,7 @@ Transform:
   m_GameObject: {fileID: 1223376674}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03992666, y: -0.08413596, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.048353985, y: 0.04835398, z: 0.048353978}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -31437,13 +31565,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &1223376677
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33181,7 +33317,7 @@ Transform:
   m_GameObject: {fileID: 1269361133}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.039926525, y: 0, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.048353985, y: 0.04835398, z: 0.048353978}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -33201,13 +33337,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &1269361136
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38529,7 +38673,7 @@ Transform:
   m_GameObject: {fileID: 1484775429}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.020377763, y: -0.18547216, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.08151101, y: 0.081511, z: 0.081511}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -38549,13 +38693,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &1484775432
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -40193,7 +40345,7 @@ Transform:
   m_GameObject: {fileID: 1537203092}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.8600006, y: -6.549999, z: 0}
+  m_LocalPosition: {x: 0.8600006, y: -10.2, z: 0}
   m_LocalScale: {x: 28.95314, y: 28.953144, z: 28.95314}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45453,7 +45605,7 @@ Transform:
   m_GameObject: {fileID: 1737553662}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.035609204, y: -0.22988872, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.048353985, y: 0.04835398, z: 0.048353978}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -45473,13 +45625,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &1737553665
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -47120,7 +47280,7 @@ Transform:
   m_GameObject: {fileID: 1790929462}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.88100433, y: -1.0200005, z: 0}
+  m_LocalPosition: {x: 0.88100433, y: -2.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52215,7 +52375,7 @@ Transform:
   m_GameObject: {fileID: 2016057635}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.020377763, y: -0.14575276, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.08151101, y: 0.081511, z: 0.081511}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -52235,13 +52395,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &2016057638
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -52366,7 +52534,7 @@ Transform:
   m_GameObject: {fileID: 2020310904}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0551581, y: -0.22988872, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.08151101, y: 0.081511, z: 0.081511}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -52386,13 +52554,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &2020310907
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -53281,7 +53457,7 @@ Transform:
   m_GameObject: {fileID: 2051128856}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.005284397, y: -0.18547216, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06700483, y: 0.067004815, z: 0.067004815}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -53301,13 +53477,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &2051128859
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -54185,7 +54369,7 @@ Transform:
   m_GameObject: {fileID: 2072170031}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03992666, y: -0.18547216, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.048353985, y: 0.04835398, z: 0.048353978}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -54205,13 +54389,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &2072170034
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -54454,7 +54646,7 @@ Transform:
   m_GameObject: {fileID: 2087793053}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.035609204, y: -0.08413596, z: -0.014851596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.048353985, y: 0.04835398, z: 0.048353978}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -54474,13 +54666,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Microorganism
   isTarget: 0
-  speed: 1
+  speed: 3
   changeDirectionTime: 1
-  limitX: {x: -10, y: 10}
-  limitZ: {x: -10, y: 10}
+  limitX: {x: -0.4, y: 0.5}
+  limitZ: {x: -0.4, y: 0.4}
   petriDish: {fileID: 1537203093}
   detectionRadius: 1
   scanTimeRequired: 2
+  bones: []
+  usePulse: 1
+  pulseSpeed: 2
+  pulseAmount: 0.05
+  useWobble: 1
+  wobbleSpeed: 3
+  wobbleAmount: 15
+  followDelay: 0.15
 --- !u!135 &2087793056
 SphereCollider:
   m_ObjectHideFlags: 0
