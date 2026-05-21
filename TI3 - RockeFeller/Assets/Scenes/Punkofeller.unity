@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 3cc42bf74581d0d4f84c9e6214f44e01, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b99659f12c3f5184894990cadceb0504, type: 2}
   m_HaloStrength: 0
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -3422,7 +3422,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 350029f40ff7f354ca6d51b2ab106615, type: 3}
   m_PrefabInstance: {fileID: 1725048420}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &177059508
+--- !u!65 &177059505
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3441,8 +3441,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 100, y: 0, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 100, y: 0.00000047683716, z: 120}
+  m_Center: {x: -30, y: 0.00000023841858, z: -20}
 --- !u!1 &182674100
 GameObject:
   m_ObjectHideFlags: 0
@@ -43490,7 +43490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 350029f40ff7f354ca6d51b2ab106615, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 29.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 350029f40ff7f354ca6d51b2ab106615, type: 3}
       propertyPath: m_LocalPosition.y
@@ -43498,7 +43498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 350029f40ff7f354ca6d51b2ab106615, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.5
+      value: 18.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 350029f40ff7f354ca6d51b2ab106615, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43538,7 +43538,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 350029f40ff7f354ca6d51b2ab106615, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 177059508}
+      addedObject: {fileID: 177059505}
   m_SourcePrefab: {fileID: 100100000, guid: 350029f40ff7f354ca6d51b2ab106615, type: 3}
 --- !u!1001 &1729029401
 PrefabInstance:
