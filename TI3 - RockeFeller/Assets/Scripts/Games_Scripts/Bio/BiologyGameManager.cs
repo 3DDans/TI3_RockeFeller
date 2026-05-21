@@ -5,6 +5,7 @@ public class BiologyGameManager : MinigameBase
 {
     public TextMeshProUGUI feedbackText;
     public GameObject gameUI;
+    public static bool gameStarted = false;
 
     public void CorrectChoice() 
     {

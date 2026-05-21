@@ -28,6 +28,7 @@ public class Microorganism : MonoBehaviour
     [Header("Animation")]
 
     public Transform[] bones;
+    private Quaternion[] boneInitialRotations;
 
     [Header("Pulse")]
     public bool usePulse = true;
@@ -56,8 +57,14 @@ public class Microorganism : MonoBehaviour
         wobbleSpeed += Random.Range(-1f, 1f);
 
         wobbleAmount += Random.Range(-5f, 5f);
-        currentDirection = direction;
         PickNewDirection();
+        currentDirection = direction;
+        boneInitialRotations = new Quaternion[bones.Length];
+
+        for (int i = 0; i < bones.Length; i++)
+        {
+            boneInitialRotations[i] = bones[i].localRotation;
+        }
     }
 
     void OnMouseDown()
@@ -74,6 +81,9 @@ public class Microorganism : MonoBehaviour
 
     void Update()
     {
+        if (!BiologyGameManager.gameStarted)
+            return;
+
         Move();
 
         AnimateVisuals();
@@ -94,25 +104,33 @@ public class Microorganism : MonoBehaviour
         }
 
         currentDirection = Vector3.Lerp(
-         currentDirection,
-         direction,
-         Time.deltaTime * 2f
-         );
+            currentDirection,
+            direction,
+            Time.deltaTime * 2f
+        ).normalized;
 
-            transform.position +=
-            currentDirection *
-            speed *
-            Time.deltaTime;
+        Vector3 pos = transform.position;
 
-
-        Vector3 localPos = petriDish.InverseTransformPoint(transform.position);
+        pos += currentDirection * speed * Time.deltaTime;
 
         float margin = 0.3f;
 
-        localPos.x = Mathf.Clamp(localPos.x, limitX.x + margin, limitX.y - margin);
-        localPos.z = Mathf.Clamp(localPos.z, limitZ.x + margin, limitZ.y - margin);
+        pos.x = Mathf.Clamp(
+            pos.x,
+            limitX.x + margin,
+            limitX.y - margin
+        );
 
-        transform.position = petriDish.TransformPoint(localPos);
+        pos.z = Mathf.Clamp(
+            pos.z,
+            limitZ.x + margin,
+            limitZ.y - margin
+        );
+
+        // trava altura
+        pos.y = transform.position.y;
+
+        transform.position = pos;
     }
 
     void PickNewDirection()
@@ -207,8 +225,7 @@ public class Microorganism : MonoBehaviour
 
         for (int i = 0; i < bones.Length; i++)
         {
-            float offset =
-                i * followDelay;
+            float offset = i * followDelay;
 
             float wave =
                 Mathf.Sin(
@@ -219,12 +236,15 @@ public class Microorganism : MonoBehaviour
             float rotation =
                 wave * wobbleAmount;
 
-            bones[i].localRotation =
+            Quaternion wobbleRotation =
                 Quaternion.Euler(
-                    0,
-                    rotation,
-                    0
+                    rotation*0.5f,
+                    -rotation,
+                    rotation
                 );
+
+            bones[i].localRotation =
+                boneInitialRotations[i] * wobbleRotation;
         }
     }
 

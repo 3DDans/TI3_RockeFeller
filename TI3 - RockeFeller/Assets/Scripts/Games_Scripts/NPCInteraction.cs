@@ -190,6 +190,10 @@ public class NPCInteraction : MonoBehaviour
         {
             CursorManager.Instance.ShowCursor();
         }
+        if (minigameID == MinigameID.Biologia)
+        {
+            BiologyGameManager.gameStarted = true;
+        }
 
         if (tabletManager != null)
         {
@@ -226,6 +230,7 @@ public class NPCInteraction : MonoBehaviour
 
     void EndMinigame()
     {
+        BiologyGameManager.gameStarted = false;
         GameProgressManager.IsInMinigame = false;
         if (puzzleUI != null)
             puzzleUI.SetActive(false);
