@@ -39,6 +39,7 @@ public class NPCInteraction : MonoBehaviour
 
     void Start()
     {
+
         player = FindFirstObjectByType<ThirdPersonMovement>();
 
         if (npcRole == NPCRole.Minigame)
@@ -84,8 +85,15 @@ public class NPCInteraction : MonoBehaviour
         player.canMove = false;
         playerVs.SetActive(false);
 
-        dialogueCamera.Priority = 20;
-        mainCamera.Priority = 10;
+        if (dialogueCamera != null)
+        {
+            dialogueCamera.Priority = 20;
+        }
+
+        if (mainCamera != null)
+        {
+            mainCamera.Priority = 5;
+        }
         interactionUI.SetActive(false);
 
         CursorManager.Instance.ShowCursor();
@@ -191,8 +199,15 @@ public class NPCInteraction : MonoBehaviour
         player.canMove = false;
         playerVs.SetActive(false);
 
-        minigameCamera.Priority = 20;
-        mainCamera.Priority = 10;
+        if (minigameCamera != null)
+        {
+            minigameCamera.Priority = 20;
+        }
+
+        if (mainCamera != null)
+        {
+            mainCamera.Priority = 5;
+        }
         interactionUI.SetActive(false);
 
        
@@ -228,9 +243,20 @@ public class NPCInteraction : MonoBehaviour
     {
         player.canMove = true;
 
-        dialogueCamera.Priority = 5;
-        minigameCamera.Priority = 5;
-        mainCamera.Priority = 10;
+        if (dialogueCamera != null)
+        {
+            dialogueCamera.Priority = 5;
+        }
+
+        if (minigameCamera != null)
+        {
+            minigameCamera.Priority = 5;
+        }
+
+        if (mainCamera != null)
+        {
+            mainCamera.Priority = 20;
+        }
 
         playerVs.SetActive(true);
 
