@@ -14,6 +14,8 @@ public class ExaminationArea : MonoBehaviour
 
     public AreaType areaType;
 
+    
+
     [Header("UI")]
     public GameObject scanPanel;
     public Slider scanSlider;
@@ -57,6 +59,7 @@ public class ExaminationArea : MonoBehaviour
     void HandleHover()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
@@ -64,13 +67,64 @@ public class ExaminationArea : MonoBehaviour
             if (hit.collider.gameObject == gameObject)
             {
                 isHovering = true;
-                meshRenderer.material.color = highlightColor;
+
+                bool hasTool =
+                    MedicalToolManager.Instance.HasTool();
+
+                meshRenderer.material.color =
+                    hasTool ? highlightColor : Color.red;
+
                 return;
             }
         }
 
         isHovering = false;
         meshRenderer.material.color = normalColor;
+    }
+
+    string GetExaminationResult()
+    {
+        MedicalToolType tool =
+            MedicalToolManager.Instance.currentTool;
+
+        PatientData patient = manager.currentPatient;
+
+        switch (areaType)
+        {
+            case AreaType.Head:
+
+                switch (tool)
+                {
+                    case MedicalToolType.Thermometer:
+                        return patient.headThermometer;
+
+                    case MedicalToolType.Stethoscope:
+                        return patient.headStethoscope;
+
+                    case MedicalToolType.Flashlight:
+                        return patient.headFlashlight;
+                }
+
+                break;
+
+            case AreaType.Body:
+
+                switch (tool)
+                {
+                    case MedicalToolType.Thermometer:
+                        return patient.bodyThermometer;
+
+                    case MedicalToolType.Stethoscope:
+                        return patient.bodyStethoscope;
+
+                    case MedicalToolType.Flashlight:
+                        return patient.bodyFlashlight;
+                }
+
+                break;
+        }
+
+        return "No data.";
     }
 
     void HandleScan()
@@ -132,20 +186,7 @@ public class ExaminationArea : MonoBehaviour
     {
         resultPanel.SetActive(true);
 
-        switch (areaType)
-        {
-            case AreaType.Head:
-                resultText.text = manager.currentPatient.headInfo;
-                break;
-
-            case AreaType.Throat:
-                resultText.text = manager.currentPatient.throatInfo;
-                break;
-
-            case AreaType.Body:
-                resultText.text = manager.currentPatient.bodyInfo;
-                break;
-        }
+        resultText.text = GetExaminationResult();
 
         StartCoroutine(HideResult());
     }

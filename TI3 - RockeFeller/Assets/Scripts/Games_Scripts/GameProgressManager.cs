@@ -17,9 +17,11 @@ public class GameProgressManager : MonoBehaviour
     [Header("Meteor")]
     public bool meteorUnlocked = false;
 
-[Header("End Game")]
-public bool finalStageUnlocked = false;
-public bool gameFinished = false;
+    public static bool IsInMinigame = false;
+
+    [Header("End Game")]
+    public bool finalStageUnlocked = false;
+    public bool gameFinished = false;
 
     private void Awake()
     {
