@@ -68,7 +68,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (horizontal != 0 || vertical != 0)
         {
-            if (!isWalkingSoundPlaying)
+            if (!isWalkingSoundPlaying && characterController.isGrounded)
             {
                 PlayWalkingSound();
             }
