@@ -8,8 +8,7 @@ public class MedicalToolPickup : MonoBehaviour
 
     void OnMouseDown()
     {
-        MedicalToolManager.Instance.EquipTool(toolType, tableObject);
-
-        tableObject.SetActive(false);
+        MedicalToolManager.Instance
+            .EquipTool(toolType, tableObject);
     }
 }
