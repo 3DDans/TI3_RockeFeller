@@ -7,13 +7,20 @@ public class MedicalToolManager : MonoBehaviour
     [Header("Camera")]
     public Camera medicalCamera;
 
-    [Header("Current Tool")]
+    [Header("Held Tools")]
+    public GameObject thermometerHeld;
+    public GameObject stethoscopeHeld;
+    public GameObject flashlightHeld;
+
+    [Header("Settings")]
+    public float fixedZ = 0f;
+
+    [HideInInspector]
     public MedicalToolType currentTool = MedicalToolType.None;
 
-    [Header("Held Tool Visual")]
-    public Transform heldToolTransform;
+    private GameObject currentToolObject;
 
-    private GameObject currentHeldObject;
+    private GameObject currentTableObject;
 
     void Awake()
     {
@@ -23,35 +30,76 @@ public class MedicalToolManager : MonoBehaviour
     void Update()
     {
         FollowMouse();
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            UnequipTool();
+        }
     }
 
     void FollowMouse()
     {
-        if (currentHeldObject == null)
+        if (currentToolObject == null)
             return;
 
         Ray ray = medicalCamera.ScreenPointToRay(Input.mousePosition);
 
-        Vector3 targetPos = ray.GetPoint(2f);
+        Vector3 targetPosition = ray.GetPoint(2f);
 
-        heldToolTransform.position = targetPos;
+        targetPosition.z = fixedZ;
+
+        currentToolObject.transform.position = targetPosition;
     }
 
-    public void EquipTool(MedicalToolType toolType, GameObject toolPrefab)
+    public void EquipTool(MedicalToolType tool, GameObject tableObject)
     {
-        currentTool = toolType;
+        DisableAll();
 
-        if (currentHeldObject != null)
+        currentTool = tool;
+
+        currentTableObject = tableObject;
+
+        switch (tool)
         {
-            Destroy(currentHeldObject);
+            case MedicalToolType.Thermometer:
+                currentToolObject = thermometerHeld;
+                break;
+
+            case MedicalToolType.Stethoscope:
+                currentToolObject = stethoscopeHeld;
+                break;
+
+            case MedicalToolType.Flashlight:
+                currentToolObject = flashlightHeld;
+                break;
         }
 
-        currentHeldObject = Instantiate(
-            toolPrefab,
-            heldToolTransform.position,
-            Quaternion.identity,
-            heldToolTransform
-        );
+        if (currentToolObject != null)
+        {
+            currentToolObject.SetActive(true);
+        }
+    }
+
+    public void UnequipTool()
+    {
+        DisableAll();
+
+        if (currentTableObject != null)
+        {
+            currentTableObject.SetActive(true);
+        }
+
+        currentTool = MedicalToolType.None;
+
+        currentToolObject = null;
+        currentTableObject = null;
+    }
+
+    void DisableAll()
+    {
+        thermometerHeld.SetActive(false);
+        stethoscopeHeld.SetActive(false);
+        flashlightHeld.SetActive(false);
     }
 
     public bool HasTool()

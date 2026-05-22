@@ -58,7 +58,8 @@ public class ExaminationArea : MonoBehaviour
 
     void HandleHover()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = MedicalToolManager.Instance.medicalCamera
+    .ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
 
