@@ -4,12 +4,12 @@ public class MedicalToolPickup : MonoBehaviour
 {
     public MedicalToolType toolType;
 
-    [Header("Held Prefab")]
-    public GameObject heldPrefab;
+    public GameObject tableObject;
 
     void OnMouseDown()
     {
-        MedicalToolManager.Instance.EquipTool(toolType, heldPrefab);
-        Debug.Log(toolType);
+        MedicalToolManager.Instance.EquipTool(toolType, tableObject);
+
+        tableObject.SetActive(false);
     }
 }
