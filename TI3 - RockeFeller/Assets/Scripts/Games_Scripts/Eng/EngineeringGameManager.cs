@@ -39,7 +39,8 @@ public class EngineeringGameManager : MinigameBase
     {
         if (selectedPart == null) return;
 
-        if (slot.acceptedType == selectedPart.type && !slot.occupied)
+        if (
+    slot.acceptedType == selectedPart.type && !slot.occupied && selectedPart.CanBePlaced())
         {
             selectedPart.Place(slot);
             selectedPart = null;
