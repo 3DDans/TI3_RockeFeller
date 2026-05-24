@@ -18,7 +18,7 @@ public class BuildSlot : MonoBehaviour
 
     public void Highlight(bool state)
     {
-        if (visual != null) { }
+        if (visual != null) 
             visual.SetActive(state);
     }
     public void Place(BuildSlot slot)
