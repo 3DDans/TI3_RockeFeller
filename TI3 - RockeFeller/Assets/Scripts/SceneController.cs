@@ -1,6 +1,9 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using Unity.Cinemachine;
+using System.Collections;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class SceneController : MonoBehaviour
 {
@@ -12,8 +15,12 @@ public class SceneController : MonoBehaviour
     public CinemachineCamera playerCamera;
 
     public MonoBehaviour playerMovement;
+    public CharacterController playerCC;
 
     public float introTime = 3f;
+
+    [Header("Cutscenes")]
+    public PlayableDirector cutscenePlay;
 
     void Start()
     {
@@ -24,6 +31,7 @@ public class SceneController : MonoBehaviour
         hud.SetActive(false);
 
         // Travar player
+        playerCC.enabled = false;
         playerMovement.enabled = false;
 
         // Prioridades
@@ -36,14 +44,43 @@ public class SceneController : MonoBehaviour
     {
         // Esconde menu
         mainMenu.SetActive(false);
+        CursorManager.Instance.HideCursor();
+        hud.SetActive(true);
+
+        StartCoroutine(PlayCutscene());
 
         // Troca câmera
         introCamera.Priority = 0;
         playerCamera.Priority = 20;
+        TransitionController.instance.FadeIn();
+        playerCC.enabled = true;
+        playerMovement.enabled = true;
+    }
 
-        // Espera blend terminar
-        Invoke(nameof(StartGameplay), introTime);
-        CursorManager.Instance.HideCursor();
+    IEnumerator PlayCutscene()
+    {
+        bool finished = false;
+
+        cutscenePlay.stopped += OnStopped;
+        cutscenePlay.Play();
+
+        yield return new WaitUntil(() => finished);
+
+        cutscenePlay.stopped -= OnStopped;
+
+        TimelineAsset timeline = (TimelineAsset)cutscenePlay.playableAsset;
+        foreach (var track in timeline.GetOutputTracks())
+        {
+            if(track.name == "PlayerAnimation" || track.name == "PlayerMovement")
+            {
+                cutscenePlay.SetGenericBinding(track, null);
+            }
+        }
+
+        void OnStopped(PlayableDirector d)
+        {
+            finished = true;
+        }
     }
 
     void StartGameplay()
