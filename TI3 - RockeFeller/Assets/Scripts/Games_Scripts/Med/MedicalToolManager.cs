@@ -11,6 +11,7 @@ public class MedicalToolManager : MonoBehaviour
     public GameObject thermometerHeld;
     public GameObject stethoscopeHeld;
     public GameObject flashlightHeld;
+    public Transform heldToolPoint;
 
     [Header("Settings")]
     public float fixedZ = 0f;
@@ -39,20 +40,23 @@ public class MedicalToolManager : MonoBehaviour
 
     void FollowMouse()
     {
-        if (currentToolObject == null)
-            return;
+        Vector3 mousePos = Input.mousePosition;
 
-        Ray ray = medicalCamera.ScreenPointToRay(Input.mousePosition);
+        float x = (mousePos.x / Screen.width - 0.5f) * 4f;
+        float y = (mousePos.y / Screen.height - 0.5f) * 2f;
 
-        Vector3 targetPosition = ray.GetPoint(2f);
-
-        targetPosition.z = fixedZ;
-
-        currentToolObject.transform.position = targetPosition;
+        heldToolPoint.localPosition =
+            new Vector3(x, y, 0.7f);
     }
 
     public void EquipTool(MedicalToolType tool, GameObject tableObject)
     {
+        // devolve ferramenta antiga pra mesa
+        if (currentTableObject != null)
+        {
+            currentTableObject.SetActive(true);
+        }
+
         DisableAll();
 
         currentTool = tool;
@@ -77,6 +81,12 @@ public class MedicalToolManager : MonoBehaviour
         if (currentToolObject != null)
         {
             currentToolObject.SetActive(true);
+        }
+
+        // esconde a nova ferramenta da mesa
+        if (currentTableObject != null)
+        {
+            currentTableObject.SetActive(false);
         }
     }
 
