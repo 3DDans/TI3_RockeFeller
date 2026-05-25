@@ -92,8 +92,8 @@ public class DialogueSystem : MonoBehaviour
 
     void NextLine()
     {
-        if (currentDialogue.lines[index].hasChoices)
-            return;
+      if (currentDialogue.lines[index].hasChoices)
+         return;
 
         index++;
         savedIndex = index; 

@@ -1,0 +1,176 @@
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
+using UnityEditor.Animations;
+
+public class DialogueSystemCutscene : MonoBehaviour
+{
+    [Header("Cutscene Options")]
+    public bool finishedDialogue = false;
+    public PlayableDirector cutscene;
+    public AnimatorController playerController;
+    public Animator playerAnimator;
+    
+    [Header("UI")]
+    public GameObject dialoguePanel;
+    public TextMeshProUGUI dialogueText;
+
+    [Header("Choices")]
+    public GameObject choicePanel;
+    public Button[] choiceButtons;
+    public TextMeshProUGUI[] choiceTexts;
+
+    [Header("Config")]
+    public float typingSpeed = 0.03f;
+
+    private Dialogue currentDialogue;
+    private int index;
+    private bool isTyping;
+    private int savedIndex = 0;
+
+    public void StartDialogue(Dialogue data)
+    {
+        finishedDialogue = false;
+
+        currentDialogue = data;
+
+        index = savedIndex; 
+
+        choicePanel.SetActive(false);
+        dialoguePanel.SetActive(true);
+
+        ShowLine();
+    }
+
+    void Update()
+    {
+        if (!dialoguePanel.activeSelf) return;
+
+    
+        if (choicePanel.activeSelf) return;
+
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
+        {
+            if (isTyping)
+            {
+                StopAllCoroutines();
+                dialogueText.text = currentDialogue.lines[index].text;
+                isTyping = false;
+            }
+            else
+            {
+                NextLine();
+            }
+        }
+    }
+
+    void ShowLine()
+    {
+        StopAllCoroutines();
+        choicePanel.SetActive(false);
+
+        StartCoroutine(TypeLine());
+    }
+
+    IEnumerator TypeLine()
+    {
+        isTyping = true;
+        dialogueText.text = "";
+
+        string text = currentDialogue.lines[index].text;
+
+        foreach (char c in text)
+        {
+            dialogueText.text += c;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        isTyping = false;
+
+        if (currentDialogue.lines[index].hasChoices)
+        {
+            ShowChoices();
+        }
+
+    }
+
+    void NextLine()
+    {
+        if (currentDialogue.lines[index].hasChoices)
+            return;
+
+        index++;
+        savedIndex = index; 
+
+        if (index >= currentDialogue.lines.Length || currentDialogue.lines[index - 1].isEnd)
+        {
+            EndDialogue();
+            return;
+        }
+
+        ShowLine();
+    }
+
+    void ShowChoices()
+    {
+        choicePanel.SetActive(true);
+
+        var choices = currentDialogue.lines[index].choices;
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            if (i < choices.Length)
+            {
+                choiceButtons[i].gameObject.SetActive(true);
+                choiceTexts[i].text = choices[i].text;
+
+                int choiceIndex = i;
+                choiceButtons[i].onClick.RemoveAllListeners();
+                choiceButtons[i].onClick.AddListener(() => Choose(choiceIndex));
+            }
+            else
+            {
+                choiceButtons[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    void Choose(int choiceIndex)
+    {
+        choicePanel.SetActive(false);
+
+        index = currentDialogue.lines[index].choices[choiceIndex].nextIndex;
+        ShowLine();
+    }
+
+    void EndDialogue()
+    {
+        dialoguePanel.SetActive(false);
+
+        savedIndex = 0;
+
+        finishedDialogue = true;
+        IsPaused();
+    }
+
+    public void PauseCutscene()
+    {
+        if (!finishedDialogue)
+        {
+            playerAnimator.runtimeAnimatorController = null;
+            cutscene.Pause();
+        }
+    }
+
+    public void IsPaused()
+    {
+        if (cutscene.state == PlayState.Paused)
+        {
+            playerAnimator.runtimeAnimatorController = playerController;
+            cutscene.Play();
+        }
+    }
+}

@@ -5,22 +5,27 @@ using UnityEngine;
 
 public class EngineeringGameManager : MinigameBase
 {
-    private BuildPart selectedPart; 
+    private BuildPart selectedPart;
+
     public TextMeshProUGUI feedbackText;
+
     public List<BuildSlot> allSlots;
     public BuildPart[] allParts;
+
+    public GameObject gameUI;
 
     public bool IsAssemblyComplete()
     {
         return allParts.All(p => p.isPlaced);
     }
 
-    // ?? Quando o player clica numa peça
+    // Quando o player clica numa peça
     public void SelectPart(BuildPart part)
     {
         if (selectedPart != null)
         {
             var oldFloat = selectedPart.GetComponent<PartJiggle>();
+
             if (oldFloat != null)
                 oldFloat.StopFloat();
         }
@@ -28,30 +33,57 @@ public class EngineeringGameManager : MinigameBase
         selectedPart = part;
 
         var floatEffect = part.GetComponent<PartJiggle>();
+
         if (floatEffect != null)
             floatEffect.StartFloat();
 
         UpdateHighlights();
     }
 
-    // ?? Quando clicar em slot (vamos usar depois)
+    // Quando clicar em slot
     public void TryPlace(BuildSlot slot)
     {
-        if (selectedPart == null) return;
+        if (selectedPart == null)
+            return;
 
-        if (slot.acceptedType == selectedPart.type && !slot.occupied)
+        if (slot.acceptedType == selectedPart.type &&
+            !slot.occupied &&
+            selectedPart.CanBePlaced())
         {
             selectedPart.Place(slot);
+
             selectedPart = null;
 
             Debug.Log("Encaixou!");
+
             ClearHighlights();
+
+            // VERIFICA SE TERMINOU O MINIGAME
+            if (IsAssemblyComplete())
+            {
+                FinishGame();
+            }
         }
         else
         {
             Debug.Log("Não encaixa!");
         }
     }
+
+    void FinishGame()
+    {
+        feedbackText.text = "Estrutura montada!";
+
+        Invoke(nameof(EndGame), 1.5f);
+    }
+
+    void EndGame()
+    {
+        gameUI.SetActive(false);
+
+        CompleteMinigame();
+    }
+
     void UpdateHighlights()
     {
         Debug.Log("Atualizando highlights");
@@ -74,4 +106,3 @@ public class EngineeringGameManager : MinigameBase
         }
     }
 }
-
