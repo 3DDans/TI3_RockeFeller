@@ -77,6 +77,8 @@ public class SceneController : MonoBehaviour
             }
         }
 
+        cutscenePlay.gameObject.SetActive(false);
+
         void OnStopped(PlayableDirector d)
         {
             finished = true;

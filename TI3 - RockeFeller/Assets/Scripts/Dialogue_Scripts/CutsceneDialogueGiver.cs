@@ -10,7 +10,7 @@ public class CutsceneDialogueGiver : MonoBehaviour
 
     public void StartDialogue()
     {
-        CursorManager.Instance.ShowCursor();;
+        CursorManager.Instance.ShowCursor();
 
         dialogueSystem.StartDialogue(dialogue);
     }

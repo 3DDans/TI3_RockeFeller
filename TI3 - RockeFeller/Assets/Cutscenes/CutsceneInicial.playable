@@ -38,7 +38,7 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 27
-  m_Retroactive: 0
+  m_Retroactive: 1
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 2b971f046a599a246a2da8b73f1dd4f1, type: 2}
 --- !u!114 &-8847966781682931907
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 13
-  m_Retroactive: 0
+  m_Retroactive: 1
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 4e59d04d9da6ef24f8e1e401fcfeb902, type: 2}
 --- !u!114 &-8328342973399046942
@@ -133,8 +133,8 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 30
-  m_Retroactive: 0
-  m_EmitOnce: 0
+  m_Retroactive: 1
+  m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 4e59d04d9da6ef24f8e1e401fcfeb902, type: 2}
 --- !u!114 &-7635302949858749421
 MonoBehaviour:
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 37
-  m_Retroactive: 0
-  m_EmitOnce: 0
+  m_Retroactive: 1
+  m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 4e59d04d9da6ef24f8e1e401fcfeb902, type: 2}
 --- !u!114 &-5680355643723385992
 MonoBehaviour:
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 16
-  m_Retroactive: 0
+  m_Retroactive: 1
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 2b971f046a599a246a2da8b73f1dd4f1, type: 2}
 --- !u!114 &-4008820150987999562
@@ -903,8 +903,8 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 24
-  m_Retroactive: 0
-  m_EmitOnce: 0
+  m_Retroactive: 1
+  m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 4e59d04d9da6ef24f8e1e401fcfeb902, type: 2}
 --- !u!114 &-2692253951503368082
 MonoBehaviour:
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 33
-  m_Retroactive: 0
+  m_Retroactive: 1
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 2b971f046a599a246a2da8b73f1dd4f1, type: 2}
 --- !u!114 &-2227103213770181050
@@ -1436,25 +1436,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1885,8 +1867,8 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 17.5
-  m_Retroactive: 0
-  m_EmitOnce: 0
+  m_Retroactive: 1
+  m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 4e59d04d9da6ef24f8e1e401fcfeb902, type: 2}
 --- !u!74 &764202479335112062
 AnimationClip:
@@ -3766,7 +3748,7 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 21
-  m_Retroactive: 0
+  m_Retroactive: 1
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 2b971f046a599a246a2da8b73f1dd4f1, type: 2}
 --- !u!114 &7260979318456040287
@@ -3806,7 +3788,7 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
   m_Time: 40
-  m_Retroactive: 0
+  m_Retroactive: 1
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 2b971f046a599a246a2da8b73f1dd4f1, type: 2}
 --- !u!114 &9021705899595132571
