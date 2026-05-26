@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: FirstBiologiaMGQ
+  m_Name: FinalTiMGQ
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: I need your help with an analysis.
+  - text: You managed to stop the central system from being destroyed.
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: "They found this plant behind the dean\u2019s building."
+  - text: Without the ventilation system, several areas of the campus would have
+      become inaccessible.
     hasChoices: 0
     choices: []
-    isEnd: 0
-  - text: "It looks normal\u2026 but there\u2019s a strange substance on its surface."
+    isEnd: 1
+  - text: "We still don\u2019t know exactly what came along with that meteor\u2026"
     hasChoices: 0
     choices: []
-    isEnd: 0
-  - text: Use the microscope and see if you can find anything unusual.
+    isEnd: 1
+  - text: ut at least now we have a chance to understand all of this.
     hasChoices: 0
     choices: []
     isEnd: 1

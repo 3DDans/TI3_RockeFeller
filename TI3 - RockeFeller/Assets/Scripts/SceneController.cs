@@ -20,6 +20,7 @@ public class SceneController : MonoBehaviour
     public float introTime = 3f;
 
     [Header("Cutscenes")]
+    public bool tocarCutscene = true;
     public PlayableDirector cutscenePlay;
 
     void Start()
@@ -47,14 +48,26 @@ public class SceneController : MonoBehaviour
         CursorManager.Instance.HideCursor();
         hud.SetActive(true);
 
-        StartCoroutine(PlayCutscene());
+        if (tocarCutscene)
+        {
+            StartCoroutine(PlayCutscene());
+            
+            TransitionController.instance.FadeIn();
+            playerCC.enabled = true;
+            playerMovement.enabled = true;
+        }
+        else
+        {
+            playerCC.enabled = false;
+            playerMovement.enabled = false;
 
-        // Troca câmera
+            playerCC.transform.position = new Vector3(0.08f, 0.323f, -25.3f);
+
+            playerCC.enabled = true;
+            playerMovement.enabled = true;
+        }
         introCamera.Priority = 0;
         playerCamera.Priority = 20;
-        TransitionController.instance.FadeIn();
-        playerCC.enabled = true;
-        playerMovement.enabled = true;
     }
 
     IEnumerator PlayCutscene()
@@ -76,6 +89,8 @@ public class SceneController : MonoBehaviour
                 cutscenePlay.SetGenericBinding(track, null);
             }
         }
+
+        cutscenePlay.gameObject.SetActive(false);
 
         void OnStopped(PlayableDirector d)
         {

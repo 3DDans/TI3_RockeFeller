@@ -21,6 +21,7 @@ public class DialogueSystem : MonoBehaviour
     private int index;
     private bool isTyping;
     private int savedIndex = 0;
+    private bool isInDialogue = false;
 
     public System.Action onDialogueEnd;
 
@@ -28,6 +29,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue(Dialogue data)
     {
+        isInDialogue = true;
         currentDialogue = data;
 
         index = savedIndex; 
@@ -40,6 +42,7 @@ public class DialogueSystem : MonoBehaviour
 
     void Update()
     {
+        if (!isInDialogue) return;
         if (!dialoguePanel.activeSelf) return;
 
     
@@ -146,5 +149,8 @@ public class DialogueSystem : MonoBehaviour
         savedIndex = 0; 
 
         onDialogueEnd?.Invoke();
+
+        isInDialogue = false;
+        CursorManager.Instance.HideCursor();
     }
 }

@@ -3,15 +3,13 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Playables;
-using UnityEngine.Timeline;
-using UnityEditor.Animations;
 
 public class DialogueSystemCutscene : MonoBehaviour
 {
     [Header("Cutscene Options")]
     public bool finishedDialogue = false;
     public PlayableDirector cutscene;
-    public AnimatorController playerController;
+    public RuntimeAnimatorController playerController;
     public Animator playerAnimator;
     
     [Header("UI")]
@@ -30,9 +28,11 @@ public class DialogueSystemCutscene : MonoBehaviour
     private int index;
     private bool isTyping;
     private int savedIndex = 0;
+    private bool isInDialogue;
 
     public void StartDialogue(Dialogue data)
     {
+        isInDialogue = true;
         finishedDialogue = false;
 
         currentDialogue = data;
@@ -153,6 +153,8 @@ public class DialogueSystemCutscene : MonoBehaviour
         savedIndex = 0;
 
         finishedDialogue = true;
+        isInDialogue = false;
+        CursorManager.Instance.HideCursor();
         IsPaused();
     }
 
