@@ -106,4 +106,12 @@ public class SceneController : MonoBehaviour
         // Liga HUD
         hud.SetActive(true);
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("Fechando jogo...");
+
+        Application.Quit();
+
+    }
 }
