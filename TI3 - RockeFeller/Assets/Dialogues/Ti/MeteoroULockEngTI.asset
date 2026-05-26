@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: FirstBiologiaMGQ
+  m_Name: MeteoroULockEngTI
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: I need your help with an analysis.
+  - text: We received new reports about the meteor.
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: "They found this plant behind the dean\u2019s building."
+  - text: After the crash, several campus systems started malfunctioning at the same
+      time.
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: "It looks normal\u2026 but there\u2019s a strange substance on its surface."
+  - text: There may be a connection between the interference and the space object.
     hasChoices: 0
     choices: []
-    isEnd: 0
-  - text: Use the microscope and see if you can find anything unusual.
+    isEnd: 1
+  - text: You should investigate this as soon as possible.
     hasChoices: 0
     choices: []
     isEnd: 1

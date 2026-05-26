@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: FirstBiologiaMGQ
+  m_Name: PosMGTiMGQ
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: I need your help with an analysis.
+  - text: Great, the airflow is back to normal.
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: "They found this plant behind the dean\u2019s building."
+  - text: The doors have started responding again as well.
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: "It looks normal\u2026 but there\u2019s a strange substance on its surface."
+  - text: "But there\u2019s still something strange happening in the servers."
     hasChoices: 0
     choices: []
-    isEnd: 0
-  - text: Use the microscope and see if you can find anything unusual.
+    isEnd: 1
+  - text: "This failure doesn\u2019t seem to have been caused by a normal error."
     hasChoices: 0
     choices: []
     isEnd: 1
