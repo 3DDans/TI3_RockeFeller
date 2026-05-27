@@ -10,23 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: Reitor1
+  m_Name: HintNPCMed
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Dr. Stan! I'm so glad to see you.
+  - text: Hello! You came to help us, right?
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: Thank you for accepting my invitation and coming to Punkofeller University.
+  - text: The doctor in this building needed help with some sick patients...
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: Your help means a great deal to us.
+  - text: "It\u2019s all so strange... they were fine, completely normal, until they
+      suddenly started getting sick!"
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: As I mentioned in my letter, Punkofeller University has been facing...
-      a number of troubling issues lately.
+  - text: "Well, I\u2019m not a doctor, so I won\u2019t make any assumptions, but
+      you should try to help!"
     hasChoices: 0
     choices: []
-    isEnd: 0
+    isEnd: 1

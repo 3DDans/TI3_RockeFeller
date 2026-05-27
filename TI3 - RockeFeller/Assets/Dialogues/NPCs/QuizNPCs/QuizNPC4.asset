@@ -10,24 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: Reitor 2
+  m_Name: QuizNPC4
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Strange and seemingly unrelated events are occurring.
+  - text: Hello, Doctor. I was researching a very renowned university, Rockefeller!
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: For example, in the Engineering Building, several pieces of equipment were
-      suddenly damaged out of nowhere!
+  - text: Do you want to hear something interesting about it?
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: "As for the building\u2019s central AI system, it\u2019s gone completely
-      haywire!"
+  - text: Which of these employees has Rockefeller ever had?
+    hasChoices: 1
+    choices:
+    - text: A dancer from the Rockettes
+      nextIndex: 3
+    - text: A famous graffiti artist
+      nextIndex: 3
+    - text: A B-movie actor
+      nextIndex: 3
+    isEnd: 0
+  - text: "All of the options are correct! Can you believe that? That\u2019s impressive!"
     hasChoices: 0
     choices: []
-    isEnd: 0
-  - text: The cooling systems and automatic doors are experiencing chaotic malfunctions...
-    hasChoices: 0
-    choices: []
-    isEnd: 0
+    isEnd: 1

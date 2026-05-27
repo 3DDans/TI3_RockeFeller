@@ -10,22 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: FirstEngMGQ
+  m_Name: QuizNPC1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Hey! Finally, someone showed up.
+  - text: I need help with an exame! Can you help me?
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: Something damaged one of our prototypes.
+  - text: Basically, I need to know what existed on the Rockefeller campus before
+      it became a biomedical research institute...
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: Oh man, I really liked that robot...
+  - text: Do you have any guesses?
+    hasChoices: 1
+    choices:
+    - text: Shipyard
+      nextIndex: 3
+    - text: Sheep farm
+      nextIndex: 4
+    - text: Manufacturing plant
+      nextIndex: 3
+    isEnd: 0
+  - text: "Hmm, I\u2019m not sure about that... Well, I\u2019ll study a little more!"
     hasChoices: 0
     choices: []
     isEnd: 1
-  - text: Fix it for me, okay?
+  - text: Of course! Pretty crazy stuff, right? I would never have imagined it.
     hasChoices: 0
     choices: []
     isEnd: 1

@@ -10,24 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: Reitor 2
+  m_Name: QuizNPC5
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Strange and seemingly unrelated events are occurring.
+  - text: "Wow, that\u2019s crazy, Doctor!"
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: For example, in the Engineering Building, several pieces of equipment were
-      suddenly damaged out of nowhere!
+  - text: This game was developed by people from another country!
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: "As for the building\u2019s central AI system, it\u2019s gone completely
-      haywire!"
+  - text: Take a guess which country.
+    hasChoices: 1
+    choices:
+    - text: United Kingdom
+      nextIndex: 3
+    - text: Canada
+      nextIndex: 3
+    - text: Brazil
+      nextIndex: 4
+    isEnd: 0
+  - text: No! It was made by Brazilian game developers!
     hasChoices: 0
     choices: []
-    isEnd: 0
-  - text: The cooling systems and automatic doors are experiencing chaotic malfunctions...
+    isEnd: 1
+  - text: "Yes! That\u2019s incredible, I love that country!"
     hasChoices: 0
     choices: []
-    isEnd: 0
+    isEnd: 1
