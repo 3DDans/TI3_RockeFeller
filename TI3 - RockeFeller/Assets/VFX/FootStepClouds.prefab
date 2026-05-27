@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9116718519885893560}
   - component: {fileID: 8530775316481413101}
   - component: {fileID: 1972926263581838048}
-  - component: {fileID: 2168609897062210044}
+  - component: {fileID: 2438422279506640883}
   m_Layer: 0
   m_Name: FootStepClouds
   m_TagString: Untagged
@@ -42,8 +42,8 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5042222549400065270}
   serializedVersion: 8
-  lengthInSec: 1
-  simulationSpeed: 1
+  lengthInSec: 3.21
+  simulationSpeed: 2.14
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -117,8 +117,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.5
+      scalar: 2.06
+      minScalar: 0.0001
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -170,7 +170,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -288,8 +288,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
-      minScalar: 5
+      scalar: 2.35
+      minScalar: 1.75
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -605,14 +605,14 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 8
+    maxNumParticles: 515
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.3
+      scalar: -0.06
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -871,7 +871,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 5.39
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4855,7 +4855,7 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!114 &2168609897062210044
+--- !u!114 &2438422279506640883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4864,7 +4864,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5042222549400065270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3db89a2fa33ccf479545b478ce57b9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 01541055df845cd45ba015063ecd9c6d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FootstepsController
-  target: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyAfterTime
+  destroyTime: 0.75

@@ -23600,6 +23600,7 @@ Transform:
   - {fileID: 749890550}
   - {fileID: 1437273592}
   - {fileID: 870054953}
+  - {fileID: 2140296351}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &629118856
@@ -26577,7 +26578,7 @@ Transform:
   m_GameObject: {fileID: 712069982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.089996, y: 0, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26587,6 +26588,7 @@ Transform:
   - {fileID: 586107643}
   - {fileID: 81786248}
   - {fileID: 170229559}
+  - {fileID: 1211318891}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &712069984
@@ -50979,6 +50981,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1553311786991054777, guid: 32b98f2f745a7f4488deb09d49c2a849, type: 3}
   m_PrefabInstance: {fileID: 1327637948}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1211318890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1211318891}
+  - component: {fileID: 1211318892}
+  m_Layer: 0
+  m_Name: VFXCONTROLER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1211318891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211318890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 712069983}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211318892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211318890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776558f4b5baca244aa3ab3d4ec1de60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VFXManager
+  vfxList:
+  - name: FootstepDust
+    prefab: {fileID: 5042222549400065270, guid: 5417c4d1d613dfb4787dd198a2ee5fa7, type: 3}
 --- !u!1001 &1213119356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63072,6 +63121,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 036a3cb2a95fce74cb532688de353376, type: 3}
   m_PrefabInstance: {fileID: 1390165472}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1503829424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503829425}
+  m_Layer: 0
+  m_Name: FootstepDust
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1503829425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503829424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.073, z: 0.431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1542420441}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1504346916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79683,11 +79763,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 628422372}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d95da6a34a760ca47ae1b9b1090de434, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000010728836
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d95da6a34a760ca47ae1b9b1090de434, type: 3}
       propertyPath: m_LocalPosition.y
@@ -88960,6 +89040,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 164e0a6d9df66a348b20a5bba2596011, type: 3}
   m_PrefabInstance: {fileID: 776758582}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2140296351 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d95da6a34a760ca47ae1b9b1090de434, type: 3}
+  m_PrefabInstance: {fileID: 1890872166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2141589308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95464,10 +95549,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2018146569249383402, guid: 62946d04eff2b8341a14257caf5886c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6457759796167888171, guid: 62946d04eff2b8341a14257caf5886c8, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7944153182406177267, guid: 62946d04eff2b8341a14257caf5886c8, type: 3}
+      propertyPath: footstepPoint
+      value: 
+      objectReference: {fileID: 1503829425}
     - target: {fileID: 7944153182406177267, guid: 62946d04eff2b8341a14257caf5886c8, type: 3}
       propertyPath: footstepInterval
       value: 1.21
@@ -95513,8 +95606,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2018146569249383402, guid: 62946d04eff2b8341a14257caf5886c8, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8879337210832920011, guid: 62946d04eff2b8341a14257caf5886c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1503829425}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62946d04eff2b8341a14257caf5886c8, type: 3}
 --- !u!95 &3730634472746328187 stripped
@@ -102598,6 +102695,5 @@ SceneRoots:
   - {fileID: 712069983}
   - {fileID: 1811260708}
   - {fileID: 1915486807}
-  - {fileID: 1890872166}
   - {fileID: 1863464341}
   - {fileID: 347983740}

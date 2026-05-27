@@ -17,6 +17,9 @@ public class ThirdPersonMovement : MonoBehaviour
     [Header("Footstep")]
     public float footstepInterval = 0.45f;
 
+    [Header("VFX")]
+    public Transform footstepPoint;
+
     private float footstepTimer;
 
     void Start()
@@ -76,6 +79,11 @@ public class ThirdPersonMovement : MonoBehaviour
             if (footstepTimer <= 0)
             {
                 SoundFXManager.Instance.PlaySFX("footstep");
+
+                VFXManager.Instance.PlayVFX(
+        "FootstepDust",
+        footstepPoint.position
+    );
 
                 footstepTimer = footstepInterval;
             }
