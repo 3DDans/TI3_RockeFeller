@@ -4,6 +4,7 @@ using Unity.Cinemachine;
 using System.Collections;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
+using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
+
+        MusicManager.Instance.PlayMusic("music1");
         // Menu ativo
         mainMenu.SetActive(true);
 
@@ -97,6 +100,21 @@ public class SceneController : MonoBehaviour
             finished = true;
         }
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SceneManager.LoadScene(1);
+        
+        }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            SceneManager.LoadScene(0);
+
+        }
+
+    }
 
     void StartGameplay()
     {
@@ -105,5 +123,13 @@ public class SceneController : MonoBehaviour
 
         // Liga HUD
         hud.SetActive(true);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Fechando jogo...");
+
+        Application.Quit();
+
     }
 }
