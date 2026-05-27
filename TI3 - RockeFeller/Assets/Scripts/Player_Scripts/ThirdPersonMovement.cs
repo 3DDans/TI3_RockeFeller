@@ -69,13 +69,13 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
         // Som de passos
-        if (characterController.isGrounded && inputDir.magnitude > 0.1f)
+        if (characterController.isGrounded && characterController.velocity.magnitude > 0.1f)
         {
             footstepTimer -= Time.deltaTime;
 
             if (footstepTimer <= 0)
             {
-                SoundFXManager.Instance.PlaySFX("Footstep");
+                SoundFXManager.Instance.PlaySFX("footstep");
 
                 footstepTimer = footstepInterval;
             }
@@ -90,7 +90,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
-            SoundFXManager.Instance.PlaySFX("Jump");
+            SoundFXManager.Instance.PlaySFX("jump");
         }
 
         // Gravidade
