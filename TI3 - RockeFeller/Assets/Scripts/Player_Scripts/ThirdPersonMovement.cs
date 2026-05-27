@@ -7,25 +7,31 @@ public class ThirdPersonMovement : MonoBehaviour
     Vector3 velocity;
 
     public bool canMove = true;
+
+    [Header("Movement")]
     public float rotationSpeed;
     public float walkSpeed;
     public float jumpHeight;
     public float gravity;
 
-    public AudioSource audioSource;
-    public AudioClip[] clips;
-    private bool isWalkingSoundPlaying = false;
+    [Header("Footstep")]
+    public float footstepInterval = 0.45f;
+
+    private float footstepTimer;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        audioSource = GetComponent<AudioSource>();
+
         mainCamera = Camera.main.transform;
     }
 
     void Update()
     {
-        if (canMove) Movement();
+        if (canMove)
+        {
+            Movement();
+        }
     }
 
     void Movement()
@@ -36,8 +42,10 @@ public class ThirdPersonMovement : MonoBehaviour
 
         Vector3 camForward = mainCamera.forward;
         Vector3 camRight = mainCamera.right;
+
         camForward.y = 0;
         camRight.y = 0;
+
         camForward.Normalize();
         camRight.Normalize();
 
@@ -48,85 +56,49 @@ public class ThirdPersonMovement : MonoBehaviour
 
         Vector3 inputDir = (camForward * vertical + camRight * horizontal);
 
-        // Rotacao do Personagem
-        if (inputDir.magnitude > 0.1f){
+        // Rotacao do personagem
+        if (inputDir.magnitude > 0.1f)
+        {
             Quaternion targetRotation = Quaternion.LookRotation(inputDir);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRotation,
+                rotationSpeed * Time.deltaTime
+            );
         }
 
-        // Movimento Vertical (Pulo e Gravidade)
-        if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
+        // Som de passos
+        if (characterController.isGrounded && inputDir.magnitude > 0.1f)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            PlayJumpSound();
-        }
-        velocity.y += gravity * Time.deltaTime;
+            footstepTimer -= Time.deltaTime;
 
-        Vector3 finalMove = inputDir * walkSpeed + velocity;
-
-        characterController.Move(finalMove * Time.deltaTime);
-
-        if (horizontal != 0 || vertical != 0)
-        {
-            if (!isWalkingSoundPlaying && characterController.isGrounded)
+            if (footstepTimer <= 0)
             {
-                PlayWalkingSound();
+                SoundFXManager.Instance.PlaySFX("Footstep");
+
+                footstepTimer = footstepInterval;
             }
         }
         else
         {
-            if (isWalkingSoundPlaying)
-            {
-                audioSource.Stop();
-                isWalkingSoundPlaying = false;
-            }
+            footstepTimer = 0;
         }
-    }
 
-    void Sounds(int clip, bool loop) 
-    {
-        if (audioSource.clip != clips[clip] || !audioSource.isPlaying)
+        // Pulo
+        if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
         {
-            audioSource.clip = clips[clip];
-            audioSource.loop = loop;
-            audioSource.Play();
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
-            isWalkingSoundPlaying = loop;
-        }
-    }
-
-    void PlayWalkingSound()
-    {
-        Sounds(0, true);
-        isWalkingSoundPlaying = true;
-    }
-
-    void PlayJumpSound()
-    {
-        bool wasWalking = isWalkingSoundPlaying;
-
-        if (wasWalking)
-        {
-            audioSource.Stop();
+            SoundFXManager.Instance.PlaySFX("Jump");
         }
 
-        Sounds(1, false);
-        audioSource.Play();
+        // Gravidade
+        velocity.y += gravity * Time.deltaTime;
 
-        if (wasWalking)
-        {
-            Invoke(nameof(ResumeWalkingSound), clips[1].length);
-        }
-    }
+        // Movimento final
+        Vector3 finalMove = inputDir * walkSpeed + velocity;
 
-    void ResumeWalkingSound()
-    {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        if ((horizontal != 0 || vertical != 0) && !audioSource.isPlaying)
-        {
-            PlayWalkingSound();
-        }
+        characterController.Move(finalMove * Time.deltaTime);
     }
 }

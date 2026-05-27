@@ -26,6 +26,8 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
+
+        MusicManager.Instance.PlayMusic("music1");
         // Menu ativo
         mainMenu.SetActive(true);
 

@@ -95,10 +95,7 @@ public class UIButtonFX : MonoBehaviour,
             pulseRoutine = StartCoroutine(PulseGlow());
         }
 
-        if (audioSource != null && hoverSound != null)
-        {
-            audioSource.PlayOneShot(hoverSound);
-        }
+        SoundFXManager.Instance.PlaySFX("btnHover");
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -127,10 +124,7 @@ public class UIButtonFX : MonoBehaviour,
 
         transform.localScale = originalScale * clickScale;
 
-        if (audioSource != null && clickSound != null)
-        {
-            audioSource.PlayOneShot(clickSound);
-        }
+        SoundFXManager.Instance.PlaySFX("click");
     }
 
     public void OnPointerUp(PointerEventData eventData)
