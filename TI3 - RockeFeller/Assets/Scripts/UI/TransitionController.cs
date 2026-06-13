@@ -21,16 +21,16 @@ public class TransitionController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetTrigger("Open");
+        animator.SetBool("Open", true);
     }
 
     public void FadeOut()
     {
-        animator.SetTrigger("Close");
+        animator.SetBool("Open", false);
     }
 
     public void FadeIn()
     {
-        animator.SetTrigger("Open");
+        animator.SetBool("Open", true);
     }
 }

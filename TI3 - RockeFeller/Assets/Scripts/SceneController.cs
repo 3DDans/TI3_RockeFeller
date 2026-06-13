@@ -11,6 +11,7 @@ public class SceneController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject mainMenu;
     public GameObject hud;
+    public GameObject pauseText;
 
     public CinemachineCamera introCamera;
     public CinemachineCamera playerCamera;
@@ -19,6 +20,7 @@ public class SceneController : MonoBehaviour
     public CharacterController playerCC;
 
     public float introTime = 3f;
+    public TabletController tabletController;
 
     [Header("Cutscenes")]
     public bool tocarCutscene = true;
@@ -32,6 +34,7 @@ public class SceneController : MonoBehaviour
         mainMenu.SetActive(true);
 
         // HUD desligada
+        pauseText.SetActive(false);
         hud.SetActive(false);
 
         // Travar player
@@ -49,15 +52,14 @@ public class SceneController : MonoBehaviour
         // Esconde menu
         mainMenu.SetActive(false);
         CursorManager.Instance.HideCursor();
-        hud.SetActive(true);
+        
 
         if (tocarCutscene)
         {
+            tabletController.canPause = false;
             StartCoroutine(PlayCutscene());
             
-            TransitionController.instance.FadeIn();
-            playerCC.enabled = true;
-            playerMovement.enabled = true;
+            //TransitionController.instance.FadeIn();
         }
         else
         {
@@ -68,6 +70,9 @@ public class SceneController : MonoBehaviour
 
             playerCC.enabled = true;
             playerMovement.enabled = true;
+            tabletController.canPause = true;
+            pauseText.SetActive(true);
+            hud.SetActive(true);
         }
         introCamera.Priority = 0;
         playerCamera.Priority = 20;
@@ -75,7 +80,11 @@ public class SceneController : MonoBehaviour
 
     IEnumerator PlayCutscene()
     {
+        playerCC.enabled = false;
+        playerMovement.enabled = false;
         bool finished = false;
+        pauseText.SetActive(false);
+        hud.SetActive(true);
 
         cutscenePlay.stopped += OnStopped;
         cutscenePlay.Play();
@@ -92,6 +101,11 @@ public class SceneController : MonoBehaviour
                 cutscenePlay.SetGenericBinding(track, null);
             }
         }
+        Debug.Log("Cutscene Finalizada");
+        playerCC.enabled = true;
+        playerMovement.enabled = true;
+        pauseText.SetActive(true);
+        tabletController.canPause = true;
 
         cutscenePlay.gameObject.SetActive(false);
 
