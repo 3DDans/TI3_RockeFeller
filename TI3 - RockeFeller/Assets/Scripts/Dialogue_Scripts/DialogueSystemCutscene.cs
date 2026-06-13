@@ -146,7 +146,7 @@ public class DialogueSystemCutscene : MonoBehaviour
         ShowLine();
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         dialoguePanel.SetActive(false);
 

@@ -12,6 +12,7 @@ public class TabletController : MonoBehaviour
    public TextMeshProUGUI hours;
    public GameObject tabletUI;
     private bool isTabletOpen;
+    public bool canPause = false;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class TabletController : MonoBehaviour
     void Update()
     {
         hours.text = DateTime.Now.ToString("hh:mm tt");
-        if (Input.GetKeyDown(KeyCode.Escape) && !GameProgressManager.IsInMinigame)
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameProgressManager.IsInMinigame && canPause)
         {
             Debug.Log("Escape key pressed. Toggling tablet.");
             ToggleTablet();
