@@ -67,15 +67,22 @@ public class NPCInteraction : MonoBehaviour
         switch (npcRole)
         {
             case NPCRole.Ambient:
-            case NPCRole.BuildingHint:
-            case NPCRole.QuestGiver:
+                StartDialogue();
+                break;
 
+            case NPCRole.BuildingHint:
+                StartDialogue();
+                break;
+
+            case NPCRole.QuestGiver:
                 StartDialogue();
                 break;
 
             case NPCRole.Minigame:
 
                 if (!GameProgressManager.Instance.IsUnlocked(minigameID))
+                    return;
+                if (GameProgressManager.Instance.IsCompleted(minigameID))
                     return;
 
                 StartMinigame();
@@ -204,6 +211,9 @@ public class NPCInteraction : MonoBehaviour
 
     void StartMinigame()
     {
+       
+
+
         if (minigameID != MinigameID.Biologia)
         {
             CursorManager.Instance.ShowCursor();
@@ -302,7 +312,7 @@ public class NPCInteraction : MonoBehaviour
 
     void EnableInteraction()
     {
-        if(playerInRange && GameProgressManager.Instance.IsUnlocked(minigameID))
+        if (playerInRange && GameProgressManager.Instance.IsUnlocked(minigameID) && !GameProgressManager.Instance.IsCompleted(minigameID))
         {
         interactionUI.SetActive(true);
         }
@@ -326,7 +336,7 @@ public class NPCInteraction : MonoBehaviour
 
             case NPCRole.Minigame:
 
-                if (GameProgressManager.Instance.IsUnlocked(minigameID))
+                if (GameProgressManager.Instance.IsUnlocked(minigameID) && !GameProgressManager.Instance.IsCompleted(minigameID))
                 {
                     interactionUI.SetActive(true);
                 }
