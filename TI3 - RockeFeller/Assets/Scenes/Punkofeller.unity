@@ -45693,6 +45693,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1072488853}
   - component: {fileID: 1072488852}
+  - component: {fileID: 1072488855}
+  - component: {fileID: 1072488854}
   m_Layer: 0
   m_Name: CinemachineCameraMENU
   m_TagString: Untagged
@@ -45758,6 +45760,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 347983740}
   m_LocalEulerAnglesHint: {x: -8.458, y: 21.339, z: 1.873}
+--- !u!114 &1072488854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072488851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f342d5b7a3a7744922f966a1c183b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuCameraBob2
+  verticalAmplitude: 0.08
+  horizontalAmplitude: 0.03
+  rotationAmplitude: 0.5
+  speed: 0.4
+--- !u!114 &1072488855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072488851}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd6e06e5d78313429132c975576101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuCameraBob
+  verticalAmplitude: 0.08
+  horizontalAmplitude: 0.03
+  speed: 0.4
 --- !u!4 &1074163866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7598434625268054876, guid: cc72c08fadad96b428475561fcacc67c, type: 3}
