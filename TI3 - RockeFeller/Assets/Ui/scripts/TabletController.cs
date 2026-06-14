@@ -13,6 +13,8 @@ public class TabletController : MonoBehaviour
    public GameObject tabletUI;
     private bool isTabletOpen;
     public bool canPause = false;
+    [Header("Task UI")]
+    public TabletTaskListUI taskListUI;
 
     void Start()
     {
@@ -39,6 +41,10 @@ public class TabletController : MonoBehaviour
         isTabletOpen = !isTabletOpen;
         Debug.Log("New tablet state: " + (isTabletOpen ? "Open" : "Closed"));
         tabletUI.SetActive(isTabletOpen);
+        if (isTabletOpen)
+        {
+            taskListUI.RefreshTasks();
+        }
         Debug.Log("Tablet UI active: " + tabletUI.activeSelf);
         Cursor.visible = isTabletOpen;
         Cursor.lockState = isTabletOpen
