@@ -21218,6 +21218,7 @@ RectTransform:
   - {fileID: 947026230}
   - {fileID: 1675228564}
   - {fileID: 3877629319710206926}
+  - {fileID: 1200717089}
   m_Father: {fileID: 1863464341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -26957,6 +26958,9 @@ GameObject:
   - component: {fileID: 712069987}
   - component: {fileID: 712069988}
   - component: {fileID: 712069989}
+  - component: {fileID: 712069990}
+  - component: {fileID: 712069991}
+  - component: {fileID: 712069992}
   m_Layer: 0
   m_Name: Controlers
   m_TagString: Untagged
@@ -27001,6 +27005,7 @@ MonoBehaviour:
   currentPhase: 0
   minigames: []
   currentLinearStage: 0
+  fisrtPhaseTask: ALL_DEPARTMENTS_COMPLETED
   meteorUnlocked: 0
   finalStageUnlocked: 0
   gameFinished: 0
@@ -27075,6 +27080,220 @@ MonoBehaviour:
   masterSlider: {fileID: 1979977843}
   musicSlider: {fileID: 2032677061}
   sfxSlider: {fileID: 1669464104}
+--- !u!114 &712069990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712069982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01982426f4890c4198b4f6e7200c486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaskManager
+  allTasks:
+  - taskID: speak_dean_01
+    taskName: Speak with the Dean
+    area: 1
+    type: 0
+    status: 1
+    unlockEventIDs: []
+    completeEventID: DEAN_FIRST_CONVERSATION
+  - taskID: explore_buildings
+    taskName: Explore the University Buildings
+    area: 1
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: ALL_DEPARTMENTS_COMPLETED
+  - taskID: biology_speak_researcher
+    taskName: Speak with the Biology Researcher
+    area: 2
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: BIOLOGY_RESEARCHER_CONVERSATION
+  - taskID: biology_use_microscope
+    taskName: Examine the Microscope
+    area: 2
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - BIOLOGY_RESEARCHER_CONVERSATION
+    completeEventID: MICROSCOPE_INTERACTION
+  - taskID: biology_discover_organism
+    taskName: Discover the Alien Organism
+    area: 2
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - MICROSCOPE_INTERACTION
+    completeEventID: ALIEN_ORGANISM_DISCOVERED
+  - taskID: biology_complete
+    taskName: Complete the Biology Department
+    area: 2
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: BIOLOGY_COMPLETED
+  - taskID: engineering_speak_engineer
+    taskName: 'Speak with the Chief Engineer '
+    area: 4
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: ENGINEER_CONVERSATION
+  - taskID: engineering_inspect_prototype
+    taskName: Inspect the Prototype
+    area: 4
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - ENGINEER_CONVERSATION
+    completeEventID: PROTOTYPE_INTERACTION
+  - taskID: engineering_assemble_prototype
+    taskName: Assemble the Prototype
+    area: 4
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - PROTOTYPE_INTERACTION
+    completeEventID: PROTOTYPE_ASSEMBLED
+  - taskID: engineering_complete
+    taskName: Complete the Engineering Department
+    area: 4
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: ENGINEERING_COMPLETED
+  - taskID: it_speak_technician
+    taskName: Speak with the IT Technician
+    area: 4
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: IT_TECHNICIAN_CONVERSATION
+  - taskID: it_access_terminal
+    taskName: Access the Server Terminal
+    area: 4
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - IT_TECHNICIAN_CONVERSATION
+    completeEventID: SERVER_TERMINAL_INTERACTION
+  - taskID: it_restore_code
+    taskName: Restore the System Code
+    area: 4
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - SERVER_TERMINAL_INTERACTION
+    completeEventID: SYSTEM_CODE_RESTORED
+  - taskID: it_complete
+    taskName: Complete the Information Technology Department
+    area: 4
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: IT_COMPLETED
+  - taskID: medicine_speak_doctor
+    taskName: Speak with the Doctor
+    area: 3
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: DOCTOR_CONVERSATION
+  - taskID: medicine_examine_patient
+    taskName: Examine the Patient
+    area: 3
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DOCTOR_CONVERSATION
+    completeEventID: PATIENT_INTERACTION
+  - taskID: medicine_complete_report
+    taskName: Complete the Patient Report
+    area: 3
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - PATIENT_INTERACTION
+    completeEventID: PATIENT_REPORT_COMPLETED
+  - taskID: medicine_complete
+    taskName: Complete the Medicine Department
+    area: 3
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_FIRST_CONVERSATION
+    completeEventID: MEDICINE_COMPLETED
+  - taskID: return_to_dean
+    taskName: Return to the Dean
+    area: 0
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - ALL_DEPARTMENTS_COMPLETED
+    completeEventID: DEAN_SECOND_CONVERSATION
+  - taskID: enter_restricted_gate
+    taskName: Enter the Restricted Gate
+    area: 0
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - DEAN_SECOND_CONVERSATION
+    completeEventID: RESTRICTED_GATE_ENTERED
+  - taskID: investigate_meteorite
+    taskName: Investigate the Meteorite
+    area: 0
+    type: 0
+    status: 0
+    unlockEventIDs:
+    - RESTRICTED_GATE_ENTERED
+    completeEventID: METEORITE_INTERACTION
+  - taskID: xxxx
+    taskName: xxxx
+    area: 0
+    type: 1
+    status: 1
+    unlockEventIDs:
+    - RESTRICTED_GATE_ENTERED
+    completeEventID: 
+--- !u!114 &712069991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712069982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 995940af69892e84d95ddb202c56fddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MissionGuideUI
+  taskText: {fileID: 758040792}
+--- !u!114 &712069992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712069982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a21d496a9bd6543b6459da3204d119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaManager
+  CurrentArea: 1
 --- !u!4 &712327019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 333239188460433319, guid: 825f305487efaa44a901e0ec03fdcaac, type: 3}
@@ -28835,6 +29054,10 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 53660213}
+    - target: {fileID: 4703786154929641585, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
+      propertyPath: destinationArea
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6222083063770446090, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
       propertyPath: m_Name
       value: DoorFadeTransition (3)
@@ -28848,6 +29071,143 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
+--- !u!1 &758040790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758040791}
+  - component: {fileID: 758040793}
+  - component: {fileID: 758040792}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &758040791
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758040790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1200717089}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.3133, y: 0.8164}
+  m_SizeDelta: {x: 429.8265, y: 587.7672}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &758040792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758040790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 501487a0f31d7dd48972465ffdddc425, type: 2}
+  m_sharedMaterial: {fileID: -8669929479987347929, guid: 501487a0f31d7dd48972465ffdddc425, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &758040793
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758040790}
+  m_CullTransparentMesh: 1
 --- !u!1001 &759198596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37132,6 +37492,10 @@ MonoBehaviour:
   npcRole: 2
   linkedMinigameNPC: {fileID: 1463946255}
   minigameID: 2
+  completeEventIDTalk: BIOLOGY_RESEARCHER_CONVERSATION
+  completeEventIDMineGameIni: 
+  completeEventIDMineGameEnd: 
+  completeEventIDMineGameEnd2: 
 --- !u!65 &915858956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43046,6 +43410,18 @@ PrefabInstance:
       propertyPath: dialogueCamera
       value: 
       objectReference: {fileID: 2036695700}
+    - target: {fileID: 162573511070855123, guid: 2c858d856c717254b9f627cb2cbc78c7, type: 3}
+      propertyPath: completeEventIDMineGameEnd
+      value: SYSTEM_CODE_RESTORED
+      objectReference: {fileID: 0}
+    - target: {fileID: 162573511070855123, guid: 2c858d856c717254b9f627cb2cbc78c7, type: 3}
+      propertyPath: completeEventIDMineGameIni
+      value: SERVER_TERMINAL_INTERACTION
+      objectReference: {fileID: 0}
+    - target: {fileID: 162573511070855123, guid: 2c858d856c717254b9f627cb2cbc78c7, type: 3}
+      propertyPath: completeEventIDMineGameEnd2
+      value: IT_COMPLETED
+      objectReference: {fileID: 0}
     - target: {fileID: 226952896319109349, guid: 2c858d856c717254b9f627cb2cbc78c7, type: 3}
       propertyPath: m_Size.x
       value: 5
@@ -43082,6 +43458,10 @@ PrefabInstance:
       propertyPath: minigameCamera
       value: 
       objectReference: {fileID: 7308111}
+    - target: {fileID: 1267580735989578091, guid: 2c858d856c717254b9f627cb2cbc78c7, type: 3}
+      propertyPath: completeEventIDTalk
+      value: IT_TECHNICIAN_CONVERSATION
+      objectReference: {fileID: 0}
     - target: {fileID: 1267580735989578091, guid: 2c858d856c717254b9f627cb2cbc78c7, type: 3}
       propertyPath: dialogues.Array.data[0].dialogue
       value: 
@@ -48289,6 +48669,10 @@ MonoBehaviour:
   npcRole: 3
   linkedMinigameNPC: {fileID: 1230782541}
   minigameID: 1
+  completeEventIDTalk: 
+  completeEventIDMineGameIni: PATIENT_INTERACTION
+  completeEventIDMineGameEnd: PATIENT_REPORT_COMPLETED
+  completeEventIDMineGameEnd2: MEDICINE_COMPLETED
 --- !u!65 &1150333745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49326,6 +49710,10 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4703786154929641585, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
+      propertyPath: destinationArea
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6222083063770446090, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
       propertyPath: m_Name
       value: DoorFadeTransition (2)
@@ -50090,6 +50478,10 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 542781170}
+    - target: {fileID: 4703786154929641585, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
+      propertyPath: destinationArea
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6222083063770446090, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
       propertyPath: m_Name
       value: DoorFadeTransition
@@ -50752,6 +51144,82 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b98f2f745a7f4488deb09d49c2a849, type: 3}
+--- !u!1 &1200717088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1200717089}
+  - component: {fileID: 1200717091}
+  - component: {fileID: 1200717090}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1200717089
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200717088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 758040791}
+  m_Father: {fileID: 551458964}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -739.85, y: -14}
+  m_SizeDelta: {x: -1479.7013, y: -482.2433}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1200717090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200717088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1200717091
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200717088}
+  m_CullTransparentMesh: 1
 --- !u!1 &1200996566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 560584817487781355, guid: 913e8597d7a149547983ae1c01147c48, type: 3}
@@ -52210,6 +52678,10 @@ MonoBehaviour:
   npcRole: 2
   linkedMinigameNPC: {fileID: 1150333744}
   minigameID: 1
+  completeEventIDTalk: DOCTOR_CONVERSATION
+  completeEventIDMineGameIni: 
+  completeEventIDMineGameEnd: 
+  completeEventIDMineGameEnd2: 
 --- !u!65 &1230782542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58482,6 +58954,10 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 2128938563}
+    - target: {fileID: 4703786154929641585, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
+      propertyPath: destinationArea
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6222083063770446090, guid: 7d9027c49f4ca064b9b6eaff5c6ff387, type: 3}
       propertyPath: m_Name
       value: DoorFadeTransition (1)
@@ -62702,6 +63178,10 @@ MonoBehaviour:
   npcRole: 3
   linkedMinigameNPC: {fileID: 915858955}
   minigameID: 2
+  completeEventIDTalk: 
+  completeEventIDMineGameIni: MICROSCOPE_INTERACTION
+  completeEventIDMineGameEnd: ALIEN_ORGANISM_DISCOVERED
+  completeEventIDMineGameEnd2: BIOLOGY_COMPLETED
 --- !u!65 &1463946256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67183,6 +67663,10 @@ MonoBehaviour:
   npcRole: 2
   linkedMinigameNPC: {fileID: 9154430716351708556}
   minigameID: 3
+  completeEventIDTalk: ENGINEER_CONVERSATION
+  completeEventIDMineGameIni: 
+  completeEventIDMineGameEnd: 
+  completeEventIDMineGameEnd2: 
 --- !u!65 &1590317629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93442,6 +93926,10 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 1289977063}
+    - target: {fileID: 8580091782583155651, guid: e3b36785424233243b78545ca6620046, type: 3}
+      propertyPath: destinationArea
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -101852,6 +102340,10 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 392237456}
+    - target: {fileID: 6672501422232054030, guid: 2074267cf2efdc34b9ad21b81123601e, type: 3}
+      propertyPath: destinationArea
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -102207,6 +102699,10 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 311533822}
+    - target: {fileID: 138322911298756183, guid: 87a327327a6c25944a313baf51258ff6, type: 3}
+      propertyPath: destinationArea
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1654255886941241132, guid: 87a327327a6c25944a313baf51258ff6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -103359,6 +103855,10 @@ MonoBehaviour:
   npcRole: 3
   linkedMinigameNPC: {fileID: 1590317628}
   minigameID: 3
+  completeEventIDTalk: 
+  completeEventIDMineGameIni: PROTOTYPE_INTERACTION
+  completeEventIDMineGameEnd: PROTOTYPE_ASSEMBLED
+  completeEventIDMineGameEnd2: ENGINEERING_COMPLETED
 --- !u!114 &9159488940956736964
 MonoBehaviour:
   m_ObjectHideFlags: 0
