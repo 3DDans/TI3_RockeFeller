@@ -13,6 +13,7 @@ public class GameProgressManager : MonoBehaviour
 
     [Header("Linear Progression")]
     public int currentLinearStage = 0;
+    public string fisrtPhaseTask;
 
     [Header("Meteor")]
     public bool meteorUnlocked = false;
@@ -22,6 +23,7 @@ public class GameProgressManager : MonoBehaviour
     [Header("End Game")]
     public bool finalStageUnlocked = false;
     public bool gameFinished = false;
+
 
     private void Awake()
     {
@@ -123,6 +125,14 @@ public class GameProgressManager : MonoBehaviour
             IsCompleted(MinigameID.Biologia) &&
             IsCompleted(MinigameID.Engenharia) &&
             IsCompleted(MinigameID.Programacao);
+
+        if (allCompleted) {
+
+            if (!string.IsNullOrEmpty(fisrtPhaseTask))
+            {
+                TaskManager.Instance.RegisterEvent(fisrtPhaseTask);
+            }
+        }
 
         // LIBERA METEORO
         if (allCompleted && !meteorUnlocked)

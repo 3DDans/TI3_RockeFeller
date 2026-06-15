@@ -12,6 +12,9 @@ public class TabletController : MonoBehaviour
    public TextMeshProUGUI hours;
    public GameObject tabletUI;
     private bool isTabletOpen;
+    public bool canPause = false;
+    [Header("Task UI")]
+    public TabletTaskListUI taskListUI;
 
     void Start()
     {
@@ -25,7 +28,7 @@ public class TabletController : MonoBehaviour
     void Update()
     {
         hours.text = DateTime.Now.ToString("hh:mm tt");
-        if (Input.GetKeyDown(KeyCode.Escape) && !GameProgressManager.IsInMinigame)
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameProgressManager.IsInMinigame && canPause)
         {
             Debug.Log("Escape key pressed. Toggling tablet.");
             ToggleTablet();
@@ -38,6 +41,10 @@ public class TabletController : MonoBehaviour
         isTabletOpen = !isTabletOpen;
         Debug.Log("New tablet state: " + (isTabletOpen ? "Open" : "Closed"));
         tabletUI.SetActive(isTabletOpen);
+        if (isTabletOpen)
+        {
+            taskListUI.RefreshTasks();
+        }
         Debug.Log("Tablet UI active: " + tabletUI.activeSelf);
         Cursor.visible = isTabletOpen;
         Cursor.lockState = isTabletOpen

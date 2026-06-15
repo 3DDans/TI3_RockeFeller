@@ -7,6 +7,6 @@ public class UIButtonHoverSound : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        audioSource.Play();
+        SoundFXManager.Instance.PlaySFX("btnHover");
     }
 }
