@@ -80,13 +80,10 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 SoundFXManager.Instance.PlaySFX("footstep");
 
-                VFXManager.Instance.PlayVFX(
-        "FootstepDust",
-        footstepPoint.position
-    );
-
                 footstepTimer = footstepInterval;
             }
+
+            //VFXManager.Instance.PlayVFX("FootstepDust", footstepPoint.position);
         }
         else
         {
