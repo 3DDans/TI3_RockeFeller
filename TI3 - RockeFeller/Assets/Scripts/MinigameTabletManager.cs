@@ -12,12 +12,9 @@ public class MinigameTabletManager : MonoBehaviour
     [Header("State")]
     public bool canOpenTablet = false;
 
-    private bool isTabletOpen = false;
+    private bool isTabletOpen = true;
 
-    void Start()
-    {
-        CloseTabletInstant();
-    }
+  
 
     void Update()
     {
