@@ -17,16 +17,16 @@ public class MissionGuideUI : MonoBehaviour
 
         TaskArea currentArea = AreaManager.Instance.CurrentArea;
 
-        sb.AppendLine("=== MAIN QUESTS ===");
-        sb.AppendLine();
+        //sb.AppendLine("=== MAIN QUESTS ===");
+        //sb.AppendLine();
 
         BuildSection(sb, TaskType.Principal, currentArea);
 
-        sb.AppendLine();
-        sb.AppendLine("=== SIDE QUESTS ===");
-        sb.AppendLine();
+        //sb.AppendLine();
+        //sb.AppendLine("=== SIDE QUESTS ===");
+        //sb.AppendLine();
 
-        BuildSection(sb, TaskType.Secundaria, currentArea);
+        //BuildSection(sb, TaskType.Secundaria, currentArea);
 
         taskText.text = sb.ToString();
     }

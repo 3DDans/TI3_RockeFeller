@@ -41,7 +41,6 @@ public class CutsceneSkipper : MonoBehaviour
     public void SkipCutscene()
     {
         StartCoroutine(SkipCutsceneCoroutine());
-        TaskManager.Instance.RegisterEvent("DEAN_FIRST_CONVERSATION");
     }
 
     IEnumerator SkipCutsceneCoroutine()

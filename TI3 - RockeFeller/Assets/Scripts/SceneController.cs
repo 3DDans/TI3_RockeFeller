@@ -102,6 +102,8 @@ public class SceneController : MonoBehaviour
             }
         }
         Debug.Log("Cutscene Finalizada");
+
+        TaskManager.Instance.RegisterEvent("DEAN_FIRST_CONVERSATION");
         playerCC.enabled = true;
         playerMovement.enabled = true;
         pauseText.SetActive(true);
