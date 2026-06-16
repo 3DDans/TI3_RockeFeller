@@ -6,6 +6,8 @@ public class MinigameTabletManager : MonoBehaviour
     public GameObject bottomHintPanel;
     public GameObject tabletPanel;
 
+    public bool hideCursorWhenTabletClosed = false;
+
     [Header("Settings")]
     public KeyCode tabletKey = KeyCode.Tab;
 
@@ -34,32 +36,41 @@ public class MinigameTabletManager : MonoBehaviour
         tabletPanel.SetActive(isTabletOpen);
         bottomHintPanel.SetActive(!isTabletOpen);
 
-        
+        if (hideCursorWhenTabletClosed)
+        {
+            if (isTabletOpen)
+                CursorManager.Instance.ShowCursor();
+            else
+                CursorManager.Instance.HideCursor();
+        }
     }
 
     public void OpenTablet()
     {
         isTabletOpen = true;
-
+       
         tabletPanel.SetActive(true);
         bottomHintPanel.SetActive(false);
-
        
+
+
     }
 
     public void CloseTablet()
     {
+        
         isTabletOpen = false;
 
         tabletPanel.SetActive(false);
         bottomHintPanel.SetActive(true);
-
        
+
     }
 
     void CloseTabletInstant()
     {
         isTabletOpen = false;
+        
 
         if (tabletPanel != null)
             tabletPanel.SetActive(false);
@@ -71,7 +82,7 @@ public class MinigameTabletManager : MonoBehaviour
     public void EnableTablet()
     {
         canOpenTablet = true;
-
+        
         if (!isTabletOpen && bottomHintPanel != null)
         {
             bottomHintPanel.SetActive(true);
@@ -81,6 +92,7 @@ public class MinigameTabletManager : MonoBehaviour
     public void DisableTablet()
     {
         canOpenTablet = false;
+        
 
         if (tabletPanel != null)
             tabletPanel.SetActive(false);

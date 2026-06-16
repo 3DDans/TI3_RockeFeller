@@ -15,6 +15,10 @@ public class MedicalGameManager : MinigameBase
     public GameObject medicalUI;
     public SymptomButton[] allButtons;
     public TextMeshProUGUI patientNameText;
+
+    public static bool IsPlayingMedicalGame = false;
+
+
     void Start()
     {
         
@@ -99,6 +103,7 @@ public class MedicalGameManager : MinigameBase
 
     void Finish()
     {
+        IsPlayingMedicalGame = false;
         medicalUI.SetActive(false);
 
         CompleteMinigame();

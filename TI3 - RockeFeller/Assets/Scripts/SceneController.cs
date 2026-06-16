@@ -26,6 +26,19 @@ public class SceneController : MonoBehaviour
     public bool tocarCutscene = true;
     public PlayableDirector cutscenePlay;
 
+
+    [Header("HUD Elements")]
+    public GameObject[] hudToHideInCutscene;
+
+    void SetHudVisible(bool visible)
+    {
+        foreach (GameObject obj in hudToHideInCutscene)
+        {
+            if (obj != null)
+                obj.SetActive(visible);
+        }
+    }
+
     void Start()
     {
 
@@ -82,6 +95,7 @@ public class SceneController : MonoBehaviour
     {
         playerCC.enabled = false;
         playerMovement.enabled = false;
+        SetHudVisible(false); 
         bool finished = false;
         pauseText.SetActive(false);
         hud.SetActive(true);
@@ -104,6 +118,7 @@ public class SceneController : MonoBehaviour
         Debug.Log("Cutscene Finalizada");
 
         TaskManager.Instance.RegisterEvent("DEAN_FIRST_CONVERSATION");
+        SetHudVisible(true);
         playerCC.enabled = true;
         playerMovement.enabled = true;
         pauseText.SetActive(true);
