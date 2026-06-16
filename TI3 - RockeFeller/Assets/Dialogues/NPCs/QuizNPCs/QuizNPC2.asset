@@ -10,22 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
-  m_Name: FirstEngMGQ
+  m_Name: QuizNPC2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Hey! Finally, someone showed up.
+  - text: "I have a question for you! I doubt you\u2019ll get it right!"
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: Something damaged one of our prototypes.
-    hasChoices: 0
-    choices: []
+  - text: Which famous person has NOT appeared on the stage of the Caspary Auditorium,
+      the main lecture and presentation hall at The Rockefeller University?
+    hasChoices: 1
+    choices:
+    - text: Hillary Clinton
+      nextIndex: 2
+    - text: Dalai Lama
+      nextIndex: 2
+    - text: Kanye West
+      nextIndex: 3
     isEnd: 0
-  - text: Oh man, I really liked that robot...
+  - text: "I knew you wouldn\u2019t get it right! It was Kanye West, bro!"
     hasChoices: 0
     choices: []
     isEnd: 1
-  - text: Fix it for me, okay?
+  - text: "Oh man! I didn\u2019t think you would get it right..."
     hasChoices: 0
     choices: []
     isEnd: 1

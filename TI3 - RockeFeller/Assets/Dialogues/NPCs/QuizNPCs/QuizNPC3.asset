@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
+  m_Name: QuizNPC3
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - text: Doctor, you might be interested in this!
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: I just made a very interesting discovery!
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: Do you know which scientific discovery was NOT made at Rockefeller?
+    hasChoices: 1
+    choices:
+    - text: DNA has a double helix structure
+      nextIndex: 4
+    - text: Advances in therapies against Hepatitis C
+      nextIndex: 3
+    - text: DNA is the molecule of heredity
+      nextIndex: 3
+    isEnd: 0
+  - text: "Wrong! They discovered that! Incredible, isn\u2019t it?"
+    hasChoices: 0
+    choices: []
+    isEnd: 1
+  - text: "Exactly! But they also made some very remarkable discoveries, don\u2019t
+      you think?"
+    hasChoices: 0
+    choices: []
+    isEnd: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PosMGTiMGQ
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: Great, the airflow is back to normal.
+  - text: Great, the airflow is back to normal!
     hasChoices: 0
     choices: []
     isEnd: 0
@@ -24,8 +24,8 @@ MonoBehaviour:
   - text: "But there\u2019s still something strange happening in the servers."
     hasChoices: 0
     choices: []
-    isEnd: 1
-  - text: "This failure doesn\u2019t seem to have been caused by a normal error."
+    isEnd: 0
+  - text: "This failure doesn\u2019t seem to have been caused by a normal error..."
     hasChoices: 0
     choices: []
     isEnd: 1
