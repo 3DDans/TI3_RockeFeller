@@ -28,7 +28,13 @@ public class NPCInteraction : MonoBehaviour
     [Header("Quest Link")]
     public NPCInteraction linkedMinigameNPC;
     public MinigameID minigameID;
-     
+
+    [Header("Tasks")]
+    public string completeEventIDTalk;
+    public string completeEventIDMineGameIni;
+    public string completeEventIDMineGameEnd;
+    public string completeEventIDMineGameEnd2;
+
     private bool playerInRange = false;
     private bool hasTalked = false;
     private ThirdPersonMovement player;
@@ -61,15 +67,22 @@ public class NPCInteraction : MonoBehaviour
         switch (npcRole)
         {
             case NPCRole.Ambient:
-            case NPCRole.BuildingHint:
-            case NPCRole.QuestGiver:
+                StartDialogue();
+                break;
 
+            case NPCRole.BuildingHint:
+                StartDialogue();
+                break;
+
+            case NPCRole.QuestGiver:
                 StartDialogue();
                 break;
 
             case NPCRole.Minigame:
 
                 if (!GameProgressManager.Instance.IsUnlocked(minigameID))
+                    return;
+                if (GameProgressManager.Instance.IsCompleted(minigameID))
                     return;
 
                 StartMinigame();
@@ -154,6 +167,8 @@ public class NPCInteraction : MonoBehaviour
         if (!hasTalked)
         {
             return DialogueStage.FirstTime;
+
+       
         }
 
         // Conversas repetidas
@@ -162,12 +177,22 @@ public class NPCInteraction : MonoBehaviour
 
     void OnDialogueEnd()
     {
+        bool firstConversation = !hasTalked;
         GameProgressManager.IsInMinigame = false;
         hasTalked = true;
+        if (firstConversation)
+        {
+            if (!string.IsNullOrEmpty(completeEventIDTalk))
+            {
+                TaskManager.Instance.RegisterEvent(completeEventIDTalk);
+            }
+        }
+
         if (npcRole == NPCRole.QuestGiver)
         {
             UnlockMinigameNPC();
         }
+
         interactionUI.SetActive(true);
         playerVs.SetActive(true);
         EndInteraction();
@@ -186,6 +211,9 @@ public class NPCInteraction : MonoBehaviour
 
     void StartMinigame()
     {
+       
+
+
         if (minigameID != MinigameID.Biologia)
         {
             CursorManager.Instance.ShowCursor();
@@ -193,6 +221,11 @@ public class NPCInteraction : MonoBehaviour
         if (minigameID == MinigameID.Biologia)
         {
             BiologyGameManager.gameStarted = true;
+        }
+
+        if (!string.IsNullOrEmpty(completeEventIDMineGameIni))
+        {
+            TaskManager.Instance.RegisterEvent(completeEventIDMineGameIni);
         }
 
         if (tabletManager != null)
@@ -221,8 +254,8 @@ public class NPCInteraction : MonoBehaviour
     }
     public void CompletePuzzle()
     {
-       
 
+       
         GameProgressManager.Instance.CompleteMinigame(minigameID);
 
         EndMinigame();
@@ -230,11 +263,20 @@ public class NPCInteraction : MonoBehaviour
 
     void EndMinigame()
     {
+
+       
         BiologyGameManager.gameStarted = false;
         GameProgressManager.IsInMinigame = false;
         if (puzzleUI != null)
             puzzleUI.SetActive(false);
-        
+        if (!string.IsNullOrEmpty(completeEventIDMineGameEnd))
+        {
+            TaskManager.Instance.RegisterEvent(completeEventIDMineGameEnd);
+        }
+        if (!string.IsNullOrEmpty(completeEventIDMineGameEnd2))
+        {
+            TaskManager.Instance.RegisterEvent(completeEventIDMineGameEnd2);
+        }
         EndInteraction();
         if (tabletManager != null)
         {
@@ -270,7 +312,7 @@ public class NPCInteraction : MonoBehaviour
 
     void EnableInteraction()
     {
-        if(playerInRange && GameProgressManager.Instance.IsUnlocked(minigameID))
+        if (playerInRange && GameProgressManager.Instance.IsUnlocked(minigameID) && !GameProgressManager.Instance.IsCompleted(minigameID))
         {
         interactionUI.SetActive(true);
         }
@@ -294,7 +336,7 @@ public class NPCInteraction : MonoBehaviour
 
             case NPCRole.Minigame:
 
-                if (GameProgressManager.Instance.IsUnlocked(minigameID))
+                if (GameProgressManager.Instance.IsUnlocked(minigameID) && !GameProgressManager.Instance.IsCompleted(minigameID))
                 {
                     interactionUI.SetActive(true);
                 }
