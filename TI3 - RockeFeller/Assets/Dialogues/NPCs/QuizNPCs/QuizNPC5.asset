@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
+  m_Name: QuizNPC5
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - text: "Wow, that\u2019s crazy, Doctor!"
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: This game was developed by people from another country!
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: Take a guess which country.
+    hasChoices: 1
+    choices:
+    - text: United Kingdom
+      nextIndex: 3
+    - text: Canada
+      nextIndex: 3
+    - text: Brazil
+      nextIndex: 4
+    isEnd: 0
+  - text: No! It was made by Brazilian game developers!
+    hasChoices: 0
+    choices: []
+    isEnd: 1
+  - text: "Yes! That\u2019s incredible, I love that country!"
+    hasChoices: 0
+    choices: []
+    isEnd: 1

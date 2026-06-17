@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
+  m_Name: QuizNPC4
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - text: Hello, Doctor. I was researching a very renowned university, Rockefeller!
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: Do you want to hear something interesting about it?
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: Which of these employees has Rockefeller ever had?
+    hasChoices: 1
+    choices:
+    - text: A dancer from the Rockettes
+      nextIndex: 3
+    - text: A famous graffiti artist
+      nextIndex: 3
+    - text: A B-movie actor
+      nextIndex: 3
+    isEnd: 0
+  - text: "All of the options are correct! Can you believe that? That\u2019s impressive!"
+    hasChoices: 0
+    choices: []
+    isEnd: 1

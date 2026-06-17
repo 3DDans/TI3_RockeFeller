@@ -211,13 +211,14 @@ public class NPCInteraction : MonoBehaviour
 
     void StartMinigame()
     {
-       
 
-
-        if (minigameID != MinigameID.Biologia)
+        if (minigameID == MinigameID.Medicina)
         {
-            CursorManager.Instance.ShowCursor();
+            MedicalGameManager.IsPlayingMedicalGame = true;
         }
+
+        
+
         if (minigameID == MinigameID.Biologia)
         {
             BiologyGameManager.gameStarted = true;
@@ -231,7 +232,15 @@ public class NPCInteraction : MonoBehaviour
         if (tabletManager != null)
         {
             tabletManager.EnableTablet();
+            tabletManager.OpenTablet();
+
+            CursorManager.Instance.ShowCursor();
+
+            tabletManager.hideCursorWhenTabletClosed = (minigameID == MinigameID.Biologia);
         }
+
+
+
         GameProgressManager.IsInMinigame = true;
         player.canMove = false;
         playerVs.SetActive(false);
