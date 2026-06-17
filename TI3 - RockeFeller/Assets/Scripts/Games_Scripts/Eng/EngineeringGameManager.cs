@@ -66,13 +66,13 @@ public class EngineeringGameManager : MinigameBase
         }
         else
         {
-            Debug.Log("Não encaixa!");
+            Debug.Log("Nao encaixa!");
         }
     }
 
     void FinishGame()
     {
-        feedbackText.text = "Estrutura montada!";
+        feedbackText.text = "Assembled robot!";
 
         Invoke(nameof(EndGame), 1.5f);
     }
