@@ -4,11 +4,27 @@ using UnityEngine;
 
 public class MissionGuideUI : MonoBehaviour
 {
+    public GameObject missionsPanel;
     public TextMeshProUGUI taskText;
+
+    private void Start()
+    {
+        missionsPanel.SetActive(false);
+    }
 
     private void Update()
     {
-        RefreshUI();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            bool opening = !missionsPanel.activeSelf;
+
+            missionsPanel.SetActive(opening);
+
+            if (opening)
+            {
+                RefreshUI();
+            }
+        }
     }
 
     void RefreshUI()
@@ -17,16 +33,7 @@ public class MissionGuideUI : MonoBehaviour
 
         TaskArea currentArea = AreaManager.Instance.CurrentArea;
 
-        //sb.AppendLine("=== MAIN QUESTS ===");
-        //sb.AppendLine();
-
         BuildSection(sb, TaskType.Principal, currentArea);
-
-        //sb.AppendLine();
-        //sb.AppendLine("=== SIDE QUESTS ===");
-        //sb.AppendLine();
-
-        //BuildSection(sb, TaskType.Secundaria, currentArea);
 
         taskText.text = sb.ToString();
     }
@@ -37,19 +44,12 @@ public class MissionGuideUI : MonoBehaviour
 
         foreach (Task task in taskManager.allTasks)
         {
-            bool correctType =
-                task.type == type;
+            bool correctType = task.type == type;
+            bool available = task.status == TaskStatus.Available;
+            bool correctArea = task.area == currentArea ||
+                               task.area == TaskArea.Global;
 
-            bool available =
-                task.status == TaskStatus.Available;
-
-            bool correctArea =
-                task.area == currentArea ||
-                task.area == TaskArea.Global;
-
-            if (correctType &&
-                available &&
-                correctArea)
+            if (correctType && available && correctArea)
             {
                 sb.AppendLine("• " + task.taskName);
             }
