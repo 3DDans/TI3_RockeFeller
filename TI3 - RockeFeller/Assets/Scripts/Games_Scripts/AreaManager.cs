@@ -15,6 +15,26 @@ public class AreaManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-   
+    public string GetAreaName(TaskArea area)
+    {
+        switch (area)
+        {
+            case TaskArea.Biologia:
+                return "BIOLOGY DEPARTMENT";
+
+            case TaskArea.Medicina:
+                return "MEDICINE DEPARTMENT";
+
+            case TaskArea.Engenharia:
+                return "ENGINEERING DEPARTMENT";
+
+            case TaskArea.Campus:
+                return "CAMPUS PUNKOFELLER";
+
+            default:
+                return "";
+        }
+    }
+
 }
 

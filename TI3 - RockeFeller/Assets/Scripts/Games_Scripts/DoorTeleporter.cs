@@ -39,7 +39,7 @@ public class DoorTeleporter : MonoBehaviour
         other.transform.position = spawnPos.position; //Teleporta o player e coloca ele na posicao e rotacao do ponto de spawn.
         other.transform.rotation = spawnPos.rotation;
 
-        AreaManager.Instance.CurrentArea = destinationArea;
+        
 
         orbFol.HorizontalAxis.Value = other.transform.eulerAngles.y; //Reseta a posicao da camera
         orbFol.VerticalAxis.Value = 0;
@@ -47,8 +47,10 @@ public class DoorTeleporter : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         TransitionController.instance.FadeIn();
+        AreaManager.Instance.CurrentArea = destinationArea;
+        AreaNameUI.Instance.ShowArea(AreaManager.Instance.GetAreaName(destinationArea));
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         camInput.enabled = true;
         movement.canMove = true;

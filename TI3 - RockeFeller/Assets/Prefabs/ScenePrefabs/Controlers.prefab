@@ -1322,6 +1322,7 @@ GameObject:
   - component: {fileID: 4679345151925589586}
   - component: {fileID: 1883986379812148501}
   - component: {fileID: 3507794356926507552}
+  - component: {fileID: 1736029359512304809}
   m_Layer: 0
   m_Name: UiController
   m_TagString: Untagged
@@ -1433,6 +1434,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1736029359512304809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750283847669527061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e6af715c0541140926696ad4d351a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaNameUI
+  panel: {fileID: 0}
+  areaText: {fileID: 0}
 --- !u!1 &5830988737976465919
 GameObject:
   m_ObjectHideFlags: 0
