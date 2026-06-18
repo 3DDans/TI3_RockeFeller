@@ -28,6 +28,18 @@ public class ThirdPersonMovement : MonoBehaviour
     [Header("VFX")]
     public Transform footstepPoint;
 
+
+    [Header("Sprint")]
+    public float sprintSpeed = 8f;
+    public float maxStamina = 5f;
+    public float staminaRecoveryRate = 1.5f;
+    public float exhaustionCooldown = 2f;
+
+    private float currentStamina;
+    private bool exhausted;
+    private float cooldownTimer;
+
+
     private float footstepTimer;
 
     bool wasGrounded;
@@ -38,6 +50,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Start()
     {
+        currentStamina = maxStamina;
+
         characterController = GetComponent<CharacterController>();
         anim = GetComponent<PlayerAnimationController>();
         animator = GetComponent<Animator>();
@@ -76,6 +90,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
+
 
         Vector3 targetInputDir = (camForward * vertical + camRight * horizontal);
 
@@ -134,6 +149,42 @@ public class ThirdPersonMovement : MonoBehaviour
             hasJumped = true;
         }
 
+
+        bool sprinting = Input.GetKey(KeyCode.LeftShift);
+
+        // Se estiver exausto
+        if (exhausted)
+        {
+            cooldownTimer -= Time.deltaTime;
+
+            if (cooldownTimer <= 0)
+            {
+                exhausted = false;
+            }
+
+            sprinting = false;
+        }
+
+        // Consome stamina
+        if (sprinting && inputDir.magnitude > 0.1f)
+        {
+            currentStamina -= Time.deltaTime;
+
+            if (currentStamina <= 0)
+            {
+                currentStamina = 0;
+                exhausted = true;
+                cooldownTimer = exhaustionCooldown;
+
+                sprinting = false;
+            }
+        }
+        else
+        {
+            currentStamina += staminaRecoveryRate * Time.deltaTime;
+            currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
+        }
+
         if (characterController.isGrounded)
         {
             hasJumped = false;
@@ -149,7 +200,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
 
-        Vector3 finalMove = inputDir * walkSpeed + velocity;
+        float currentSpeed = sprinting ? sprintSpeed : walkSpeed;
+
+        Vector3 finalMove = inputDir * currentSpeed + velocity;
+
+
 
         characterController.Move(finalMove * Time.deltaTime);
 
@@ -179,5 +234,15 @@ public class ThirdPersonMovement : MonoBehaviour
 
             lastRaycastGrounded = grounded;
         }
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody rb = hit.collider.attachedRigidbody;
+
+        if (rb == null || rb.isKinematic)
+            return;
+
+        rb.AddForce(hit.moveDirection * 4f, ForceMode.Impulse);
     }
 }
