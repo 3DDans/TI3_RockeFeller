@@ -39,7 +39,9 @@ public class DoorTeleporter : MonoBehaviour
         other.transform.position = spawnPos.position; //Teleporta o player e coloca ele na posicao e rotacao do ponto de spawn.
         other.transform.rotation = spawnPos.rotation;
 
-        
+        PetManager.Instance.TeleportPet();
+
+
 
         orbFol.HorizontalAxis.Value = other.transform.eulerAngles.y; //Reseta a posicao da camera
         orbFol.VerticalAxis.Value = 0;
