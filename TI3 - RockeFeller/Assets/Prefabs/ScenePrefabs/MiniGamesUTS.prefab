@@ -817,6 +817,7 @@ Transform:
   - {fileID: 6482232502083025840}
   - {fileID: 984307826964199197}
   - {fileID: 1432159394569104146}
+  - {fileID: 4566603422745229799}
   m_Father: {fileID: 1474327473756476138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2370658174703875114
@@ -3840,6 +3841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &2957764273101683690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &3380059099342311127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,6 +4877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &3941504855138258549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4966,6 +4973,37 @@ MonoBehaviour:
   wobbleSpeed: 3
   wobbleAmount: 15
   followDelay: 0.15
+--- !u!1 &3960290286424356676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4566603422745229799}
+  m_Layer: 0
+  m_Name: RobotSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4566603422745229799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3960290286424356676}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.015001297, y: -0.13500023, z: -0.47299922}
+  m_LocalScale: {x: 0.27000007, y: 0.27, z: 0.27000007}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5258351322311235854}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4071134715055173188
 GameObject:
   m_ObjectHideFlags: 0
@@ -5548,6 +5586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &4658545060097961678
 GameObject:
   m_ObjectHideFlags: 0
@@ -6186,6 +6226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &5297299287052814306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6285,6 +6327,7 @@ MonoBehaviour:
   minigameID: 3
   npc: {fileID: 3510051069793735336}
   feedbackText: {fileID: 0}
+  robotBenchSpawnPoint: {fileID: 4566603422745229799}
   allSlots:
   - {fileID: 1965862809374049025}
   - {fileID: 1046637791778033919}
@@ -7367,6 +7410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &6059753552793630638
 GameObject:
   m_ObjectHideFlags: 0
@@ -7483,6 +7528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &6083551681442665104
 GameObject:
   m_ObjectHideFlags: 0
@@ -8259,6 +8306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &6855916858773821617
 GameObject:
   m_ObjectHideFlags: 0
@@ -8934,6 +8983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &7233815770862903192
 GameObject:
   m_ObjectHideFlags: 0
@@ -9125,6 +9176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &7285925352540884495
 GameObject:
   m_ObjectHideFlags: 0
@@ -9303,6 +9356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &7372445124494611691
 GameObject:
   m_ObjectHideFlags: 0
@@ -9732,6 +9787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &7482645098946614635
 GameObject:
   m_ObjectHideFlags: 0
@@ -9820,6 +9877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &7613486483641016556
 GameObject:
   m_ObjectHideFlags: 0
@@ -10041,6 +10100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5c88d8e805e324abd8ce1198615f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  floatHeight: 0.15
+  floatSpeed: 1
 --- !u!1 &7691460606723457489
 GameObject:
   m_ObjectHideFlags: 0

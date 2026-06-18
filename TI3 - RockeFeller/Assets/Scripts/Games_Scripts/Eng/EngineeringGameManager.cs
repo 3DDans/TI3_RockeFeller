@@ -8,6 +8,8 @@ public class EngineeringGameManager : MinigameBase
     private BuildPart selectedPart;
 
     public TextMeshProUGUI feedbackText;
+    public Transform robotBenchSpawnPoint;
+
 
     public List<BuildSlot> allSlots;
     public BuildPart[] allParts;
@@ -80,7 +82,7 @@ public class EngineeringGameManager : MinigameBase
     void EndGame()
     {
         gameUI.SetActive(false);
-
+        PetManager.Instance.SpawnPet(robotBenchSpawnPoint);
         CompleteMinigame();
     }
 
