@@ -136,7 +136,7 @@ public class NPCInteraction : MonoBehaviour
     {
         GameProgressManager progress = GameProgressManager.Instance;
 
-        // Pós jogo
+        // Pï¿½s jogo
         if (progress.gameFinished)
         {
             return DialogueStage.Finished;
@@ -154,7 +154,7 @@ public class NPCInteraction : MonoBehaviour
             return DialogueStage.MeteorUnlocked;
         }
 
-        // Pós minigame
+        // Pï¿½s minigame
         if (
             minigameID != MinigameID.None &&
             progress.IsCompleted(minigameID)
@@ -360,6 +360,24 @@ public class NPCInteraction : MonoBehaviour
 
         playerInRange = false;
         interactionUI.SetActive(false);
+    }
+
+    public void ExitMinigame()
+    {
+        MedicalGameManager.IsPlayingMedicalGame = false;
+        BiologyGameManager.gameStarted = false;
+
+        GameProgressManager.IsInMinigame = false;
+
+        if (puzzleUI != null)
+            puzzleUI.SetActive(false);
+
+        if (tabletManager != null)
+        {
+            tabletManager.DisableTablet();
+        }
+
+        EndInteraction();
     }
 }
 
