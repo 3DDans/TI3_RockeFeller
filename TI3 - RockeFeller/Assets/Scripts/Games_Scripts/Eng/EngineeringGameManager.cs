@@ -21,7 +21,7 @@ public class EngineeringGameManager : MinigameBase
         return allParts.All(p => p.isPlaced);
     }
 
-    // Quando o player clica numa peça
+    // Quando o player clica numa peï¿½a
     public void SelectPart(BuildPart part)
     {
         if (selectedPart != null)
@@ -68,13 +68,13 @@ public class EngineeringGameManager : MinigameBase
         }
         else
         {
-            Debug.Log("Não encaixa!");
+            Debug.Log("Nï¿½o encaixa!");
         }
     }
 
     void FinishGame()
     {
-        feedbackText.text = "Estrutura montada!";
+        feedbackText.text = "Fixed robot!";
 
         Invoke(nameof(EndGame), 1.5f);
     }
@@ -94,7 +94,7 @@ public class EngineeringGameManager : MinigameBase
         {
             bool valid = slot.acceptedType == selectedPart.type && !slot.occupied;
 
-            Debug.Log(slot.name + " válido: " + valid);
+            Debug.Log(slot.name + " vï¿½lido: " + valid);
 
             slot.Highlight(valid);
         }
