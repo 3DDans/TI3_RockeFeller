@@ -6,9 +6,15 @@ using UnityEngine;
 public class DoorTeleporter : MonoBehaviour
 {
     public Transform spawnPos;
+    public AutomaticDoorsController doorsController;
 
     [Header("Area")]
     public TaskArea destinationArea;
+
+    private void Start()
+    {
+        doorsController = gameObject.transform.parent.GetComponent<AutomaticDoorsController>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,7 +28,6 @@ public class DoorTeleporter : MonoBehaviour
     {
         Debug.Log("Entrou no Trigger de Teleporte!");
         TransitionController.instance.FadeOut();
-
 
         ThirdPersonMovement movement = other.GetComponent<ThirdPersonMovement>();
         CharacterController controller = other.GetComponent<CharacterController>();
@@ -39,9 +44,10 @@ public class DoorTeleporter : MonoBehaviour
         other.transform.position = spawnPos.position; //Teleporta o player e coloca ele na posicao e rotacao do ponto de spawn.
         other.transform.rotation = spawnPos.rotation;
 
+        if (doorsController != null)
+            doorsController.FecharPorta();
+
         PetManager.Instance.TeleportPet();
-
-
 
         orbFol.HorizontalAxis.Value = other.transform.eulerAngles.y; //Reseta a posicao da camera
         orbFol.VerticalAxis.Value = 0;
