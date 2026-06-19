@@ -120,6 +120,17 @@ public class NPCInteraction : MonoBehaviour
 
     Dialogue GetCurrentDialogue()
     {
+        if (npcRole == NPCRole.Ambient)
+        {
+            foreach (var entry in dialogues)
+            {
+                if (entry.stage == DialogueStage.FirstTime)
+                {
+                    return entry.dialogue;
+                }
+            }
+        }
+
         DialogueStage currentStage = GetCurrentDialogueStage();
 
         foreach (var entry in dialogues)
@@ -130,8 +141,14 @@ public class NPCInteraction : MonoBehaviour
             }
         }
 
+        if (dialogues.Count > 0)
+        {
+            return dialogues[0].dialogue;
+        }
+
         return null;
     }
+
     DialogueStage GetCurrentDialogueStage()
     {
         GameProgressManager progress = GameProgressManager.Instance;
