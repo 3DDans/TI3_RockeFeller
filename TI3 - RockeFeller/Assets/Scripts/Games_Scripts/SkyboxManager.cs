@@ -31,6 +31,10 @@ public class SkyboxManager : MonoBehaviour
     public void SetDayStage(int stage)
     {
         RenderSettings.skybox = daySkybox;
+        if (DayNightObjectsManager.Instance != null)
+        {
+            DayNightObjectsManager.Instance.SetDay();
+        }
 
         float rotation = morningRotation;
 
@@ -64,6 +68,11 @@ public class SkyboxManager : MonoBehaviour
     public void SetNight()
     {
         RenderSettings.skybox = nightSkybox;
+
+        if (DayNightObjectsManager.Instance != null)
+        {
+            DayNightObjectsManager.Instance.SetNight();
+        }
 
         directionalLight.rotation =
             Quaternion.Euler(nightRotation, 0, 0);

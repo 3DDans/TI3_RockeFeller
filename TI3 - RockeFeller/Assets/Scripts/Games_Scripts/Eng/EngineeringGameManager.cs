@@ -76,6 +76,7 @@ public class EngineeringGameManager : MinigameBase
 
     void FinishGame()
     {
+        feedbackText.gameObject.SetActive(true);
         feedbackText.text = "Fixed robot!";
 
         Invoke(nameof(EndGame), 1.5f);

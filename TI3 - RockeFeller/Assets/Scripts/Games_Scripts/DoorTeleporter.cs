@@ -55,7 +55,7 @@ public class DoorTeleporter : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         TransitionController.instance.FadeIn();
-        AreaManager.Instance.CurrentArea = destinationArea;
+        AreaManager.Instance.SetArea(destinationArea);
         AreaNameUI.Instance.ShowArea(AreaManager.Instance.GetAreaName(destinationArea));
 
         yield return new WaitForSeconds(0.5f);

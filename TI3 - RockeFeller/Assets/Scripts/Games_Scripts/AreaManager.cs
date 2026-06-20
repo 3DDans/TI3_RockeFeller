@@ -36,5 +36,12 @@ public class AreaManager : MonoBehaviour
         }
     }
 
+    public void SetArea(TaskArea newArea)
+    {
+        CurrentArea = newArea;
+
+        AmbientManager.Instance.SetArea(newArea);
+    }
+
 }
 
