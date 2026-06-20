@@ -1212,6 +1212,7 @@ GameObject:
   - component: {fileID: 4260817627368410661}
   - component: {fileID: 488011384212911203}
   - component: {fileID: 176480556442840876}
+  - component: {fileID: 2549882553010653446}
   m_Layer: 0
   m_Name: Options
   m_TagString: Untagged
@@ -1334,6 +1335,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2549882553010653446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365036187851719763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8275a4e16c761e4ebdc17c2e81f728c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
+  hoverScale: 1.1
+  speed: 10
 --- !u!1 &367699004066813059
 GameObject:
   m_ObjectHideFlags: 0
