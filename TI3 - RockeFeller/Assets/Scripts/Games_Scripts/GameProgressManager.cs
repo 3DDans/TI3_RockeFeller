@@ -128,6 +128,8 @@ public class GameProgressManager : MonoBehaviour
 
         if (allCompleted) {
 
+            AnalyticsManager.Instance.MarcarGameEnded(); //Como ainda não tem fim de jogo, está pra tocar quando terminar todos os puzzles. MUDAR DEPOIS.
+
             if (!string.IsNullOrEmpty(fisrtPhaseTask))
             {
                 TaskManager.Instance.RegisterEvent(fisrtPhaseTask);

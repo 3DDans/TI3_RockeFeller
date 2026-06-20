@@ -120,6 +120,17 @@ public class NPCInteraction : MonoBehaviour
 
     Dialogue GetCurrentDialogue()
     {
+        if (npcRole == NPCRole.Ambient)
+        {
+            foreach (var entry in dialogues)
+            {
+                if (entry.stage == DialogueStage.FirstTime)
+                {
+                    return entry.dialogue;
+                }
+            }
+        }
+
         DialogueStage currentStage = GetCurrentDialogueStage();
 
         foreach (var entry in dialogues)
@@ -130,13 +141,19 @@ public class NPCInteraction : MonoBehaviour
             }
         }
 
+        if (dialogues.Count > 0)
+        {
+            return dialogues[0].dialogue;
+        }
+
         return null;
     }
+
     DialogueStage GetCurrentDialogueStage()
     {
         GameProgressManager progress = GameProgressManager.Instance;
 
-        // Pós jogo
+        // Pï¿½s jogo
         if (progress.gameFinished)
         {
             return DialogueStage.Finished;
@@ -154,7 +171,7 @@ public class NPCInteraction : MonoBehaviour
             return DialogueStage.MeteorUnlocked;
         }
 
-        // Pós minigame
+        // Pï¿½s minigame
         if (
             minigameID != MinigameID.None &&
             progress.IsCompleted(minigameID)
@@ -202,6 +219,25 @@ public class NPCInteraction : MonoBehaviour
     {
         GameProgressManager.Instance.UnlockMinigame(minigameID);
 
+        switch (minigameID)
+        {
+            case MinigameID.Medicina:
+                AnalyticsManager.Instance.MarcarNPCInteragido(AnalyticsManager.Area.Medicine);
+                break;
+            case MinigameID.Biologia:
+                AnalyticsManager.Instance.MarcarNPCInteragido(AnalyticsManager.Area.Biology);
+                break;
+            case MinigameID.Programacao:
+                AnalyticsManager.Instance.MarcarNPCInteragido(AnalyticsManager.Area.Programming);
+                break;
+            case MinigameID.Engenharia:
+                AnalyticsManager.Instance.MarcarNPCInteragido(AnalyticsManager.Area.Engineering);
+                break;
+            default:
+                Debug.Log("ID de Minigame Invalido");
+                break;
+        }
+
         if (linkedMinigameNPC != null)
         {
             linkedMinigameNPC.EnableInteraction();
@@ -211,6 +247,24 @@ public class NPCInteraction : MonoBehaviour
 
     void StartMinigame()
     {
+        switch (minigameID)
+        {
+            case MinigameID.Medicina:
+                AnalyticsManager.Instance.MarcarPuzzleStarted(AnalyticsManager.Area.Medicine);
+                break;
+            case MinigameID.Biologia:
+                AnalyticsManager.Instance.MarcarPuzzleStarted(AnalyticsManager.Area.Biology);
+                break;
+            case MinigameID.Programacao:
+                AnalyticsManager.Instance.MarcarPuzzleStarted(AnalyticsManager.Area.Programming);
+                break;
+            case MinigameID.Engenharia:
+                AnalyticsManager.Instance.MarcarPuzzleStarted(AnalyticsManager.Area.Engineering);
+                break;
+            default:
+                Debug.Log("ID de Minigame Invalido");
+                break;
+        }
 
         if (minigameID == MinigameID.Medicina)
         {
@@ -360,6 +414,24 @@ public class NPCInteraction : MonoBehaviour
 
         playerInRange = false;
         interactionUI.SetActive(false);
+    }
+
+    public void ExitMinigame()
+    {
+        MedicalGameManager.IsPlayingMedicalGame = false;
+        BiologyGameManager.gameStarted = false;
+
+        GameProgressManager.IsInMinigame = false;
+
+        if (puzzleUI != null)
+            puzzleUI.SetActive(false);
+
+        if (tabletManager != null)
+        {
+            tabletManager.DisableTablet();
+        }
+
+        EndInteraction();
     }
 }
 

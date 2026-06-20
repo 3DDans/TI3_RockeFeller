@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 2840552121028209110}
   - component: {fileID: 850917053684040946}
   - component: {fileID: 3774444568949934805}
+  - component: {fileID: 4352438462576435504}
   m_Layer: 0
   m_Name: Controlers
   m_TagString: Untagged
@@ -550,6 +551,9 @@ MonoBehaviour:
   tocarCutscene: 1
   cutscenePlay: {fileID: 0}
   hudToHideInCutscene:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
 --- !u!114 &3105730313173631818
 MonoBehaviour:
@@ -800,6 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionGuideUI
   taskText: {fileID: 0}
+  boxMissions: {fileID: 0}
 --- !u!114 &850917053684040946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,6 +832,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TabletTaskListUI
   content: {fileID: 0}
   taskItemPrefab: {fileID: 785851905861811016, guid: 91f1229bc5247a34bacc2c26d0fad52d, type: 3}
+--- !u!114 &4352438462576435504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309994138816933629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b847ab9acb25a4aba8fb5cce2c4377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PetManager
+  petRobot: {fileID: 0}
+  buildRobot: {fileID: 0}
 --- !u!1 &2611140518599382976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1387,7 @@ MonoBehaviour:
   actualScreen: 0
   hours: {fileID: 0}
   tabletUI: {fileID: 0}
+  isInMainMenu: 1
   canPause: 0
   taskListUI: {fileID: 3774444568949934805}
 --- !u!114 &4679345151925589586

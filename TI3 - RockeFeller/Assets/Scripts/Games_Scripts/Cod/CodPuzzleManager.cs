@@ -4,7 +4,6 @@ public class CodPuzzleManager : MinigameBase
 {
     public GameObject[] puzzles;
     public int currentPuzzle;
-    public int niveisFinalizados = 0;
     public NPCInteraction npcInteraction;
 
     private void Start()
@@ -21,11 +20,17 @@ public class CodPuzzleManager : MinigameBase
 
     public void TerminouNivel()
     {
-        Debug.Log("Nivel Finalizado");
-        niveisFinalizados++;
+        puzzles[currentPuzzle].gameObject.SetActive(false);
 
-        if(niveisFinalizados == puzzles.Length)
+        Debug.Log("Nivel Finalizado");
+        currentPuzzle++;
+
+        if (currentPuzzle < puzzles.Length)
+            puzzles[currentPuzzle].gameObject.SetActive(true);
+
+        if (currentPuzzle == puzzles.Length)
         {
+            AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Programming);
             CompleteMinigame();
         }
     }

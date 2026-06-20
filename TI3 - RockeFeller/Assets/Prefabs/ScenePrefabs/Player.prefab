@@ -107,11 +107,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonMovement
   canMove: 1
   rotationSpeed: 10
-  walkSpeed: 7
+  walkSpeed: 6
   jumpHeight: 1
   gravity: -9.8
+  smoothTime: 0.1
   footstepInterval: 1.21
   footstepPoint: {fileID: 2487894334175372152}
+  sprintSpeed: 8.5
+  maxStamina: 5
+  staminaRecoveryRate: 1
+  exhaustionCooldown: 1
 --- !u!95 &9157206820152391787
 Animator:
   serializedVersion: 7

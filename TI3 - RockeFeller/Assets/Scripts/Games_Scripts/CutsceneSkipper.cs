@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
@@ -9,24 +8,24 @@ public class CutsceneSkipper : MonoBehaviour
     public PlayableDirector director;
     public DialogueSystemCutscene dialogueCutscene;
     public Slider sliderSkip;
-    bool isHoldingEsc = false;
+    bool isHoldingTab = false;
     float timeHolding = 0f;
     float timeToHold = 2f;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            isHoldingEsc = true;
+        if (Input.GetKeyDown(KeyCode.Tab)){
+            isHoldingTab = true;
             timeHolding = 0f;
             sliderSkip.gameObject.SetActive(true);
         }
-        else if (Input.GetKeyUp(KeyCode.Escape))
+        else if (Input.GetKeyUp(KeyCode.Tab))
         {
-            isHoldingEsc = false;
+            isHoldingTab = false;
             sliderSkip.gameObject.SetActive(false);
         }
 
-        if (isHoldingEsc)
+        if (isHoldingTab)
         {
             timeHolding += Time.deltaTime;
             sliderSkip.value = timeHolding;

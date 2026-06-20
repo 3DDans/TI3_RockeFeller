@@ -21,8 +21,8 @@ public class BiologyGameManager : MinigameBase
 
     void EndGame()
     {
+        AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Biology);
         gameUI.SetActive(false);
-
         CompleteMinigame();
     }
 }
