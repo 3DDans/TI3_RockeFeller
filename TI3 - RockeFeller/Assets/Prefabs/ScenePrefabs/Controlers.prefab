@@ -552,6 +552,9 @@ MonoBehaviour:
   cutscenePlay: {fileID: 0}
   hudToHideInCutscene:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &3105730313173631818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,6 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionGuideUI
   taskText: {fileID: 0}
+  boxMissions: {fileID: 0}
 --- !u!114 &850917053684040946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,6 +1387,7 @@ MonoBehaviour:
   actualScreen: 0
   hours: {fileID: 0}
   tabletUI: {fileID: 0}
+  isInMainMenu: 1
   canPause: 0
   taskListUI: {fileID: 3774444568949934805}
 --- !u!114 &4679345151925589586

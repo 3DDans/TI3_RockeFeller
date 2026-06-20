@@ -62,6 +62,7 @@ public class SceneController : MonoBehaviour
 
     public void PlayGame()
     {
+        tabletController.isInMainMenu = false;
         // Esconde menu
         mainMenu.SetActive(false);
         CursorManager.Instance.HideCursor();
@@ -121,6 +122,7 @@ public class SceneController : MonoBehaviour
         TaskManager.Instance.RegisterEvent("DEAN_FIRST_CONVERSATION");
         SetHudVisible(true);
         playerCC.enabled = true;
+        CursorManager.Instance.HideCursor();
         playerMovement.enabled = true;
         pauseText.SetActive(true);
         tabletController.canPause = true;
