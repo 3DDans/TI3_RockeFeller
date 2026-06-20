@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 850917053684040946}
   - component: {fileID: 3774444568949934805}
   - component: {fileID: 4352438462576435504}
+  - component: {fileID: 6648313231807229887}
   m_Layer: 0
   m_Name: Controlers
   m_TagString: Untagged
@@ -846,6 +847,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PetManager
   petRobot: {fileID: 0}
   buildRobot: {fileID: 0}
+--- !u!114 &6648313231807229887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309994138816933629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5755a12173fa1459807745c6c8ae43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayNightObjectsManager
+  dayOnlyObjects:
+  - {fileID: 0}
+  nightOnlyObjects:
+  - {fileID: 0}
 --- !u!1 &2611140518599382976
 GameObject:
   m_ObjectHideFlags: 0

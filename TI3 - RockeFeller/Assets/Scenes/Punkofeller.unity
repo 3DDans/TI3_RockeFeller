@@ -124,6 +124,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7333519422947531147, guid: 098138091fc687e49bc945fc6cd030c2, type: 3}
   m_PrefabInstance: {fileID: 2935265305634342869}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &127202759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129436046981623078, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+  m_PrefabInstance: {fileID: 7119300566082897475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &157200078 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6590216747129253534, guid: 6d2845b464374ba409474955a3f68ead, type: 3}
@@ -140,6 +145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &295583962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8895894163734056364, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+  m_PrefabInstance: {fileID: 7119300566082897475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!320 &377779965 stripped
 PlayableDirector:
   m_CorrespondingSourceObject: {fileID: 5487108412952292722, guid: a5e6343c3362acb4aac979817a966ebb, type: 3}
@@ -1622,6 +1632,14 @@ PrefabInstance:
       propertyPath: 'choiceButtons.Array.data[2]'
       value: 
       objectReference: {fileID: 6579687850665567264}
+    - target: {fileID: 6648313231807229887, guid: 00141b47425052348856e8e3485bad8d, type: 3}
+      propertyPath: 'dayOnlyObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 295583962}
+    - target: {fileID: 6648313231807229887, guid: 00141b47425052348856e8e3485bad8d, type: 3}
+      propertyPath: 'nightOnlyObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 127202759}
     - target: {fileID: 7236487226350571486, guid: 00141b47425052348856e8e3485bad8d, type: 3}
       propertyPath: sfxSlider
       value: 
@@ -1926,10 +1944,118 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 107332815215294157, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 107332815215294157, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 107332815215294157, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 277008645676342469, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 277008645676342469, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 277008645676342469, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 1266984644187010158, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 1266984644187010158, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 1266984644187010158, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 1480713045661705769, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 1480713045661705769, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 1480713045661705769, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 2628471147602531843, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 2628471147602531843, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 2628471147602531843, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 2736478370782877549, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 2736478370782877549, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 2736478370782877549, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
     - target: {fileID: 2956757295377974893, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
       propertyPath: m_Name
       value: NPCsCampus
       objectReference: {fileID: 0}
+    - target: {fileID: 3093114782801114184, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 3093114782801114184, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 3093114782801114184, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 3740759297043992022, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 3740759297043992022, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 3740759297043992022, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 4101292364360236242, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 4101292364360236242, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 4101292364360236242, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
     - target: {fileID: 4798751829488366205, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1970,6 +2096,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5097031806113827638, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 5097031806113827638, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 5097031806113827638, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 6269800640619508396, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 6269800640619508396, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 6269800640619508396, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 6639936315496116209, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 6639936315496116209, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 6639936315496116209, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 7785704291369355501, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 7785704291369355501, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 7785704291369355501, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 8098986311756549420, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 8098986311756549420, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 8098986311756549420, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 8343790623463422635, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 8343790623463422635, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 8343790623463422635, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
+    - target: {fileID: 8928937412110340863, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: playerVs
+      value: 
+      objectReference: {fileID: 157200078}
+    - target: {fileID: 8928937412110340863, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1268861377}
+    - target: {fileID: 8928937412110340863, guid: 34e27f47c05cdf341bfded3be8679306, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 586107642}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
