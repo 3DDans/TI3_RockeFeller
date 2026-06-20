@@ -66,6 +66,7 @@ public class SceneController : MonoBehaviour
         mainMenu.SetActive(false);
         CursorManager.Instance.HideCursor();
         
+        AnalyticsManager.Instance.MarcarGameStarted();
 
         if (tocarCutscene)
         {

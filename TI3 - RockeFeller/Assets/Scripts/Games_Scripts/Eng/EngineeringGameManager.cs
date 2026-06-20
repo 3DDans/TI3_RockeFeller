@@ -83,6 +83,7 @@ public class EngineeringGameManager : MinigameBase
     {
         gameUI.SetActive(false);
         PetManager.Instance.SpawnPet(robotBenchSpawnPoint);
+        AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Engineering);
         CompleteMinigame();
     }
 

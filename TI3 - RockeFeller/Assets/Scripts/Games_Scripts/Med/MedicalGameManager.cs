@@ -103,6 +103,7 @@ public class MedicalGameManager : MinigameBase
 
     void Finish()
     {
+        AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Medicine);
         IsPlayingMedicalGame = false;
         medicalUI.SetActive(false);
 

@@ -4937,6 +4937,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1eb9f65df3d209498871ecda1424d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SymptomButton
+--- !u!1001 &6886225855972113328
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3276977882295433194, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_Name
+      value: AnalyticsManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -49.06948
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.94447
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.79491
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332688421971590998, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 576f7b78fec4d604c8fa38c04093cfb0, type: 3}
 --- !u!114 &6989995354130358394 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5256047842681140265, guid: 098138091fc687e49bc945fc6cd030c2, type: 3}
@@ -5371,3 +5428,4 @@ SceneRoots:
   - {fileID: 281228845848896911}
   - {fileID: 5001049729661692971}
   - {fileID: 2231675718646349322}
+  - {fileID: 6886225855972113328}

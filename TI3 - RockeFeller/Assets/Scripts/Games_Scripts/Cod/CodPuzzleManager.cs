@@ -30,6 +30,7 @@ public class CodPuzzleManager : MinigameBase
 
         if (currentPuzzle == puzzles.Length)
         {
+            AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Programming);
             CompleteMinigame();
         }
     }
