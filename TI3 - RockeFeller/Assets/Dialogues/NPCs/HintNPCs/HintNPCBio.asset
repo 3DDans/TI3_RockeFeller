@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
+  m_Name: HintNPCBio
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - text: Good afternoon, Doctor!
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "Strange plants found around the campus have been collected... That\u2019s
+      scary."
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: They have purple particles surrounding them... it almost looks radioactive!
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "Go into the building and take a look, maybe you\u2019ll be able to help!"
+    hasChoices: 0
+    choices: []
+    isEnd: 1

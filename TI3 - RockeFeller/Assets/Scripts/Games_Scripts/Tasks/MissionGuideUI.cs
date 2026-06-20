@@ -5,10 +5,24 @@ using UnityEngine;
 public class MissionGuideUI : MonoBehaviour
 {
     public TextMeshProUGUI taskText;
+    public GameObject boxMissions;
+
+    private void Start()
+    {
+        boxMissions.SetActive(false);
+    }
 
     private void Update()
     {
-        RefreshUI();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            boxMissions.SetActive(!boxMissions.activeSelf);
+        }
+
+        if (boxMissions.activeSelf)
+        {
+            RefreshUI();
+        }
     }
 
     void RefreshUI()
@@ -17,16 +31,7 @@ public class MissionGuideUI : MonoBehaviour
 
         TaskArea currentArea = AreaManager.Instance.CurrentArea;
 
-        sb.AppendLine("=== MAIN QUESTS ===");
-        sb.AppendLine();
-
         BuildSection(sb, TaskType.Principal, currentArea);
-
-        sb.AppendLine();
-        sb.AppendLine("=== SIDE QUESTS ===");
-        sb.AppendLine();
-
-        BuildSection(sb, TaskType.Secundaria, currentArea);
 
         taskText.text = sb.ToString();
     }

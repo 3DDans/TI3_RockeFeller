@@ -53,8 +53,14 @@ public class DialogueSystem : MonoBehaviour
             if (isTyping)
             {
                 StopAllCoroutines();
+
                 dialogueText.text = currentDialogue.lines[index].text;
                 isTyping = false;
+
+                if (currentDialogue.lines[index].hasChoices)
+                {
+                    ShowChoices();
+                }
             }
             else
             {

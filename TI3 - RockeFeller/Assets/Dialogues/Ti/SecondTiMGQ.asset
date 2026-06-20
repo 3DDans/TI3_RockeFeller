@@ -13,19 +13,16 @@ MonoBehaviour:
   m_Name: SecondTiMGQ
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: The sensors are sending incomplete data.
-    hasChoices: 0
-    choices: []
-    isEnd: 0
-  - text: It looks like something is interfering with the internal network.
+  - text: The sensors are sending incomplete data. Something seems to be interfering
+      with the network.
     hasChoices: 0
     choices: []
     isEnd: 0
   - text: Try restoring the circuits manually.
     hasChoices: 0
     choices: []
-    isEnd: 1
-  - text: Maybe that will stabilize the ventilation system.
+    isEnd: 0
+  - text: Maybe that will stabilize the doors system.
     hasChoices: 0
     choices: []
     isEnd: 1

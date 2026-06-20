@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8d4378795f62042ba39e3a4e744aa9, type: 3}
+  m_Name: FactsNPC2
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - text: Look at this, Doctor!
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: The students who developed this game study Digital Games!
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: 'At a world-renowned university: the Pontifical Catholic University of
+      Minas Gerais!'
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: "How fancy! That\u2019s quite a university!"
+    hasChoices: 0
+    choices: []
+    isEnd: 1

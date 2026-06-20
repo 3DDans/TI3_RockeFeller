@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PosMGBiologiaMGQ
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
-  - text: "So I was right\u2026\t"
+  - text: So I was right!
     hasChoices: 0
     choices: []
     isEnd: 0
@@ -25,7 +25,11 @@ MonoBehaviour:
     hasChoices: 0
     choices: []
     isEnd: 0
-  - text: This is not something natural.
+  - text: This is not something natural. Maybe...
+    hasChoices: 0
+    choices: []
+    isEnd: 0
+  - text: Well, whatever.
     hasChoices: 0
     choices: []
     isEnd: 1

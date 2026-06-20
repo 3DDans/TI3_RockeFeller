@@ -9,14 +9,14 @@ public class BiologyGameManager : MinigameBase
 
     public void CorrectChoice() 
     {
-        feedbackText.text = "Organismo identificado!";
+        feedbackText.text = "Organism identified!";
 
         Invoke(nameof(EndGame), 1.5f);
     }
 
     public void WrongChoice()
     {
-        feedbackText.text = "Não parece ser esse...";
+        feedbackText.text = "It doesn't seem to be that one...";
     }
 
     void EndGame()

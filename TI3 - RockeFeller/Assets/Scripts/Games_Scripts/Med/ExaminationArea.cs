@@ -52,6 +52,12 @@ public class ExaminationArea : MonoBehaviour
 
     void Update()
     {
+        if (!MedicalGameManager.IsPlayingMedicalGame)
+        {
+            meshRenderer.material.color = normalColor;
+            return;
+        }
+
         HandleHover();
         HandleScan();
     }
