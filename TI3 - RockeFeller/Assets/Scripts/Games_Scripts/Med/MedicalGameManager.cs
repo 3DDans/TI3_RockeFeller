@@ -18,7 +18,7 @@ public class MedicalGameManager : MinigameBase
 
     public static bool IsPlayingMedicalGame = false;
 
-
+    public Transform vfxPoint;
     void Start()
     {
         
@@ -106,7 +106,8 @@ public class MedicalGameManager : MinigameBase
         AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Medicine);
         IsPlayingMedicalGame = false;
         medicalUI.SetActive(false);
-
+        VFXManager.Instance.PlayVFX("Correct", vfxPoint.position);
+        SoundFXManager.Instance.PlaySFX("Correct");
         CompleteMinigame();
     }
 

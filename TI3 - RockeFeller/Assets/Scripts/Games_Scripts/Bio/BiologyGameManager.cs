@@ -6,6 +6,7 @@ public class BiologyGameManager : MinigameBase
     public TextMeshProUGUI feedbackText;
     public GameObject gameUI;
     public static bool gameStarted = false;
+    public Transform vfxPoint;
 
     public void CorrectChoice() 
     {
@@ -23,6 +24,8 @@ public class BiologyGameManager : MinigameBase
     {
         AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Biology);
         gameUI.SetActive(false);
+        VFXManager.Instance.PlayVFX("Correct", vfxPoint.position);
+        SoundFXManager.Instance.PlaySFX("Correct");
         CompleteMinigame();
     }
 }

@@ -16,6 +16,8 @@ public class EngineeringGameManager : MinigameBase
 
     public GameObject gameUI;
 
+    public Transform vfxPoint;
+
     public bool IsAssemblyComplete()
     {
         return allParts.All(p => p.isPlaced);
@@ -84,6 +86,8 @@ public class EngineeringGameManager : MinigameBase
         gameUI.SetActive(false);
         PetManager.Instance.SpawnPet(robotBenchSpawnPoint);
         AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Engineering);
+        VFXManager.Instance.PlayVFX("Correct", vfxPoint.position);
+        SoundFXManager.Instance.PlaySFX("Correct");
         CompleteMinigame();
     }
 
