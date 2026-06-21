@@ -26,7 +26,7 @@ public class AreaManager : MonoBehaviour
                 return "MEDICINE DEPARTMENT";
 
             case TaskArea.Engenharia:
-                return "ENGINEERING DEPARTMENT";
+                return "TECHNOLOGY DEPARTMENT";
 
             case TaskArea.Campus:
                 return "CAMPUS PUNKOFELLER";
