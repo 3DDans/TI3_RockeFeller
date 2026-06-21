@@ -42,9 +42,10 @@ public class SceneController : MonoBehaviour
     void Start()
     {
 
-        MusicManager.Instance.PlayMusic("music1");
+
         // Menu ativo
         AreaManager.Instance.SetArea(TaskArea.Campus);
+
         mainMenu.SetActive(true);
 
         // HUD desligada
@@ -63,6 +64,7 @@ public class SceneController : MonoBehaviour
 
     public void PlayGame()
     {
+        
         tabletController.isInMainMenu = false;
 
         // Esconde menu
