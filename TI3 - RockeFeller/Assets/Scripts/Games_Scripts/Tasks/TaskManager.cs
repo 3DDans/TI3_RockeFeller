@@ -53,6 +53,11 @@ public class TaskManager : MonoBehaviour
                 task.status = TaskStatus.Completed;
 
                 Debug.Log("Task concluída: " + task.taskName);
+
+                if (task.taskID == "DEAN_SECOND_CONVERSATION")
+                {
+                    GameProgressManager.Instance.PlayPostPuzzleCutscene();
+                }
             }
         }
     }

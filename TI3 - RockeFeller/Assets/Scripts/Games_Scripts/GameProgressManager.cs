@@ -1,6 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
+//using static Unity.Cinemachine.InputAxisControllerBase<T>;
 
 public class GameProgressManager : MonoBehaviour
 {
@@ -231,5 +234,42 @@ public class GameProgressManager : MonoBehaviour
         MinigameData minigame = minigames.Find(m => m.id == id);
 
         return minigame != null && minigame.unlocked;
+    }
+
+    public void PlayPostPuzzleCutscene()
+    {
+        if (!cutscenePostPuzzlePlayed)
+        {
+            StartCoroutine(PostPuzzleCutsceneCoroutine());
+        }
+        
+    }
+
+    IEnumerator PostPuzzleCutsceneCoroutine()
+    {
+       GameObject player = GameObject.FindGameObjectWithTag("Player");
+       ThirdPersonMovement movement = player.GetComponent<ThirdPersonMovement>();
+       CharacterController controller = player.GetComponent<CharacterController>();
+       GameObject camObj = GameObject.Find("PlayerCamera");
+       CinemachineOrbitalFollow orbFol = camObj.GetComponent<CinemachineOrbitalFollow>();
+       CinemachineInputAxisController camInput = camObj.GetComponent<CinemachineInputAxisController>();
+
+       cutscenePostPuzzlePlayed = true;
+
+       bool finished = false;
+       cutscenePostPuzzle.stopped += OnStopped;
+       cutscenePostPuzzle.Play();
+
+       yield return new WaitUntil(() => finished);
+
+       cutscenePostPuzzle.stopped -= OnStopped;
+
+       yield return new WaitUntil(() => finished);
+
+       void OnStopped(PlayableDirector d)
+       {
+           finished = true;
+       }
+        
     }
 }

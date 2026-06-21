@@ -61,35 +61,9 @@ public class DoorTeleporter : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        
-        if (GameProgressManager.Instance.CheckAllPhasesCompletion() && !GameProgressManager.Instance.cutscenePostPuzzlePlayed)
-        {
-            GameProgressManager.Instance.cutscenePostPuzzlePlayed = true;
+        camInput.enabled = true;
+        movement.canMove = true;
+        controller.enabled = true;
 
-            bool finished = false;
-            GameProgressManager.Instance.cutscenePostPuzzle.stopped += OnStopped;
-            GameProgressManager.Instance.cutscenePostPuzzle.Play();
-
-            yield return new WaitUntil(() => finished);
-
-            GameProgressManager.Instance.cutscenePostPuzzle.stopped -= OnStopped;
-
-            yield return new WaitUntil(() => finished);
-
-            camInput.enabled = true;
-            movement.canMove = true;
-            controller.enabled = true;
-
-            void OnStopped(PlayableDirector d)
-            {
-                finished = true;
-            }
-        }
-        else
-        {
-            camInput.enabled = true;
-            movement.canMove = true;
-            controller.enabled = true;
-        }
     }
 }
