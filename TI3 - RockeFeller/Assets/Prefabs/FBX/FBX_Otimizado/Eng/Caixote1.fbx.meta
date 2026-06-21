@@ -3,7 +3,17 @@ guid: 361cc2872185c3a47bb889bbe75796e1
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToonShading
+    second: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToonShading.001
+    second: {fileID: 2100000, guid: 6c9c6594fbebbaf42b2c150c44d5d273, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
