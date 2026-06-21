@@ -63,6 +63,8 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+
+
     // =========================================
     // Sistema antigo (mantido)
     // =========================================

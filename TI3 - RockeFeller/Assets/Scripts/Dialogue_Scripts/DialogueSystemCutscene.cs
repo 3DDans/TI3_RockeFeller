@@ -85,6 +85,13 @@ public class DialogueSystemCutscene : MonoBehaviour
         foreach (char c in text)
         {
             dialogueText.text += c;
+            if (c != ' ')
+            {
+                if (Random.value > 0.5f)
+                    SoundFXManager.Instance.PlaySFX("Diag1");
+                else
+                    SoundFXManager.Instance.PlaySFX("Diag2");
+            }
             yield return new WaitForSeconds(typingSpeed);
         }
 

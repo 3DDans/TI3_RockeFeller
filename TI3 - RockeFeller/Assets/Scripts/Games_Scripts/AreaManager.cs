@@ -41,6 +41,7 @@ public class AreaManager : MonoBehaviour
         CurrentArea = newArea;
 
         AmbientManager.Instance.SetArea(newArea);
+        MusicManager.Instance.SetArea(newArea);
     }
 
 }
