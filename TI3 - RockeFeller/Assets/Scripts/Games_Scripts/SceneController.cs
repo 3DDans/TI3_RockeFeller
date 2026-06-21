@@ -187,6 +187,7 @@ public class SceneController : MonoBehaviour
         //TaskManager.Instance.RegisterEvent("DEAN_FIRST_CONVERSATION");
 
         SceneManager.LoadScene("Punkofeller");
+        CursorManager.Instance.ShowCursor();
 
         void OnStopped(PlayableDirector d)
         {
