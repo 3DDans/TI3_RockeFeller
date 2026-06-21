@@ -48,6 +48,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0b6fb88dd967f944589de4a2e470a3ae, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0b6fb88dd967f944589de4a2e470a3ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 0b6fb88dd967f944589de4a2e470a3ae, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1617082561846925732, guid: 47bc2a65ff8326646bfc2139cd963817, type: 3}
     - target: {fileID: 919132149155446097, guid: 0b6fb88dd967f944589de4a2e470a3ae, type: 3}
       propertyPath: m_Name
       value: TreePit1
@@ -58,14 +70,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b6fb88dd967f944589de4a2e470a3ae, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 474538032620330927}
+      addedObject: {fileID: 6035884874640525074}
   m_SourcePrefab: {fileID: 100100000, guid: 0b6fb88dd967f944589de4a2e470a3ae, type: 3}
 --- !u!1 &3879345801332946582 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b6fb88dd967f944589de4a2e470a3ae, type: 3}
   m_PrefabInstance: {fileID: 4113859735081929671}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &474538032620330927
+--- !u!135 &6035884874640525074
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,5 +96,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 184.75
-  m_Center: {x: 1.6000633, y: -2.5535119, z: 130.89}
+  m_Radius: 1.1976457
+  m_Center: {x: 0.016003072, y: -0.09047921, z: -0.025532663}
