@@ -576,6 +576,7 @@ MonoBehaviour:
   middayRotation: 120
   sunsetRotation: 170
   nightRotation: 220
+  isNight: 0
 --- !u!114 &2800368271000061043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,6 +1545,7 @@ MonoBehaviour:
   musicList:
   - name: music1
     clip: {fileID: 8300000, guid: a5e649067195d6c49a3eca5523cd39ab, type: 3}
+  areaMusics: []
 --- !u!82 &8336005431482138743
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1939,6 +1941,7 @@ GameObject:
   - component: {fileID: 7955070680837748353}
   - component: {fileID: 2452734668822210257}
   - component: {fileID: 8746878436093957963}
+  - component: {fileID: 4598532133126184580}
   m_Layer: 0
   m_Name: SFXMANAGER
   m_TagString: Untagged
@@ -2083,6 +2086,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4598532133126184580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180708348904988146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e10b8fbbaf44354f8bc35d9eaee65de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmbientManager
+  ambientList:
+  - area: 1
+    dayClip: {fileID: 8300000, guid: 943d75bd9dd736a448f4c8623b8802c7, type: 3}
+    nightClip: {fileID: 0}
+  - area: 1
+    dayClip: {fileID: 8300000, guid: 3b7511fda883e9545930edf0d468c10b, type: 3}
+    nightClip: {fileID: 0}
+  - area: 4
+    dayClip: {fileID: 8300000, guid: 1213d280ec0e53f4ba4031dc304dd012, type: 3}
+    nightClip: {fileID: 8300000, guid: 1213d280ec0e53f4ba4031dc304dd012, type: 3}
+  - area: 3
+    dayClip: {fileID: 8300000, guid: df1687d143f52de459e25b8b2f6dcbe0, type: 3}
+    nightClip: {fileID: 8300000, guid: df1687d143f52de459e25b8b2f6dcbe0, type: 3}
 --- !u!1 &9193570231026223850
 GameObject:
   m_ObjectHideFlags: 0
