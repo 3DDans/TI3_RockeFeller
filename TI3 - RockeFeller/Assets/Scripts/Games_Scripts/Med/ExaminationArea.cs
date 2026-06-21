@@ -14,8 +14,6 @@ public class ExaminationArea : MonoBehaviour
 
     public AreaType areaType;
 
-    
-
     [Header("UI")]
     public GameObject scanPanel;
     public Slider scanSlider;
@@ -25,9 +23,8 @@ public class ExaminationArea : MonoBehaviour
     public TextMeshProUGUI resultText;
 
     [Header("Highlight")]
-    public Renderer meshRenderer;
-    public Color normalColor = Color.white;
-    public Color highlightColor = Color.yellow;
+    public GameObject highlightObject;
+    public float blinkSpeed = 8f;
 
     [Header("Config")]
     public float minScanTime = 3f;
@@ -47,14 +44,17 @@ public class ExaminationArea : MonoBehaviour
         scanPanel.SetActive(false);
         resultPanel.SetActive(false);
 
-        meshRenderer.material.color = normalColor;
+        if (highlightObject != null)
+            highlightObject.SetActive(false);
     }
 
     void Update()
     {
         if (!MedicalGameManager.IsPlayingMedicalGame)
         {
-            meshRenderer.material.color = normalColor;
+            if (highlightObject != null)
+                highlightObject.SetActive(false);
+
             return;
         }
 
@@ -65,7 +65,7 @@ public class ExaminationArea : MonoBehaviour
     void HandleHover()
     {
         Ray ray = MedicalToolManager.Instance.medicalCamera
-    .ScreenPointToRay(Input.mousePosition);
+            .ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
 
@@ -75,18 +75,20 @@ public class ExaminationArea : MonoBehaviour
             {
                 isHovering = true;
 
-                bool hasTool =
-                    MedicalToolManager.Instance.HasTool();
-
-                meshRenderer.material.color =
-                    hasTool ? highlightColor : Color.red;
+                if (highlightObject != null)
+                {
+                    bool visible = Mathf.Sin(Time.time * blinkSpeed) > 0;
+                    highlightObject.SetActive(visible);
+                }
 
                 return;
             }
         }
 
         isHovering = false;
-        meshRenderer.material.color = normalColor;
+
+        if (highlightObject != null)
+            highlightObject.SetActive(false);
     }
 
     string GetExaminationResult()
@@ -138,13 +140,11 @@ public class ExaminationArea : MonoBehaviour
     {
         if (!isHovering) return;
 
-        // COMEÇA O SCAN
         if (Input.GetMouseButtonDown(0) && !isScanning)
         {
             StartScan();
         }
 
-        // SEGURANDO
         if (Input.GetMouseButton(0) && isScanning)
         {
             currentTime += Time.deltaTime;
@@ -156,7 +156,6 @@ public class ExaminationArea : MonoBehaviour
             }
         }
 
-        // SOLTOU ANTES
         if (Input.GetMouseButtonUp(0) && isScanning)
         {
             CancelScan();
