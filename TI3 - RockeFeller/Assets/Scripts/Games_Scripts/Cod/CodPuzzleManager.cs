@@ -5,6 +5,7 @@ public class CodPuzzleManager : MinigameBase
     public GameObject[] puzzles;
     public int currentPuzzle;
     public NPCInteraction npcInteraction;
+    public Transform vfxPoint;
 
     private void Start()
     {
@@ -31,6 +32,8 @@ public class CodPuzzleManager : MinigameBase
         if (currentPuzzle == puzzles.Length)
         {
             AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Programming);
+            VFXManager.Instance.PlayVFX("Correct", vfxPoint.position);
+            SoundFXManager.Instance.PlaySFX("Correct");
             CompleteMinigame();
         }
     }
