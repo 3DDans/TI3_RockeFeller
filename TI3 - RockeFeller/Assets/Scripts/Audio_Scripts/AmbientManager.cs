@@ -9,13 +9,18 @@ public class AmbientManager : MonoBehaviour
     public class AreaAmbient
     {
         public TaskArea area;
-        public AudioClip clip;
+
+        [Header("Dia")]
+        public AudioClip dayClip;
+
+        [Header("Noite")]
+        public AudioClip nightClip;
     }
 
     [Header("Ambientes por área")]
     public List<AreaAmbient> ambientList = new List<AreaAmbient>();
 
-    private Dictionary<TaskArea, AudioClip> ambientDict;
+
 
     private AudioSource audioSource;
 
@@ -36,29 +41,17 @@ public class AmbientManager : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
-        ambientDict = new Dictionary<TaskArea, AudioClip>();
-
-        foreach (var ambient in ambientList)
-        {
-            if (!ambientDict.ContainsKey(ambient.area))
-                ambientDict.Add(ambient.area, ambient.clip);
-        }
+       
     }
 
     public void SetArea(TaskArea newArea)
     {
-        if (currentArea == newArea) return;
+        if (currentArea == newArea)
+            return;
 
         currentArea = newArea;
 
-        if (ambientDict.TryGetValue(newArea, out AudioClip clip))
-        {
-            StartCoroutine(SwitchAmbient(clip));
-        }
-        else
-        {
-            Debug.LogWarning("Sem ambient para área: " + newArea);
-        }
+        RefreshAmbient();
     }
 
     private System.Collections.IEnumerator SwitchAmbient(AudioClip newClip)
@@ -84,4 +77,32 @@ public class AmbientManager : MonoBehaviour
 
         audioSource.volume = startVolume;
     }
+
+    public void RefreshAmbient()
+    {
+        foreach (var ambient in ambientList)
+        {
+            if (ambient.area != currentArea)
+                continue;
+
+            AudioClip clipToPlay = ambient.dayClip;
+
+            // Campus usa som diferente à noite
+            if (currentArea == TaskArea.Campus &&
+                DayNightObjectsManager.Instance != null &&
+                SkyboxManager.Instance.isNight)
+            {
+                clipToPlay = ambient.nightClip;
+            }
+
+            if (audioSource.clip != clipToPlay)
+            {
+                StartCoroutine(SwitchAmbient(clipToPlay));
+            }
+
+            return;
+        }
+    }
+
+
 }

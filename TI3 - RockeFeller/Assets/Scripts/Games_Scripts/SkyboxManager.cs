@@ -18,6 +18,8 @@ public class SkyboxManager : MonoBehaviour
     public float sunsetRotation = 170f;
     public float nightRotation = 220f;
 
+
+     public bool isNight = false;
     private void Start()
     {
         SetDayStage(0);
@@ -67,8 +69,9 @@ public class SkyboxManager : MonoBehaviour
 
     public void SetNight()
     {
+        isNight = true;
         RenderSettings.skybox = nightSkybox;
-
+        AmbientManager.Instance.RefreshAmbient();
         if (DayNightObjectsManager.Instance != null)
         {
             DayNightObjectsManager.Instance.SetNight();
