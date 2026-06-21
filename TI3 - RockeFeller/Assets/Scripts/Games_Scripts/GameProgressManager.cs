@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class GameProgressManager : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class GameProgressManager : MonoBehaviour
     public bool finalStageUnlocked = false;
     public bool gameFinished = false;
 
+    [Header("Cutscene Values")]
+    public bool cutscenePostPuzzlePlayed = false;
+    public PlayableDirector cutscenePostPuzzle;
 
     private void Awake()
     {
@@ -128,7 +132,7 @@ public class GameProgressManager : MonoBehaviour
 
         if (allCompleted) {
 
-            AnalyticsManager.Instance.MarcarGameEnded(); //Como ainda não tem fim de jogo, está pra tocar quando terminar todos os puzzles. MUDAR DEPOIS.
+            //AnalyticsManager.Instance.MarcarGameEnded(); //Como ainda não tem fim de jogo, está pra tocar quando terminar todos os puzzles. MUDAR DEPOIS.
 
             if (!string.IsNullOrEmpty(fisrtPhaseTask))
             {
@@ -143,6 +147,17 @@ public class GameProgressManager : MonoBehaviour
 
             SkyboxManager.Instance.SetNight();
         }
+    }
+
+    public bool CheckAllPhasesCompletion()
+    {
+        bool allCompleted =
+            IsCompleted(MinigameID.Medicina) &&
+            IsCompleted(MinigameID.Biologia) &&
+            IsCompleted(MinigameID.Engenharia) &&
+            IsCompleted(MinigameID.Programacao);
+
+        return allCompleted;
     }
 
     private void UnlockMeteor()
