@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -93,14 +93,423 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 892
+        width: 153
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed89d0de527efb4caf331b4c3f2069d
+      internalID: -477812694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 961
+        width: 112
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fda58e938c7cce409b8c3aa5ac80e93
+      internalID: -1955627126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 818
+        width: 92
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c9396261ee52d4888a7e763bb79477
+      internalID: 1851548813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_9
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 818
+        width: 107
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eba5badbb3c49e4489d01d81dca7fbf
+      internalID: -1881115162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_20
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 727
+        width: 83
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28aa8b86be9d9e4386b1df8e09316c8
+      internalID: 766525187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca011b89796029d4bbeb5c672057440a
+      internalID: -614802938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_22
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 70
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242421fb2f90a2f41b81e52242bf6a77
+      internalID: 1245249089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_23
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 5
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c281d26b35a25dd448cdf1d4c6e8938b
+      internalID: 78081687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_24
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 5
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d8182fd95652a4ab190eb897047bf1
+      internalID: 608472060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_25
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 5
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a6365c9472cd434d82768e6c663f424
+      internalID: 1972108961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_26
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 50
+        width: 196
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6921f2fa4fbf9504baef4cc85219c461
+      internalID: 1742422928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_27
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 289
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ede116827a6b8e4bba36ada7d9bad92
+      internalID: -171366889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_28
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 149
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b940a1f15076f6e448faa7efa5bb14b9
+      internalID: -1807523772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_29
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 140
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef70eefccb2b40c43aa3507770d5de7d
+      internalID: 1054433274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_30
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 93
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645e62b09d8d84146b8d86652e16bc53
+      internalID: -1832897829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_31
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 93
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ccdde6512f5054da06254563459872
+      internalID: -1909577550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 758
+        width: 1
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039e259b31eaebc43b8b50012c1f9717
+      internalID: -1720821914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToonShadingTexturaTestes_3
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 752
+        width: 370
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b680250461e5b41af8718c37745a35
+      internalID: 13287184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8a4c3548ea84fe447a1ad1191cd11a74
     internalID: 0
     vertices: []
     indices: 
@@ -108,8 +517,42 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ToonShadingTexturaTestes_0: -477812694
+      ToonShadingTexturaTestes_1: -1955627126
+      ToonShadingTexturaTestes_10: -1791631159
+      ToonShadingTexturaTestes_11: -1495414874
+      ToonShadingTexturaTestes_12: 2049237343
+      ToonShadingTexturaTestes_13: 1141699925
+      ToonShadingTexturaTestes_14: -1355843837
+      ToonShadingTexturaTestes_15: -1296173280
+      ToonShadingTexturaTestes_16: -1611793149
+      ToonShadingTexturaTestes_17: 1632983568
+      ToonShadingTexturaTestes_18: -1967360782
+      ToonShadingTexturaTestes_19: -781425444
+      ToonShadingTexturaTestes_2: -1720821914
+      ToonShadingTexturaTestes_20: 766525187
+      ToonShadingTexturaTestes_21: -614802938
+      ToonShadingTexturaTestes_22: 1245249089
+      ToonShadingTexturaTestes_23: 78081687
+      ToonShadingTexturaTestes_24: 608472060
+      ToonShadingTexturaTestes_25: 1972108961
+      ToonShadingTexturaTestes_26: 1742422928
+      ToonShadingTexturaTestes_27: -171366889
+      ToonShadingTexturaTestes_28: -1807523772
+      ToonShadingTexturaTestes_29: 1054433274
+      ToonShadingTexturaTestes_3: 13287184
+      ToonShadingTexturaTestes_30: -1832897829
+      ToonShadingTexturaTestes_31: -1909577550
+      ToonShadingTexturaTestes_4: -1975274074
+      ToonShadingTexturaTestes_5: -395471227
+      ToonShadingTexturaTestes_6: 2123909545
+      ToonShadingTexturaTestes_7: 513558117
+      ToonShadingTexturaTestes_8: 1851548813
+      ToonShadingTexturaTestes_9: -1881115162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

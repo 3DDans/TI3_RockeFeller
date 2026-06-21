@@ -108,6 +108,7 @@ public class MedicalGameManager : MinigameBase
         medicalUI.SetActive(false);
         VFXManager.Instance.PlayVFX("Correct", vfxPoint.position);
         SoundFXManager.Instance.PlaySFX("Correct");
+        MedicalToolManager.Instance.UnequipTool();
         CompleteMinigame();
     }
 
