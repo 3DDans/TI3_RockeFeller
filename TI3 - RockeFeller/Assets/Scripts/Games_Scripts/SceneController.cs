@@ -25,6 +25,7 @@ public class SceneController : MonoBehaviour
     [Header("Cutscenes")]
     public bool tocarCutscene = true;
     public PlayableDirector cutscenePlay;
+    public PlayableDirector cutsceneEnding;
 
 
     [Header("HUD Elements")]
@@ -76,7 +77,7 @@ public class SceneController : MonoBehaviour
         if (tocarCutscene)
         {
             tabletController.canPause = false;
-            StartCoroutine(PlayCutscene());
+            StartCoroutine(PlayInitialCutscene());
             
             //TransitionController.instance.FadeIn();
         }
@@ -97,7 +98,7 @@ public class SceneController : MonoBehaviour
         playerCamera.Priority = 20;
     }
 
-    IEnumerator PlayCutscene()
+    IEnumerator PlayInitialCutscene()
     {
         playerCC.enabled = false;
         playerMovement.enabled = false;
@@ -169,5 +170,41 @@ public class SceneController : MonoBehaviour
 
         Application.Quit();
 
+    }
+
+    public void EndingCutscene()
+    {
+        AnalyticsManager.Instance.MarcarGameEnded();
+
+        StartCoroutine(EndingCutsceneCoroutine());
+    }
+
+    IEnumerator EndingCutsceneCoroutine()
+    {
+        playerCC.enabled = false;
+        playerMovement.enabled = false;
+        SetHudVisible(false);
+        bool finished = false;
+        pauseText.SetActive(false);
+        hud.SetActive(false);
+
+        cutsceneEnding.gameObject.SetActive(true);
+        cutsceneEnding.stopped += OnStopped;
+        cutsceneEnding.Play();
+
+        yield return new WaitUntil(() => finished);
+
+        cutsceneEnding.stopped -= OnStopped;
+
+        Debug.Log("Cutscene Finalizada");
+
+        //TaskManager.Instance.RegisterEvent("DEAN_FIRST_CONVERSATION");
+
+        SceneManager.LoadScene("Punkofeller");
+
+        void OnStopped(PlayableDirector d)
+        {
+            finished = true;
+        }
     }
 }
