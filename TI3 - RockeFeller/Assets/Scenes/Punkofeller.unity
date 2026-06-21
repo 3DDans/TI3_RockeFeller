@@ -8116,8 +8116,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: d32a255ebafa8044cb9e9d631537c889, type: 3}
 --- !u!95 &1685763401 stripped
 Animator:
-  m_CorrespondingSourceObject: {fileID: 8643429407195264196, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-  m_PrefabInstance: {fileID: 9030494781571059417}
+  m_CorrespondingSourceObject: {fileID: 4055987155096764419, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+  m_PrefabInstance: {fileID: 1651095302662772431}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1686450199
 PrefabInstance:
@@ -8587,8 +8587,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1789024409 stripped
 Animator:
-  m_CorrespondingSourceObject: {fileID: 5935664978906963304, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-  m_PrefabInstance: {fileID: 9030494781571059417}
+  m_CorrespondingSourceObject: {fileID: 6125322883934289098, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+  m_PrefabInstance: {fileID: 1651095302662772431}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1789305246
 PrefabInstance:
@@ -11134,6 +11134,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1eb9f65df3d209498871ecda1424d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SymptomButton
+--- !u!1001 &1651095302662772431
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 497175929080737667, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 712069985}
+    - target: {fileID: 2792009914788064482, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_Name
+      value: Cenario
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092536502683671643, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
 --- !u!143 &1909081327930323168 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 2817391570456089946, guid: 6d2845b464374ba409474955a3f68ead, type: 3}
@@ -13295,67 +13356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1001 &9030494781571059417
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823836661696546627, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655491529248480406, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: sceneController
-      value: 
-      objectReference: {fileID: 712069985}
-    - target: {fileID: 8410863112669097283, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
-      propertyPath: m_Name
-      value: Cenario
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
 --- !u!114 &9048341724794573950 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5424743937576309788, guid: 098138091fc687e49bc945fc6cd030c2, type: 3}
@@ -13372,7 +13372,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 869252183475142524}
-  - {fileID: 9030494781571059417}
+  - {fileID: 1651095302662772431}
   - {fileID: 3000398322328806010}
   - {fileID: 2935265305634342869}
   - {fileID: 4989163957708330428}
