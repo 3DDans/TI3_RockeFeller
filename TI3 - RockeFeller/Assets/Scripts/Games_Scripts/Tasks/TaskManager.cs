@@ -54,7 +54,7 @@ public class TaskManager : MonoBehaviour
 
                 Debug.Log("Task concluída: " + task.taskName);
 
-                if (task.taskID == "DEAN_SECOND_CONVERSATION")
+                if (task.completeEventID == "DEAN_SECOND_CONVERSATION")
                 {
                     GameProgressManager.Instance.PlayPostPuzzleCutscene();
                 }

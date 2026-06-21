@@ -100,6 +100,7 @@ public class TabletController : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
+        CursorManager.Instance.ShowCursor();
         SceneManager.LoadScene("Punkofeller");
     }
 }
