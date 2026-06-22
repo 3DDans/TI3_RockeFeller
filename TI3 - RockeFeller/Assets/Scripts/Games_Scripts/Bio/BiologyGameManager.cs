@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class BiologyGameManager : MinigameBase
 {
@@ -22,10 +23,21 @@ public class BiologyGameManager : MinigameBase
 
     void EndGame()
     {
+        StartCoroutine(EndGameCoroutine());
+    }
+
+    IEnumerator EndGameCoroutine()
+    {
+        TransitionController.instance.FadeOut();
+        yield return new WaitForSeconds(2f);
+
         AnalyticsManager.Instance.MarcarPuzzleFinished(AnalyticsManager.Area.Biology);
         gameUI.SetActive(false);
         VFXManager.Instance.PlayVFX("Correct", vfxPoint.position);
         SoundFXManager.Instance.PlaySFX("Correct");
         CompleteMinigame();
+
+        yield return new WaitForSeconds(2f);
+        TransitionController.instance.FadeIn();
     }
 }
