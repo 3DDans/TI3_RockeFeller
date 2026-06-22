@@ -2049,6 +2049,7 @@ MonoBehaviour:
   minZoomValue: 50
   maxZoomValue: 500
   initialFOV: 1
+  zoomSoundDuration: 14.028
 --- !u!1 &1624050603835422581
 GameObject:
   m_ObjectHideFlags: 0
@@ -14704,7 +14705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 90469c5d3fcbf844eae483d0f28ca4ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0048971
+      value: -0.172
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 90469c5d3fcbf844eae483d0f28ca4ce, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14991,6 +14992,7 @@ MonoBehaviour:
   resultPanel: {fileID: 0}
   resultText: {fileID: 0}
   highlightObject: {fileID: 5945739534430977877}
+  blinkSpeed: 8
   minScanTime: 3
   maxScanTime: 5
 --- !u!1 &5777481984484573152 stripped
@@ -15038,6 +15040,7 @@ MonoBehaviour:
   resultPanel: {fileID: 0}
   resultText: {fileID: 0}
   highlightObject: {fileID: 2121794342368511673}
+  blinkSpeed: 8
   minScanTime: 3
   maxScanTime: 5
 --- !u!1001 &1438034183362812418
@@ -17554,7 +17557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff109a4aca2af184386b34986eb94058, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0064058
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff109a4aca2af184386b34986eb94058, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18576,7 +18579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61d81d3feb8ed1544a48ae418ee461a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11942
+      value: -0.236
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61d81d3feb8ed1544a48ae418ee461a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18618,6 +18621,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LanternaECabeca (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5341716633167322052, guid: 61d81d3feb8ed1544a48ae418ee461a6, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341716633167322052, guid: 61d81d3feb8ed1544a48ae418ee461a6, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
