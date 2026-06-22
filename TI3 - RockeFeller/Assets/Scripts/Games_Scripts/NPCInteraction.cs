@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -271,11 +272,11 @@ public class NPCInteraction : MonoBehaviour
             MedicalGameManager.IsPlayingMedicalGame = true;
         }
 
-        
-
         if (minigameID == MinigameID.Biologia)
         {
             BiologyGameManager.gameStarted = true;
+            StartCoroutine(MinigameBiologiaCoroutine());
+            return;
         }
 
         if (!string.IsNullOrEmpty(completeEventIDMineGameIni))
@@ -292,8 +293,6 @@ public class NPCInteraction : MonoBehaviour
 
             tabletManager.hideCursorWhenTabletClosed = (minigameID == MinigameID.Biologia);
         }
-
-
 
         GameProgressManager.IsInMinigame = true;
         player.canMove = false;
@@ -315,6 +314,52 @@ public class NPCInteraction : MonoBehaviour
         if (puzzleUI != null)
             puzzleUI.SetActive(true);
     }
+
+    IEnumerator MinigameBiologiaCoroutine()
+    {
+        TransitionController.instance.FadeOut();
+
+        yield return new WaitForSeconds(1f);
+
+        if (!string.IsNullOrEmpty(completeEventIDMineGameIni))
+        {
+            TaskManager.Instance.RegisterEvent(completeEventIDMineGameIni);
+        }
+
+        if (tabletManager != null)
+        {
+            tabletManager.EnableTablet();
+            tabletManager.OpenTablet();
+
+            CursorManager.Instance.ShowCursor();
+
+            tabletManager.hideCursorWhenTabletClosed = (minigameID == MinigameID.Biologia);
+        }
+
+        GameProgressManager.IsInMinigame = true;
+        player.canMove = false;
+        playerVs.SetActive(false);
+
+        if (minigameCamera != null)
+        {
+            minigameCamera.Priority = 20;
+        }
+
+        if (mainCamera != null)
+        {
+            mainCamera.Priority = 5;
+        }
+        interactionUI.SetActive(false);
+
+
+
+        if (puzzleUI != null)
+            puzzleUI.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        TransitionController.instance.FadeIn();
+    }
+
     public void CompletePuzzle()
     {
 
