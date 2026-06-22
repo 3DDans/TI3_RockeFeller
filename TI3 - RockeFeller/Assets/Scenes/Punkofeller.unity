@@ -9098,7 +9098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &944903978
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9210,6 +9210,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GoalTrigger
   ballSpawn: {fileID: 1040675852}
   goalSound: {fileID: 944903978}
+  vfxPoint: {fileID: 0}
+  vfxPoint2: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!65 &944903980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9825,37 +9828,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c08b77d3f5d9ac42a379133d6c845fa, type: 3}
---- !u!1 &1040675851
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1040675852}
-  m_Layer: 0
-  m_Name: BallSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1040675852
+--- !u!4 &1040675852 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 146330060167674382, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+  m_PrefabInstance: {fileID: 1999580730}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040675851}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.89577, y: 0.1292, z: -21.678}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052117206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 842267798387044296, guid: 098138091fc687e49bc945fc6cd030c2, type: 3}
@@ -17763,7 +17740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1664479350
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17875,6 +17852,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GoalTrigger
   ballSpawn: {fileID: 1040675852}
   goalSound: {fileID: 1664479350}
+  vfxPoint: {fileID: 0}
+  vfxPoint2: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!65 &1664479352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19874,6 +19854,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3967995372466557894, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
   m_PrefabInstance: {fileID: 1651095302662772431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1999580730
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784245999627016391, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358892769019546501, guid: b6ee48154d784b149898636eaae33c56, type: 3}
+      propertyPath: m_Name
+      value: Goals
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6ee48154d784b149898636eaae33c56, type: 3}
 --- !u!114 &1999613166 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6676690910831100428, guid: 0aeec094336dcb94b993b89da5cea912, type: 3}
@@ -22621,9 +22658,9 @@ SceneRoots:
   - {fileID: 7119300566082897475}
   - {fileID: 974559065}
   - {fileID: 1378348264}
+  - {fileID: 1999580730}
   - {fileID: 1664479353}
   - {fileID: 944903981}
-  - {fileID: 1040675852}
   - {fileID: 503982400}
   - {fileID: 999800543}
   - {fileID: 1895921198}
