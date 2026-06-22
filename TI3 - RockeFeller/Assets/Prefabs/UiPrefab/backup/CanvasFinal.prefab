@@ -6329,7 +6329,7 @@ GameObject:
   - component: {fileID: 7337869289733757563}
   - component: {fileID: 7586408031987623921}
   - component: {fileID: 6059955058126657086}
-  - component: {fileID: 1816211262821753661}
+  - component: {fileID: 5935137217421076768}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -6462,7 +6462,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1816211262821753661
+--- !u!114 &5935137217421076768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6471,19 +6471,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1571756158023787793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad9a0ce4a90bb944964d544cd7ac9cd, type: 3}
+  m_Script: {fileID: 11500000, guid: c8275a4e16c761e4ebdc17c2e81f728c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIButtonFX
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
   hoverScale: 1.1
-  hoverMoveY: 0.1
-  clickScale: 0.92
-  bounceScale: 1.12
-  bounceDuration: 0.04
-  speed: 0.8
-  glowImage: {fileID: 0}
-  audioSource: {fileID: 0}
-  hoverSound: {fileID: 8300000, guid: 224baccb7d7aa594fbc4dd58d02006fe, type: 3}
-  clickSound: {fileID: 8300000, guid: bd9f58eedc83cdf42bd8d1268c026043, type: 3}
+  speed: 10
 --- !u!1 &1577860493842669955
 GameObject:
   m_ObjectHideFlags: 0
@@ -9304,7 +9296,7 @@ GameObject:
   - component: {fileID: 4296078065209091684}
   - component: {fileID: 7099614308830697597}
   - component: {fileID: 8544300534407626016}
-  - component: {fileID: 3059181533517521382}
+  - component: {fileID: 1558666329712713502}
   m_Layer: 5
   m_Name: ButtonPlay
   m_TagString: Untagged
@@ -9425,7 +9417,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3059181533517521382
+--- !u!114 &1558666329712713502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9434,19 +9426,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2192825984169731756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad9a0ce4a90bb944964d544cd7ac9cd, type: 3}
+  m_Script: {fileID: 11500000, guid: c8275a4e16c761e4ebdc17c2e81f728c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIButtonFX
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
   hoverScale: 1.1
-  hoverMoveY: 0.1
-  clickScale: 0.92
-  bounceScale: 1.12
-  bounceDuration: 0.04
-  speed: 0.8
-  glowImage: {fileID: 0}
-  audioSource: {fileID: 0}
-  hoverSound: {fileID: 8300000, guid: 224baccb7d7aa594fbc4dd58d02006fe, type: 3}
-  clickSound: {fileID: 8300000, guid: bd9f58eedc83cdf42bd8d1268c026043, type: 3}
+  speed: 10
 --- !u!1 &2199724330101889541
 GameObject:
   m_ObjectHideFlags: 0
@@ -24871,7 +24855,7 @@ GameObject:
   - component: {fileID: 6960822170050915919}
   - component: {fileID: 1082922391624136371}
   - component: {fileID: 6256214071112723214}
-  - component: {fileID: 3912173922044365344}
+  - component: {fileID: 890797543416185643}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -24992,7 +24976,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3912173922044365344
+--- !u!114 &890797543416185643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25001,19 +24985,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5459156463655942081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad9a0ce4a90bb944964d544cd7ac9cd, type: 3}
+  m_Script: {fileID: 11500000, guid: c8275a4e16c761e4ebdc17c2e81f728c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIButtonFX
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
   hoverScale: 1.1
-  hoverMoveY: 0.1
-  clickScale: 0.92
-  bounceScale: 1.12
-  bounceDuration: 0.04
-  speed: 0.8
-  glowImage: {fileID: 0}
-  audioSource: {fileID: 0}
-  hoverSound: {fileID: 8300000, guid: 224baccb7d7aa594fbc4dd58d02006fe, type: 3}
-  clickSound: {fileID: 8300000, guid: bd9f58eedc83cdf42bd8d1268c026043, type: 3}
+  speed: 10
 --- !u!1 &5572711662490298510
 GameObject:
   m_ObjectHideFlags: 0
@@ -37434,7 +37410,7 @@ GameObject:
   - component: {fileID: 6849920596832780604}
   - component: {fileID: 7366821711363145688}
   - component: {fileID: 2067770353562124517}
-  - component: {fileID: 6788798361288940933}
+  - component: {fileID: 41001567265281986}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -37567,7 +37543,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6788798361288940933
+--- !u!114 &41001567265281986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37576,19 +37552,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7917880191242957940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad9a0ce4a90bb944964d544cd7ac9cd, type: 3}
+  m_Script: {fileID: 11500000, guid: c8275a4e16c761e4ebdc17c2e81f728c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIButtonFX
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
   hoverScale: 1.1
-  hoverMoveY: 0.1
-  clickScale: 0.92
-  bounceScale: 1.12
-  bounceDuration: 0.04
-  speed: 0.8
-  glowImage: {fileID: 0}
-  audioSource: {fileID: 0}
-  hoverSound: {fileID: 8300000, guid: 224baccb7d7aa594fbc4dd58d02006fe, type: 3}
-  clickSound: {fileID: 8300000, guid: bd9f58eedc83cdf42bd8d1268c026043, type: 3}
+  speed: 10
 --- !u!1 &7958519286035452503
 GameObject:
   m_ObjectHideFlags: 0
