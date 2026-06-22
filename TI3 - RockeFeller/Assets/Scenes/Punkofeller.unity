@@ -11487,6 +11487,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 0.54230654
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.36309814
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inSlope
+      value: -4.217258
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
+      value: -1.2873404
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inSlope
+      value: -0.30011982
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].outSlope
+      value: -4.217258
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
+      value: -1.2873404
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].outSlope
+      value: -0.30011982
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].outWeight
+      value: 0.23015973
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385866502330040713, guid: 6b2326e27a9742f479d0fb9a9f034a7e, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outWeight
+      value: 0.27171054
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12687,7 +12759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4993909740232376194, guid: 67b46657d9a2d6d4bb44c321106eb268, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901176648557880871, guid: 67b46657d9a2d6d4bb44c321106eb268, type: 3}
       propertyPath: m_Name
@@ -13160,7 +13232,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7663844639945649489}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &8712902537013987273 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9181110845387576862, guid: 098138091fc687e49bc945fc6cd030c2, type: 3}
