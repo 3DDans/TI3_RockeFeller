@@ -57,7 +57,7 @@ public class EngineeringGameManager : MinigameBase
             selectedPart.Place(slot);
 
             selectedPart = null;
-
+            SoundFXManager.Instance.PlaySFX("Fit");
             Debug.Log("Encaixou!");
 
             ClearHighlights();

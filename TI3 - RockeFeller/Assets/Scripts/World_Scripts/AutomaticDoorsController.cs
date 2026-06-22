@@ -28,11 +28,13 @@ public class AutomaticDoorsController : MonoBehaviour
     {
         animator.SetBool("Open", true);
         Debug.Log("Abrir porta automatica");
+        SoundFXManager.Instance.PlaySFX("Door");
     }
 
     public void FecharPorta()
     {
         animator.SetBool("Open", false);
         Debug.Log("Fechou porta automatica");
+        SoundFXManager.Instance.PlaySFX("Door");
     }
 }
