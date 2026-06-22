@@ -874,7 +874,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &2611140518599382976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1568,9 @@ MonoBehaviour:
   - area: 4
     dayClip: {fileID: 8300000, guid: 324085f6f0509ab419e248478ed0793b, type: 3}
     nightClip: {fileID: 8300000, guid: 324085f6f0509ab419e248478ed0793b, type: 3}
+  - area: 0
+    dayClip: {fileID: 8300000, guid: 1213d280ec0e53f4ba4031dc304dd012, type: 3}
+    nightClip: {fileID: 8300000, guid: 1213d280ec0e53f4ba4031dc304dd012, type: 3}
 --- !u!82 &8336005431482138743
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2140,7 +2142,7 @@ MonoBehaviour:
   ambientList:
   - area: 1
     dayClip: {fileID: 8300000, guid: 943d75bd9dd736a448f4c8623b8802c7, type: 3}
-    nightClip: {fileID: 0}
+    nightClip: {fileID: 8300000, guid: 51eeca0209ae0cd4abdc91fc1eb4aa87, type: 3}
   - area: 1
     dayClip: {fileID: 8300000, guid: 3b7511fda883e9545930edf0d468c10b, type: 3}
     nightClip: {fileID: 0}
@@ -2148,6 +2150,9 @@ MonoBehaviour:
     dayClip: {fileID: 8300000, guid: 1213d280ec0e53f4ba4031dc304dd012, type: 3}
     nightClip: {fileID: 8300000, guid: 1213d280ec0e53f4ba4031dc304dd012, type: 3}
   - area: 3
+    dayClip: {fileID: 8300000, guid: df1687d143f52de459e25b8b2f6dcbe0, type: 3}
+    nightClip: {fileID: 8300000, guid: df1687d143f52de459e25b8b2f6dcbe0, type: 3}
+  - area: 2
     dayClip: {fileID: 8300000, guid: df1687d143f52de459e25b8b2f6dcbe0, type: 3}
     nightClip: {fileID: 8300000, guid: df1687d143f52de459e25b8b2f6dcbe0, type: 3}
 --- !u!1 &9193570231026223850
