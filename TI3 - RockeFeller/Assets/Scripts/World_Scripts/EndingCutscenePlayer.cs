@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class EndingCutscenePlayer : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class EndingCutscenePlayer : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             sceneController.EndingCutscene();
+            AreaManager.Instance.SetArea(TaskArea.Global);
         }
     }
 }
