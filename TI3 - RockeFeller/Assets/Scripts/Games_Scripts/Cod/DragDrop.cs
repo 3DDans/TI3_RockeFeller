@@ -29,6 +29,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (Random.value > 0.5f)
+            SoundFXManager.Instance.PlaySFX("Tec1");
+        else
+            SoundFXManager.Instance.PlaySFX("Tec2");
         Debug.Log("OnBeginDrag");
         canvasGroup.blocksRaycasts = false;
     }

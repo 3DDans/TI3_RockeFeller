@@ -22,6 +22,10 @@ public class MicroscopeZoom : MonoBehaviour
     [Header("Initial State")]
     public float initialFOV = 35f;
 
+    private bool zoomSoundPlaying;
+    private float zoomTimer;
+
+    [SerializeField] private float zoomSoundDuration = 14.028f;
 
     private float targetFOV;
     void Start()
@@ -33,12 +37,23 @@ public class MicroscopeZoom : MonoBehaviour
 
         UpdateZoomHUD();
     }
-        
+
     void Update()
     {
         HandleZoom();
         SmoothZoom();
         UpdateZoomHUD();
+        HandleZoomSound();
+
+        if (zoomSoundPlaying)
+        {
+            zoomTimer -= Time.deltaTime;
+
+            if (zoomTimer <= 0f)
+            {
+                zoomSoundPlaying = false;
+            }
+        }
     }
 
     void HandleZoom()
@@ -102,5 +117,23 @@ public class MicroscopeZoom : MonoBehaviour
             minFOV,
             virtualCamera.Lens.FieldOfView
         );
+    }
+
+    void HandleZoomSound()
+    {
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+        bool isZooming = Mathf.Abs(scroll) > 0.0001f;
+
+        if (isZooming)
+        {
+            if (!zoomSoundPlaying)
+            {
+                SoundFXManager.Instance.PlaySFX("Micro"); // ou ZoomSFX
+
+                zoomSoundPlaying = true;
+                zoomTimer = zoomSoundDuration;
+            }
+        }
     }
 }
