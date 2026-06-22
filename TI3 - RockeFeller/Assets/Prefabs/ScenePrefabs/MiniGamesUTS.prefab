@@ -2426,7 +2426,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.13, y: 0.18, z: 0.3}
-  m_Center: {x: 0, y: -0.03, z: 0}
+  m_Center: {x: 0, y: -0.16, z: 0}
 --- !u!1 &1811394885711647078
 GameObject:
   m_ObjectHideFlags: 0
@@ -6550,7 +6550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286cac2cd2dd9004ba90c909e58655dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MicroscopeController
-  maxMoveSpeed: 5
+  maxMoveSpeed: 7
   minMoveSpeed: 2
   limitX: {x: -10, y: 10}
   limitZ: {x: -10, y: 10}
@@ -6561,8 +6561,8 @@ MonoBehaviour:
   lightValue: 50
   lightChangeSpeed: 30
   zoomController: {fileID: 5929437809170562605}
-  focusValue: 50
-  idealFocusValue: 34.1
+  focusValue: 31
+  idealFocusValue: 46
   focusChangeSpeed: 5
   maxDriftStrength: 9.3
   driftSpeed: 0.99
@@ -12047,7 +12047,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.15, y: 0.06, z: 0.32}
-  m_Center: {x: -0.04, y: -0.09, z: 0}
+  m_Center: {x: -0.04, y: -0.13, z: 0}
 --- !u!1 &7925377496827882779
 GameObject:
   m_ObjectHideFlags: 0
@@ -12116,7 +12116,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.14, y: 0.12, z: 0.35}
-  m_Center: {x: 0, y: -0.06, z: 0}
+  m_Center: {x: 0, y: -0.08, z: 0}
 --- !u!1 &7953887786363414079
 GameObject:
   m_ObjectHideFlags: 0
@@ -14917,6 +14917,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
+    - target: {fileID: 4291685627735735326, guid: eeb20adb63c29fe46b5426818d72744d, type: 3}
+      propertyPath: m_Name
+      value: ArmatureCharacter02
+      objectReference: {fileID: 0}
     - target: {fileID: 5695194966551304650, guid: eeb20adb63c29fe46b5426818d72744d, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -17729,6 +17733,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: cb8432554be961f46bc1ac135748f00d, type: 2}
+    - target: {fileID: 4291685627735735326, guid: eeb20adb63c29fe46b5426818d72744d, type: 3}
+      propertyPath: m_Name
+      value: ArmatureCharacter02
+      objectReference: {fileID: 0}
     - target: {fileID: 5239288222847161719, guid: eeb20adb63c29fe46b5426818d72744d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.219
