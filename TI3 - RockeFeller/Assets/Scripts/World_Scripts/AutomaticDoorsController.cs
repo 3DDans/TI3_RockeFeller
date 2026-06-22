@@ -3,10 +3,12 @@ using UnityEngine;
 public class AutomaticDoorsController : MonoBehaviour
 {
     Animator animator;
+    AudioSource audioSource;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,13 +30,12 @@ public class AutomaticDoorsController : MonoBehaviour
     {
         animator.SetBool("Open", true);
         Debug.Log("Abrir porta automatica");
-        SoundFXManager.Instance.PlaySFX("Door");
+        audioSource.Play();
     }
 
     public void FecharPorta()
     {
         animator.SetBool("Open", false);
         Debug.Log("Fechou porta automatica");
-        SoundFXManager.Instance.PlaySFX("Door");
     }
 }
