@@ -65,6 +65,8 @@ public class SceneController : MonoBehaviour
 
     public void PlayGame()
     {
+        if (Time.timeScale == 0)
+            return;
         
         tabletController.isInMainMenu = false;
 
